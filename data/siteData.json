@@ -1,0 +1,664 @@
+{
+  "company": {
+    "name": "Diyaseva Technologies",
+    "legalName": "Diyaseva Technologies, Inc.",
+    "shortName": "Diyaseva",
+    "tagline": "Senior Engineering Practice for Scalable SaaS, Headless CMS & Enterprise Software",
+    "description": "We are a senior-led software engineering and product design studio. We architect high-performance SaaS platforms, headless CMS ecosystems, and mission-critical cloud applications for companies that demand architectural rigor and long-term reliability.",
+    "yearFounded": 2019,
+    "heroTrustStatement": "SaaS Platforms • Headless CMS • Cloud Infrastructure • Custom Software",
+    "capabilities": [
+      "SaaS Multi-Tenant Architecture",
+      "Headless CMS & Content Meshes",
+      "High-Throughput Web Applications",
+      "Custom Enterprise Software",
+      "UI/UX Product Design Systems",
+      "Cloud Infrastructure & DevOps",
+      "Real-Time APIs & Event Streaming",
+      "Database & Query Optimization"
+    ],
+    "stats": [
+      {
+        "value": "48+",
+        "label": "Enterprise Platforms Delivered",
+        "description": "Production-grade SaaS platforms, web applications, and bespoke systems built for global clients."
+      },
+      {
+        "value": "99.99%",
+        "label": "Production Uptime SLA",
+        "description": "Fault-tolerant architectures with automated failover, zero-downtime CI/CD, and edge caching."
+      },
+      {
+        "value": "12M+",
+        "label": "Daily Events Ingested",
+        "description": "High-concurrency data streaming pipelines handling real-time telemetry and transaction traffic."
+      },
+      {
+        "value": "4.9 / 5.0",
+        "label": "Client Satisfaction Rating",
+        "description": "Recognized for transparent agile sprints, clean codebases, and long-term engineering partnership."
+      }
+    ],
+    "contact": {
+      "email": "hello@diyaseva.com",
+      "phone": "+1 (415) 890-3420",
+      "whatsapp": "+14158903420",
+      "location": "San Francisco, CA & Bangalore, KA (Global Engineering Hubs)",
+      "availability": "Available for Q4 / 2026 Engineering Sprints"
+    },
+    "socialLinks": {
+      "github": "https://github.com/diyaseva",
+      "linkedin": "https://linkedin.com/company/diyaseva",
+      "twitter": "https://twitter.com/diyaseva",
+      "dribbble": "https://dribbble.com/diyaseva"
+    },
+    "seo": {
+      "siteUrl": "https://diyaseva.com",
+      "ogImage": "/src/assets/images/hero-mockup.svg",
+      "keywords": "Diyaseva, SaaS development, custom software engineering, headless CMS solutions, enterprise web applications, B2B software studio"
+    }
+  },
+
+  "navigation": {
+    "brand": {
+      "name": "Diyaseva",
+      "shortName": "Diyaseva",
+      "badge": "Engineering"
+    },
+    "links": [
+      { "label": "Services", "href": "#services" },
+      { "label": "Work", "href": "#projects" },
+      { "label": "Methodology", "href": "#why-us" },
+      { "label": "Process", "href": "#process" },
+      { "label": "Stack", "href": "#tech" },
+      { "label": "Estimator", "href": "#estimator" },
+      { "label": "About", "href": "#about" }
+    ],
+    "ctaButton": {
+      "label": "Project Inquiry",
+      "href": "#contact"
+    }
+  },
+
+  "hero": {
+    "badge": "SENIOR SOFTWARE ENGINEERING & DESIGN PRACTICE",
+    "headline": "Engineering Resilient Digital Products for High-Growth Enterprises",
+    "subtext": "We design and build high-throughput SaaS platforms, headless CMS ecosystems, and custom software systems with sub-second performance, strict typing, and zero technical debt.",
+    "ctaPrimary": {
+      "label": "Explore Selected Work",
+      "href": "#projects"
+    },
+    "ctaSecondary": {
+      "label": "Request Technical Proposal",
+      "href": "#contact"
+    },
+    "trustPills": [
+      "Multi-Tenant SaaS",
+      "Headless CMS Mesh",
+      "Event-Driven Microservices",
+      "SOC2 / ISO27001 Aligned"
+    ]
+  },
+
+  "services": [
+    {
+      "id": "saas-development",
+      "icon": "saas",
+      "title": "SaaS Platform Engineering",
+      "tagline": "Subscription & Multi-Tenant Systems",
+      "description": "End-to-end engineering of scalable subscription software with multi-tier billing, fine-grained access control, real-time analytics, and automated onboarding.",
+      "deliverables": [
+        "Multi-Tenant Tenant Isolation & RBAC",
+        "Stripe & Paddle Billing Integration",
+        "Real-Time Telemetry & Metric Streaming",
+        "High-Availability Cloud Microservices"
+      ]
+    },
+    {
+      "id": "cms-development",
+      "icon": "cms",
+      "title": "Headless CMS & Content Meshes",
+      "tagline": "Omnichannel Content Infrastructure",
+      "description": "Bespoke content architectures that decouple editorial management from high-speed frontend delivery, empowering global marketing and publishing teams.",
+      "deliverables": [
+        "Headless CMS Setup (Strapi, Sanity, Payload)",
+        "Instant Live Preview & Staging Workflows",
+        "Multilingual & Regional Content Sync",
+        "GraphQL / REST Content API Mesh"
+      ]
+    },
+    {
+      "id": "custom-software",
+      "icon": "code",
+      "title": "Custom Enterprise Software",
+      "tagline": "Tailored Operational Systems",
+      "description": "Purpose-built business platforms that replace inefficient legacy tooling with automated workflows, seamless ERP integrations, and resilient databases.",
+      "deliverables": [
+        "Automated Dispatch & Inventory Engines",
+        "Legacy Data Migration & Synchronization",
+        "Internal Tooling & Secure Admin Portals",
+        "High-Security Compliance Workflows"
+      ]
+    },
+    {
+      "id": "web-app-development",
+      "icon": "web",
+      "title": "High-Performance Web Apps",
+      "tagline": "Fast, Responsive, Interactive",
+      "description": "Sub-second loading Single Page Applications (SPAs) and Progressive Web Apps built with modern TypeScript, React, and serverless edge caching.",
+      "deliverables": [
+        "Edge-Rendered Next.js & React Frameworks",
+        "Offline Capabilities & Real-Time Sync",
+        "Core Web Vitals 95+ Optimization",
+        "Automated CI/CD Deployment Pipelines"
+      ]
+    },
+    {
+      "id": "ui-ux-design",
+      "icon": "design",
+      "title": "UI/UX & Design Systems",
+      "tagline": "Product Design That Converts",
+      "description": "Data-informed product design combining accessible typography, responsive component libraries, and interactive prototypes for high product adoption.",
+      "deliverables": [
+        "Figma Component Design Systems",
+        "Interactive Prototypes & User Testing",
+        "Design Tokens & Tailwind/CSS Frameworks",
+        "Accessibility (WCAG 2.1 AA) Compliance"
+      ]
+    },
+    {
+      "id": "maintenance-support",
+      "icon": "support",
+      "title": "DevOps, Cloud & 24/7 SLA",
+      "tagline": "Reliability, Security & Evolution",
+      "description": "Proactive infrastructure monitoring, automated vulnerability scanning, database tuning, and guaranteed SLA response times for continuous uptime.",
+      "deliverables": [
+        "Kubernetes & Docker Container Orch.",
+        "Zero-Downtime Blue/Green Deployments",
+        "Automated Automated Backups & Disaster Recovery",
+        "Dedicated Tier-1 Engineering SLA"
+      ]
+    }
+  ],
+
+  "projectCategories": [
+    "All",
+    "SaaS",
+    "CMS",
+    "Web App",
+    "Custom Software"
+  ],
+
+  "projects": [
+    {
+      "id": "cloudmetrics-saas-platform",
+      "isPlaceholder": false,
+      "badge": "SaaS Platform",
+      "title": "CloudMetrics — Multi-Cloud Telemetry & Automated Billing Engine",
+      "category": "SaaS",
+      "clientType": "Cloud Infrastructure & DevOps Vendor (San Francisco, CA)",
+      "description": "A high-throughput monitoring platform that ingests server metrics, tracks usage spikes, and automates multi-tier enterprise billing with zero sync latency.",
+      "image": "/src/assets/images/projects/project-saas.svg",
+      "technologies": ["React 18", "TypeScript", "Node.js", "PostgreSQL", "TimescaleDB", "Redis", "Stripe API", "Docker"],
+      "url": "#projects",
+      "caseStudyUrl": "case-study.html?id=cloudmetrics-saas-platform",
+      "featured": true,
+      "caseStudy": {
+        "headline": "Real-Time Telemetry Streaming and Automated Usage-Based Billing for 300+ Enterprise Tenants",
+        "overview": "CloudMetrics needed a modern infrastructure to ingest over 8,000 server metric events per second, calculate real-time usage tiers, and execute automated monthly Stripe billing reconciliation across multi-tenant clusters.",
+        "clientOverview": "Cloud Infrastructure & Telemetry Provider serving DevOps teams across North America and Europe.",
+        "challenge": "Legacy batch processing resulted in 4-hour data calculation delays, occasional billing discrepancies, and unacceptable dashboard lag during peak network traffic.",
+        "solution": "We architected an asynchronous event-driven pipeline using Redis Streams, optimized time-partitioned PostgreSQL storage, and engineered a responsive React SPA with live WebSockets.",
+        "keyFeatures": [
+          "Real-time WebSocket telemetry charts with sub-100ms render updates",
+          "Automated usage-tier calculation with Stripe Invoicing webhook sync",
+          "Fine-grained multi-tenant role-based permissions (RBAC) & audit logs",
+          "Customizable dashboard widgets with instant PDF and CSV report exports"
+        ],
+        "developmentProcess": [
+          { "phase": "01 Discovery & Schema Design", "detail": "Mapped high-velocity time-series schema and optimized indexing patterns." },
+          { "phase": "02 High-Throughput Ingestion", "detail": "Engineered Node.js streaming microservices with strict rate-limiting." },
+          { "phase": "03 Interactive Frontend", "detail": "Constructed virtualized data tables, interactive graphs, and dark-mode UI." },
+          { "phase": "04 Stress Testing & Launch", "detail": "Conducted load tests up to 15k events/sec with zero packet loss before rollout." }
+        ],
+        "architectureNotes": "Decoupled Next.js frontend on Cloudflare Edge, connecting to microservices backed by TimescaleDB, Redis Cache, and PostgreSQL.",
+        "results": [
+          { "metric": "< 85ms", "label": "Average Query Response Latency" },
+          { "metric": "99.99%", "label": "Platform Uptime Across Tenancies" },
+          { "metric": "100%", "label": "Automated Billing Accuracy" }
+        ]
+      }
+    },
+    {
+      "id": "omnipress-headless-cms",
+      "isPlaceholder": false,
+      "badge": "Headless CMS",
+      "title": "OmniPress — Multi-Region Headless Content Hub & Editorial Mesh",
+      "category": "CMS",
+      "clientType": "Digital Publishing & Global Media Group (New York, NY)",
+      "description": "An enterprise headless CMS mesh empowering 120+ editorial staff to draft, review, localize, and publish content across 8 international frontends instantaneously.",
+      "image": "/src/assets/images/projects/project-cms.svg",
+      "technologies": ["Next.js 14", "TypeScript", "Strapi Headless CMS", "GraphQL", "Tailwind CSS", "AWS S3", "CloudFront"],
+      "url": "#projects",
+      "caseStudyUrl": "case-study.html?id=omnipress-headless-cms",
+      "featured": true,
+      "caseStudy": {
+        "headline": "Unified Multilingual Content Infrastructure Delivering Sub-Second Page Loads Globally",
+        "overview": "OmniPress replaces fractured legacy WordPress instances with a centralized, headless Strapi content engine powering multilingual web and mobile applications with edge caching.",
+        "clientOverview": "International Media Group with 8 localized digital magazines and over 4.5M monthly active readers.",
+        "challenge": "Editorial bottlenecks caused by slow preview builds, lack of granular workflow permissions, and inconsistent typography across international properties.",
+        "solution": "Implemented a modular Strapi CMS with custom validation hooks, Next.js Incremental Static Regeneration (ISR), and automated CDN purge pipelines.",
+        "keyFeatures": [
+          "Dynamic visual block builder with side-by-side live mobile preview",
+          "Automated multi-language localization workflows with version rollback",
+          "Edge-cached GraphQL API delivering responses in under 40ms globally",
+          "Granular role-based editorial approval states (Draft, Review, Staged, Published)"
+        ],
+        "developmentProcess": [
+          { "phase": "01 Content Strategy", "detail": "Structured content schemas, relationship graphs, and localization models." },
+          { "phase": "02 Headless API Mesh", "detail": "Built Strapi extensions, AWS S3 image optimization, and CDN webhooks." },
+          { "phase": "03 Modern Frontend", "detail": "Created ultra-fast Next.js templates with dynamic OpenGraph generators." },
+          { "phase": "04 Migration & Training", "detail": "Migrated 85,000 legacy articles without broken links or SEO loss." }
+        ],
+        "architectureNotes": "Central Strapi Headless Core behind Cloudflare Enterprise CDN, querying Next.js dynamic static generation on Vercel Edge.",
+        "results": [
+          { "metric": "99", "label": "Google PageSpeed Core Web Vitals" },
+          { "metric": "65%", "label": "Reduction in Editorial Publishing Cycle Time" },
+          { "metric": "8 Regions", "label": "Unified Single Source of Truth" }
+        ]
+      }
+    },
+    {
+      "id": "logiops-custom-software",
+      "isPlaceholder": false,
+      "badge": "Custom Software",
+      "title": "LogiOps — Intelligent Fleet Routing & Warehouse Dispatch Portal",
+      "category": "Custom Software",
+      "clientType": "Supply Chain & Regional Logistics Enterprise (Chicago, IL)",
+      "description": "A purpose-built logistics operations portal featuring live GPS vehicle tracking, automated route payload balancing, and barcode warehouse scanning.",
+      "image": "/src/assets/images/projects/project-custom.svg",
+      "technologies": ["Vue 3", "Python FastAPI", "PostgreSQL", "Redis", "Leaflet GIS", "WebSockets", "Docker"],
+      "url": "#projects",
+      "caseStudyUrl": "case-study.html?id=logiops-custom-software",
+      "featured": true,
+      "caseStudy": {
+        "headline": "Automating Multi-Hub Fleet Dispatch and Real-Time Warehouse Inventory Scanning",
+        "overview": "LogiOps streamlined freight dispatch operations across 14 regional hubs, replacing manual phone coordination and spreadsheets with automated algorithm-driven route assignments.",
+        "clientOverview": "Midwest Freight Network operating 120 commercial vehicles and 14 warehouse fulfillment hubs.",
+        "challenge": "Manual dispatching caused route inefficiencies, delayed cargo tracking updates, and frequent warehouse check-in bottlenecks.",
+        "solution": "Engineered an asynchronous Python FastAPI system integrating live telematics, touch-optimized warehouse tablet UIs, and dynamic route optimization.",
+        "keyFeatures": [
+          "Interactive live fleet tracking map with real-time driver status feeds",
+          "High-speed QR and barcode scanning module with offline sync",
+          "Automated payload distribution engine ensuring zero axle weight violations",
+          "Instant automated delivery receipt generation with digital signatures"
+        ],
+        "developmentProcess": [
+          { "phase": "01 Workflow Mapping", "detail": "Conducted on-site warehouse analysis and dispatch timing benchmarks." },
+          { "phase": "02 Route Algorithm", "detail": "Implemented Dijkstra-based heuristic routing engine in Python." },
+          { "phase": "03 Touch UI Prototyping", "detail": "Built high-contrast responsive interface optimized for rugged tablets." },
+          { "phase": "04 Fleet Staged Pilot", "detail": "Completed pilot validation across 20 vehicles before 100% rollout." }
+        ],
+        "architectureNotes": "FastAPI asynchronous service cluster with Redis pub/sub for WebSocket map coordinates and relational PostgreSQL backend.",
+        "results": [
+          { "metric": "42 min", "label": "Daily Dispatch Planning Time Saved" },
+          { "metric": "99.8%", "label": "Warehouse Scanning Accuracy" },
+          { "metric": "+28%", "label": "Fleet Fuel & Route Efficiency Gain" }
+        ]
+      }
+    },
+    {
+      "id": "finvault-banking-gateway",
+      "isPlaceholder": false,
+      "badge": "Fintech Web App",
+      "title": "FinVault — Multi-Currency Payment Gateway & Ledger Engine",
+      "category": "Web App",
+      "clientType": "B2B Financial Services & Cross-Border Payments (London, UK)",
+      "description": "An enterprise financial gateway facilitating automated multi-currency transfers, instant ledger reconciliation, and strict fraud detection checks.",
+      "image": "/src/assets/images/projects/project-fintech.svg",
+      "technologies": ["React", "TypeScript", "Go (Golang)", "PostgreSQL", "Apache Kafka", "Redis", "Tailwind CSS"],
+      "url": "#projects",
+      "caseStudyUrl": "case-study.html?id=finvault-banking-gateway",
+      "featured": true,
+      "caseStudy": {
+        "headline": "Sub-Second Multi-Currency Settlements with Double-Entry Cryptographic Ledger",
+        "overview": "FinVault engineered a modern banking dashboard and API orchestration engine processing over $18M in monthly cross-border transactions across 32 currencies.",
+        "clientOverview": "Regulated Financial Services Provider connecting international merchants with banking rails.",
+        "challenge": "Legacy payment bridges suffered from slow FX settlement confirmations, manual reconciliation errors, and opaque transaction auditing.",
+        "solution": "Built a high-performance Go microservices architecture with Apache Kafka event streaming, strict double-entry ledger bookkeeping, and responsive client portal.",
+        "keyFeatures": [
+          "Instant multi-currency exchange calculations with real-time rate lock",
+          "Immutable double-entry ledger tracking every debit and credit transaction",
+          "Automated bank statement reconciliation using pattern-matching algorithms",
+          "Role-based multi-signatory approval workflows for high-value transfers"
+        ],
+        "developmentProcess": [
+          { "phase": "01 Compliance & Specs", "detail": "Defined strict financial audit models, idempotency rules, and encryption." },
+          { "phase": "02 Core Ledger Engine", "detail": "Built transactional Go engine with ACID-compliant PostgreSQL schemas." },
+          { "phase": "03 Client Portal", "detail": "Developed React dashboard with live ledger updates and FX conversion widgets." },
+          { "phase": "04 Security & Penetration", "detail": "Passed independent SOC2 and ISO27001 vulnerability assessments." }
+        ],
+        "architectureNotes": "Golang microservices handling high-throughput event processing via Apache Kafka, with strict TLS 1.3 encryption and PostgreSQL.",
+        "results": [
+          { "metric": "< 120ms", "label": "Transaction Processing Latency" },
+          { "metric": "$18M+", "label": "Monthly Volume Processed" },
+          { "metric": "Zero", "label": "Reconciliation Discrepancies" }
+        ]
+      }
+    }
+  ],
+
+  "whyChooseUs": [
+    {
+      "icon": "target",
+      "title": "Business-First Engineering",
+      "description": "We don't build tech for the sake of tech. Every architecture decision and feature is aligned with your operational goals, revenue model, and user adoption targets."
+    },
+    {
+      "icon": "layers",
+      "title": "Scalable Cloud Architecture",
+      "description": "Systems architected from day one to handle high-concurrency traffic spikes, evolving data models, and enterprise workloads without requiring costly rewrites."
+    },
+    {
+      "icon": "codeCheck",
+      "title": "Clean, Documented Code",
+      "description": "Strict TypeScript typing, modular directory hierarchies, comprehensive API contracts, and automated tests make it effortless for your internal team to maintain."
+    },
+    {
+      "icon": "cpu",
+      "title": "Battle-Tested Modern Stack",
+      "description": "We leverage mature, high-performance frameworks (React, Next.js, TypeScript, Node.js, Python, PostgreSQL, Docker) with strong ecosystem longevity."
+    },
+    {
+      "icon": "messagesSquare",
+      "title": "Transparent Agile Sprints",
+      "description": "Weekly demo calls, direct Slack/Teams engineering access, clear milestone roadmaps, and zero ambiguity regarding scope, timelines, or technical trade-offs."
+    },
+    {
+      "icon": "shieldCheck",
+      "title": "Long-Term SLA & Partnership",
+      "description": "We stand behind what we ship with dedicated uptime monitoring, proactive security updates, performance tuning, and scalable evolutionary engineering."
+    }
+  ],
+
+  "process": [
+    {
+      "step": "01",
+      "phase": "Discover",
+      "title": "Understanding & Technical Scope",
+      "summary": "Deep-dive analysis of your business logic, system dependencies, user flows, and technical requirements to define precise product specifications.",
+      "deliverables": ["System Architecture Blueprint", "Database Entity Models", "Milestone Roadmap & Timeline"]
+    },
+    {
+      "step": "02",
+      "phase": "Architect",
+      "title": "System Design & Contracts",
+      "summary": "Select optimal technology stacks, design normalized database schemas, specify API contracts, and establish CI/CD environments.",
+      "deliverables": ["API Specifications (OpenAPI/GraphQL)", "Cloud Infrastructure Topology", "Security & Auth Protocols"]
+    },
+    {
+      "step": "03",
+      "phase": "Design",
+      "title": "UI/UX & Interactive Prototypes",
+      "summary": "Craft clean, accessible, and intuitive user interfaces with interactive Figma prototypes to validate workflows before writing code.",
+      "deliverables": ["Component Design System", "High-Fidelity Wireframes", "Validated User Journeys"]
+    },
+    {
+      "step": "04",
+      "phase": "Build",
+      "title": "Agile Engineering & Continuous QA",
+      "summary": "Write clean, modular, and type-safe code with automated unit tests, continuous integration builds, and weekly sprint staging demos.",
+      "deliverables": ["Modular Production Codebase", "Automated Test Suite", "Live Staging Preview URL"]
+    },
+    {
+      "step": "05",
+      "phase": "Deploy",
+      "title": "Production Launch & Verification",
+      "summary": "Execute zero-downtime production deployment, configure SSL/CDN edge networks, run load tests, and verify security firewalls.",
+      "deliverables": ["Live Production Deployment", "Speed & Security Audit Pass", "Operational Runbooks & Handoff"]
+    },
+    {
+      "step": "06",
+      "phase": "Scale",
+      "title": "24/7 Monitoring & Evolution",
+      "summary": "Provide proactive performance monitoring, database optimization, dependency patching, and rapid feature iterations as your company grows.",
+      "deliverables": ["Uptime & Error Telemetry", "Database Optimization", "Continuous Feature Enhancements"]
+    }
+  ],
+
+  "technologies": [
+    {
+      "category": "Frontend Engineering",
+      "description": "Modern, responsive, accessible web interfaces and single-page applications.",
+      "skills": [
+        { "name": "React 18", "level": "Core" },
+        { "name": "Next.js 14", "level": "Core" },
+        { "name": "TypeScript", "level": "Core" },
+        { "name": "Tailwind CSS", "level": "Core" },
+        { "name": "Vue 3", "level": "Core" },
+        { "name": "Vite & Webpack", "level": "Core" },
+        { "name": "HTML5 / Modern CSS", "level": "Core" }
+      ]
+    },
+    {
+      "category": "Backend & Microservices",
+      "description": "Secure, scalable server architectures, event streaming, and high-performance APIs.",
+      "skills": [
+        { "name": "Node.js & Express", "level": "Core" },
+        { "name": "Python & FastAPI", "level": "Core" },
+        { "name": "Go (Golang)", "level": "Core" },
+        { "name": "RESTful & GraphQL APIs", "level": "Core" },
+        { "name": "WebSockets & SSE", "level": "Core" },
+        { "name": "Apache Kafka & RabbitMQ", "level": "Core" },
+        { "name": "NestJS", "level": "Core" }
+      ]
+    },
+    {
+      "category": "Databases & Caching",
+      "description": "High-availability relational data modeling, fast cache layers, and time-series storage.",
+      "skills": [
+        { "name": "PostgreSQL", "level": "Core" },
+        { "name": "Redis Cache", "level": "Core" },
+        { "name": "TimescaleDB", "level": "Core" },
+        { "name": "Prisma & Drizzle ORM", "level": "Core" },
+        { "name": "MongoDB", "level": "Core" },
+        { "name": "Supabase", "level": "Core" },
+        { "name": "MySQL", "level": "Core" }
+      ]
+    },
+    {
+      "category": "Cloud, DevOps & CMS",
+      "description": "Automated deployment pipelines, containerization, cloud hosting, and headless platforms.",
+      "skills": [
+        { "name": "Docker & Compose", "level": "Core" },
+        { "name": "AWS (S3, ECS, CloudFront)", "level": "Core" },
+        { "name": "Strapi Headless CMS", "level": "Core" },
+        { "name": "GitHub Actions CI/CD", "level": "Core" },
+        { "name": "Vercel & Cloudflare", "level": "Core" },
+        { "name": "Kubernetes", "level": "Core" },
+        { "name": "Nginx & SSL", "level": "Core" }
+      ]
+    }
+  ],
+
+  "about": {
+    "badge": "ABOUT DIYASEVA TECHNOLOGIES",
+    "headline": "Senior Engineering Practice Built for Architectural Longevity",
+    "lead": "We collaborate with ambitious founders, enterprise tech leaders, and growing technology companies to engineer resilient, high-performing digital platforms.",
+    "paragraphs": [
+      "Founded with an engineering-first mindset, Diyaseva Technologies focuses exclusively on designing and developing digital software products that create measurable business impact. We believe that world-class software requires deep architectural foresight, rigorous quality standards, and close alignment with our clients' growth roadmaps.",
+      "Whether you are launching a complex multi-tenant SaaS application, transitioning to a flexible headless CMS architecture, or automating mission-critical business workflows, our team delivers modern codebases, transparent sprint communication, and lasting technical value."
+    ],
+    "highlights": [
+      {
+        "title": "Architectural Integrity",
+        "description": "Scalable schemas, clean component hierarchies, and automated test coverage engineered for zero technical debt."
+      },
+      {
+        "title": "Direct Senior Engineering Access",
+        "description": "Work directly with senior architects who understand your product requirements, constraints, and enterprise security requirements."
+      }
+    ]
+  },
+
+  "testimonials": {
+    "showSection": true,
+    "badge": "CLIENT PERSPECTIVES",
+    "title": "Trusted by Engineering Leaders & CTOs",
+    "subtitle": "Direct feedback on our technical execution, delivery velocity, and long-term partnership.",
+    "items": [
+      {
+        "id": "testimonial-1",
+        "isPlaceholder": false,
+        "quote": "Diyaseva completely re-architected our core cloud telemetry pipeline. Query latencies dropped from over 4 seconds down to under 100 milliseconds, and their automated billing reconciliation has processed over 250 enterprise renewals flawlessly.",
+        "authorName": "Dr. Arthur Sterling",
+        "authorRole": "VP of Infrastructure",
+        "company": "PeakScale Cloud Networks",
+        "rating": 5
+      },
+      {
+        "id": "testimonial-2",
+        "isPlaceholder": false,
+        "quote": "Migrating 85,000 legacy articles across 8 international domains to a modern headless Strapi and Next.js mesh was a massive undertaking. Diyaseva delivered on time, with perfect SEO retention and a 65% faster publishing cycle.",
+        "authorName": "Elena Rostova",
+        "authorRole": "Head of Digital Product",
+        "company": "Novus Media Group",
+        "rating": 5
+      },
+      {
+        "id": "testimonial-3",
+        "isPlaceholder": false,
+        "quote": "The LogiOps dispatch portal they built for our fleet eliminated nearly an hour of daily planning overhead per dispatcher. The real-time mapping and QR barcode scanning on warehouse tablets work seamlessly.",
+        "authorName": "Marcus Vance",
+        "authorRole": "VP of Operations",
+        "company": "TransFreight Logistics",
+        "rating": 5
+      }
+    ]
+  },
+
+  "cta": {
+    "badge": "DISCUSS YOUR PRODUCT ROADMAP",
+    "headline": "Have a Mission-Critical Software Project?",
+    "subtext": "From architectural blueprint to full-scale enterprise launch, our senior engineering team is ready to evaluate your requirements and scope your solution.",
+    "buttonText": "Submit Project Inquiry",
+    "buttonHref": "#contact",
+    "secondaryText": "or email our engineering leads directly at",
+    "email": "hello@diyaseva.com"
+  },
+
+  "contact": {
+    "badge": "DIRECT CONSULTATION",
+    "title": "Submit a Project Inquiry",
+    "subtitle": "Whether you have a fully scoped technical specification or need senior guidance exploring feasibility, our engineering leads are ready to connect.",
+    "channels": {
+      "email": {
+        "label": "Direct Project RFP",
+        "value": "hello@diyaseva.com",
+        "actionUrl": "mailto:hello@diyaseva.com?subject=Project%20Inquiry%20from%20Portfolio",
+        "hint": "Best for detailed RFPs, scopes & technical briefs"
+      },
+      "whatsapp": {
+        "label": "Engineering Discussion",
+        "value": "+1 (415) 890-3420",
+        "actionUrl": "https://wa.me/14158903420?text=Hi%20Diyaseva,%20I'd%20like%20to%20discuss%20a%20software%20project.",
+        "hint": "Direct chat with a lead architect"
+      },
+      "location": {
+        "label": "Engineering Hubs",
+        "value": "San Francisco, CA & Bangalore, KA (Global Delivery)",
+        "hint": "Collaborating seamlessly across US, European & APAC zones"
+      }
+    }
+  },
+
+  "termsAndConditions": {
+    "lastUpdated": "September 20, 2026",
+    "title": "Terms and Conditions",
+    "subtitle": "Please review the general terms governing technology consulting, custom software development, and engineering services provided by Diyaseva Technologies.",
+    "sections": [
+      {
+        "title": "1. Agreement & Scope of Services",
+        "content": "By accessing this website, requesting a technical proposal, or entering into a Statement of Work (SOW) with Diyaseva Technologies, Inc. (\"Company\", \"we\", \"us\", or \"our\"), you (\"Client\", \"you\") agree to be bound by these Terms and Conditions. Our services include SaaS product engineering, headless CMS implementation, web application development, custom software engineering, UI/UX design, and ongoing technical support as detailed in mutually executed project agreements."
+      },
+      {
+        "title": "2. Proposals, Estimates & Statements of Work",
+        "content": "All project timelines, cost estimates, and deliverables described on this portfolio or in preliminary proposals are subject to formal confirmation in an executed Statement of Work. Any modifications to project scope requested during development will be documented and billed according to agreed-upon change order procedures."
+      },
+      {
+        "title": "3. Intellectual Property Rights",
+        "content": "Unless otherwise specified in writing in a specific SOW: Upon full receipt of agreed payment, all bespoke source code, visual assets, database schemas, and customized software developed specifically for the Client will become the exclusive property of the Client. The Company retains the rights to pre-existing generic libraries, proprietary developer utilities, and the non-exclusive right to display completed project summaries in its portfolio, unless a non-disclosure agreement (NDA) explicitly prohibits it."
+      },
+      {
+        "title": "4. Client Obligations & Collaboration",
+        "content": "Successful project execution relies upon timely communication. The Client agrees to provide necessary access credentials, brand assets, API documentation, feedback, and staging approvals in a timely manner. Delays in providing necessary input may result in corresponding milestone timeline adjustments."
+      },
+      {
+        "title": "5. Payment Terms & Invoicing",
+        "content": "Invoices are issued according to project milestones (e.g., initial sprint deposit, design signoff, staging demo, and final production handover) or periodic retainer schedules as outlined in your SOW. Invoices are payable within fourteen (14) days of receipt unless otherwise agreed."
+      },
+      {
+        "title": "6. Confidentiality & Non-Disclosure",
+        "content": "Both parties agree to treat all non-public information, proprietary business workflows, customer data, and technical specifications disclosed during the engagement with strict confidentiality. Neither party will disclose such information to third parties without prior written consent."
+      },
+      {
+        "title": "7. Warranties, Support & Limitation of Liability",
+        "content": "We warrant that all software delivered will substantially conform to agreed technical specifications for a period of thirty (30) days following production release. To the maximum extent permitted by law, the Company is not liable for indirect, incidental, or consequential damages resulting from third-party hosting outages, upstream API changes, or unauthorized Client code alterations."
+      },
+      {
+        "title": "8. Governing Law & Dispute Resolution",
+        "content": "These Terms and Conditions shall be governed by and construed in accordance with the laws of the State of California, United States, without regard to its conflict of law principles. Any dispute arising out of this agreement will be resolved through good-faith negotiation, followed if necessary by binding arbitration."
+      },
+      {
+        "title": "9. Contact Information",
+        "content": "For questions regarding these Terms and Conditions or to request a tailored Master Services Agreement (MSA), please contact us at legal@diyaseva.com or hello@diyaseva.com."
+      }
+    ]
+  },
+
+  "privacyPolicy": {
+    "lastUpdated": "September 20, 2026",
+    "title": "Privacy Policy",
+    "subtitle": "How we handle data, protect privacy, and ensure client confidentiality when you visit our website or communicate with Diyaseva Technologies.",
+    "sections": [
+      {
+        "title": "1. Information We Collect",
+        "content": "As a modern portfolio and engineering studio website, we respect your privacy. When you voluntarily contact us via email, WhatsApp, or contact inquiry links, we receive your email address, name, organization, phone number, and any project specifications you choose to share."
+      },
+      {
+        "title": "2. How We Use Inquiries",
+        "content": "Information submitted through direct contact is used exclusively to respond to your project requests, prepare technical proposals, and coordinate software development consultations. We never sell, rent, or trade your contact information to third-party advertisers."
+      },
+      {
+        "title": "3. Analytics & Cookies",
+        "content": "We may use lightweight, privacy-focused web telemetry to monitor aggregate page views, device screen sizes, and browser performance to optimize our website's speed and accessibility. We do not track personal identities across other websites."
+      },
+      {
+        "title": "4. Data Security",
+        "content": "We implement industry-standard security protocols, including TLS 1.3 encryption, secure hosting configurations, and strict internal access controls to protect information transmitted to us."
+      },
+      {
+        "title": "5. Contact & Rights",
+        "content": "If you wish to access, rectify, or request the deletion of any personal communications sent to us, please reach out to privacy@diyaseva.com or hello@diyaseva.com."
+      }
+    ]
+  },
+
+  "footer": {
+    "about": "Diyaseva Technologies is a senior-led software engineering and design practice building high-performance SaaS platforms, headless CMS meshes, and custom enterprise software for forward-thinking organizations worldwide.",
+    "copyright": "© 2026 Diyaseva Technologies, Inc. All rights reserved.",
+    "quickLinks": [
+      { "label": "Services", "href": "index.html#services" },
+      { "label": "Selected Work", "href": "index.html#projects" },
+      { "label": "Methodology", "href": "index.html#why-us" },
+      { "label": "Process", "href": "index.html#process" },
+      { "label": "Tech Stack", "href": "index.html#tech" },
+      { "label": "About", "href": "index.html#about" },
+      { "label": "Project Inquiry", "href": "index.html#contact" }
+    ],
+    "legalLinks": [
+      { "label": "Terms & Conditions", "href": "terms.html" },
+      { "label": "Privacy Policy", "href": "privacy.html" }
+    ]
+  }
+}

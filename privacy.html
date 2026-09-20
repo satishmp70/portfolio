@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Diyaseva Technologies</title>
+  <meta name="description" content="Privacy Policy detailing how Diyaseva Technologies collects, uses, and safeguards client information." />
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <link rel="stylesheet" href="/src/css/animations.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" id="privacyBrandLogo">
+        <div class="brand-icon">DS</div>
+        <span id="privacyCompanyName">Diyaseva Technologies</span>
+      </a>
+
+      <div class="nav-actions">
+        <a href="index.html" class="btn btn-secondary btn-sm">
+          ← Back to Home
+        </a>
+        <a href="index.html#contact" class="btn btn-primary btn-sm">
+          Project Inquiry
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="legal-page-header">
+    <div class="container container-narrow">
+      <div class="section-badge">DATA & CONFIDENTIALITY</div>
+      <h1 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 14px;" id="privacyTitle">Privacy Policy</h1>
+      <p style="font-size: 1.1rem; color: var(--text-muted); max-width: 680px; margin: 0 auto 16px auto;" id="privacySubtitle">
+        How we handle data, protect privacy, and ensure confidentiality when you visit our website or contact us.
+      </p>
+      <div style="font-size: 0.85rem; color: var(--accent-cyan); font-family: var(--font-mono);" id="privacyLastUpdated">
+        Last Updated: September 20, 2026
+      </div>
+    </div>
+  </section>
+
+  <!-- Legal Body Content -->
+  <main class="legal-content-body">
+    <div class="container container-narrow" id="privacySectionsContainer">
+      <!-- Injected dynamically from siteData.json -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <div id="privacyFooterCopyright">© 2026 Diyaseva Technologies, Inc. All rights reserved.</div>
+        <div><a href="terms.html" class="footer-link">Terms & Conditions</a> • <a href="index.html" class="footer-link">Home</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { getSiteData } from '/src/js/dataLoader.js';
+
+    async function loadPrivacy() {
+      const siteData = await getSiteData();
+      if (!siteData || !siteData.privacyPolicy) return;
+
+      const priv = siteData.privacyPolicy;
+      const comp = siteData.company;
+
+      document.title = `${priv.title} — ${comp.name}`;
+      
+      const compNameEl = document.getElementById('privacyCompanyName');
+      const footerCopyEl = document.getElementById('privacyFooterCopyright');
+      const titleEl = document.getElementById('privacyTitle');
+      const subEl = document.getElementById('privacySubtitle');
+      const updatedEl = document.getElementById('privacyLastUpdated');
+      const container = document.getElementById('privacySectionsContainer');
+
+      if (compNameEl) compNameEl.textContent = comp.name;
+      if (footerCopyEl) footerCopyEl.textContent = `© ${new Date().getFullYear()} ${comp.name}. All rights reserved.`;
+      if (titleEl) titleEl.textContent = priv.title;
+      if (subEl) subEl.textContent = priv.subtitle;
+      if (updatedEl) updatedEl.textContent = `Last Updated: ${priv.lastUpdated}`;
+
+      if (container && priv.sections) {
+        container.innerHTML = priv.sections.map(sec => `
+          <div class="legal-section-block">
+            <h3>${sec.title}</h3>
+            <p>${sec.content}</p>
+          </div>
+        `).join('');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadPrivacy);
+  </script>
+</body>
+</html>

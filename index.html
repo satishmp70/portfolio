@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary SEO Metadata -->
+  <title>Diyaseva Technologies — Senior Engineering Practice for Scalable SaaS, Headless CMS & Enterprise Software</title>
+  <meta name="description" content="Diyaseva is a senior software engineering studio designing and developing scalable SaaS platforms, headless CMS meshes, and custom enterprise software for high-growth businesses." />
+  <meta name="keywords" content="Diyaseva, SaaS development, custom software engineering, headless CMS solutions, enterprise web applications, B2B software studio" />
+  <meta name="author" content="Diyaseva Technologies" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Social Sharing Metadata -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://diyaseva.com/" />
+  <meta property="og:title" content="Diyaseva Technologies — Senior Enterprise Software Studio" />
+  <meta property="og:description" content="High-performance SaaS platforms, Headless CMS meshes, and custom software engineering." />
+  <meta property="og:image" content="/src/assets/images/hero-mockup.svg" />
+
+  <!-- Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Diyaseva Technologies — Senior Software Studio" />
+  <meta name="twitter:description" content="Custom software engineering, SaaS platforms, and enterprise web applications." />
+  <meta name="twitter:image" content="/src/assets/images/hero-mockup.svg" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <link rel="stylesheet" href="/src/css/animations.css" />
+
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Diyaseva Technologies",
+    "legalName": "Diyaseva Technologies, Inc.",
+    "description": "Senior B2B software engineering practice specializing in SaaS, Headless CMS, and custom enterprise cloud systems.",
+    "url": "https://diyaseva.com",
+    "logo": "https://diyaseva.com/src/assets/images/hero-mockup.svg",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "technical consultations",
+      "email": "hello@diyaseva.com",
+      "telephone": "+1-415-890-3420"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. NAVIGATION / HEADER
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo" id="navbarBrand" aria-label="Diyaseva Home">
+        <div class="brand-icon">DS</div>
+        <div class="brand-logo-content">
+          <span class="brand-title">Diyaseva</span>
+          <span class="brand-badge">Engineering</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="navbarLinks">
+          <!-- Populated dynamically by main.js from siteData.json -->
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="live-status-badge d-none-mobile">
+          <span class="pulse-dot"></span>
+          <span>Available for Q4</span>
+        </div>
+        <a href="#contact" class="btn btn-primary btn-sm" id="navbarCta">Project Inquiry</a>
+        
+        <!-- Mobile Menu Hamburger Button -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <ul class="mobile-nav-links" id="mobileNavLinks">
+      <!-- Populated dynamically -->
+    </ul>
+    <a href="#contact" class="btn btn-primary btn-block mobile-nav-link">Project Inquiry</a>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- =========================================================================
+         2. HERO SECTION
+         ========================================================================= -->
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge-row">
+              <div class="section-badge" id="heroBadge">SENIOR ENGINEERING PRACTICE</div>
+              <div class="live-status-pill">
+                <span class="pulse-dot"></span>
+                <span>2 Sprint Slots Available</span>
+              </div>
+            </div>
+            
+            <h1 class="hero-headline" id="heroHeadline">
+              Engineering Resilient Digital Products for <span class="hero-gradient-text">High-Growth Enterprises</span>
+            </h1>
+            <p class="hero-subtext" id="heroSubtext">
+              We design and build high-throughput SaaS platforms, headless CMS ecosystems, and custom software systems with sub-second performance, strict typing, and zero technical debt.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary btn-lg" id="heroCtaPrimary">Explore Selected Work</a>
+              <a href="#estimator" class="btn btn-secondary btn-lg" id="heroCtaSecondary">Scope Estimator</a>
+            </div>
+
+            <div class="hero-trust-bar">
+              <span class="hero-trust-label">Core Capabilities:</span>
+              <div id="heroPills" style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <!-- Populated dynamically -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual: Interactive SaaS/Telemetry Mockup Frame -->
+          <div class="hero-visual-wrapper">
+            <div class="hero-visual-frame">
+              <img src="/src/assets/images/hero-mockup.svg" alt="Diyaseva Real-Time Telemetry and Cloud Metrics Dashboard Interface" width="880" height="560" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. TRUST / CAPABILITIES TICKER
+         ========================================================================= -->
+    <section class="capabilities-bar" aria-label="Core Technology Standards">
+      <div class="container">
+        <div class="capabilities-track" id="capabilitiesContainer">
+          <!-- Populated dynamically from siteData.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. SERVICES SECTION ("What We Build")
+         ========================================================================= -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">SERVICES & SOLUTIONS</div>
+          <h2 class="section-title">What We Build</h2>
+          <p class="section-subtitle">Scalable technology solutions engineered around your revenue models, operational velocity, and user adoption.</p>
+        </div>
+
+        <div class="services-grid" id="servicesContainer">
+          <!-- Populated dynamically from siteData.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. FEATURED PROJECTS / PORTFOLIO
+         ========================================================================= -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">PRODUCTION WORK</div>
+          <h2 class="section-title">Selected Engineering Deployments</h2>
+          <p class="section-subtitle">A look at high-throughput SaaS platforms, headless CMS meshes, and custom enterprise tools we have architected.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="portfolio-filter-bar" id="projectFilterContainer">
+          <!-- Populated dynamically from siteData.json -->
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projectsContainer">
+          <!-- Populated dynamically from siteData.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. INTERACTIVE PROJECT SCOPE & ARCHITECTURE ESTIMATOR
+         ========================================================================= -->
+    <section class="section" id="estimator">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">INTERACTIVE PLANNING</div>
+          <h2 class="section-title">Architecture & Scope Estimator</h2>
+          <p class="section-subtitle">Select your project parameters to get an instant recommended technology stack and estimated delivery roadmap.</p>
+        </div>
+
+        <div class="glass-card estimator-wrapper">
+          <div class="estimator-controls">
+            <!-- Step 1: Project Type -->
+            <div class="estimator-group">
+              <label class="estimator-label">1. Primary Product Architecture</label>
+              <div class="estimator-options-grid" id="estTypeOptions">
+                <button type="button" class="est-option-btn active" data-type="saas">
+                  <strong>Multi-Tenant SaaS</strong>
+                  <span>Subscription, Billing & RBAC</span>
+                </button>
+                <button type="button" class="est-option-btn" data-type="cms">
+                  <strong>Headless CMS Mesh</strong>
+                  <span>Multilingual Publishing & Edge</span>
+                </button>
+                <button type="button" class="est-option-btn" data-type="custom">
+                  <strong>Custom Enterprise App</strong>
+                  <span>Workflows, ERP & Dispatch</span>
+                </button>
+                <button type="button" class="est-option-btn" data-type="api">
+                  <strong>High-Throughput API</strong>
+                  <span>Event Streaming & Ledgers</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Scale / Traffic -->
+            <div class="estimator-group">
+              <label class="estimator-label">2. Anticipated Traffic & Concurrency</label>
+              <div class="estimator-options-grid" id="estScaleOptions">
+                <button type="button" class="est-option-btn active" data-scale="mvp">
+                  <strong>MVP / Growth</strong>
+                  <span>&lt; 50k monthly active users</span>
+                </button>
+                <button type="button" class="est-option-btn" data-scale="scale">
+                  <strong>High Concurrency</strong>
+                  <span>50k - 500k active users</span>
+                </button>
+                <button type="button" class="est-option-btn" data-scale="enterprise">
+                  <strong>Mission-Critical</strong>
+                  <span>1M+ events/day &amp; 99.99% SLA</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 3: Feature Modules -->
+            <div class="estimator-group">
+              <label class="estimator-label">3. Core Technical Capabilities</label>
+              <div class="estimator-checks-grid" id="estFeatureChecks">
+                <label class="est-check-item">
+                  <input type="checkbox" checked data-feature="auth" />
+                  <span>Role-Based Access (RBAC) & SSO</span>
+                </label>
+                <label class="est-check-item">
+                  <input type="checkbox" checked data-feature="billing" />
+                  <span>Stripe / Usage Billing Engine</span>
+                </label>
+                <label class="est-check-item">
+                  <input type="checkbox" checked data-feature="realtime" />
+                  <span>WebSocket Real-Time Telemetry</span>
+                </label>
+                <label class="est-check-item">
+                  <input type="checkbox" data-feature="gis" />
+                  <span>GIS Map & Route Optimization</span>
+                </label>
+                <label class="est-check-item">
+                  <input type="checkbox" data-feature="compliance" />
+                  <span>SOC2 & Audit Logging Pipeline</span>
+                </label>
+                <label class="est-check-item">
+                  <input type="checkbox" data-feature="mobile" />
+                  <span>PWA & Offline Tablet Sync</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Estimator Output Panel -->
+          <div class="estimator-summary-panel">
+            <div class="est-summary-header">
+              <span class="est-summary-tag">RECOMMENDED BLUEPRINT</span>
+              <h3 id="estSummaryTitle">Multi-Tenant SaaS Engine</h3>
+            </div>
+
+            <div class="est-metric-row">
+              <div class="est-metric-card">
+                <span class="est-metric-label">Estimated Sprints</span>
+                <span class="est-metric-value" id="estDeliveryTime">5 - 7 Weeks</span>
+              </div>
+              <div class="est-metric-card">
+                <span class="est-metric-label">Recommended SLA</span>
+                <span class="est-metric-value" id="estSlaTier">99.99% Uptime</span>
+              </div>
+            </div>
+
+            <div class="est-tech-block">
+              <span class="est-tech-title">Recommended Stack:</span>
+              <div class="est-tech-pills" id="estTechStack">
+                <span class="tech-tag">React 18</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Redis</span>
+                <span class="tech-tag">Docker</span>
+              </div>
+            </div>
+
+            <div class="est-cta-box">
+              <a href="#contact" class="btn btn-primary btn-block" id="estPrefillBtn">
+                Submit Architecture Scope &rarr;
+              </a>
+              <span class="est-subtext">Direct technical roadmap consultation with senior architect</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. WHY CHOOSE US
+         ========================================================================= -->
+    <section class="section section-alt" id="why-us">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">ENGINEERING PRINCIPLES</div>
+          <h2 class="section-title">Why Tech Leaders Choose Diyaseva</h2>
+          <p class="section-subtitle">Disciplined architecture, transparent communication, and long-term technical reliability without the agency overhead.</p>
+        </div>
+
+        <div class="why-us-grid" id="whyUsContainer">
+          <!-- Populated dynamically from siteData.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. DEVELOPMENT PROCESS
+         ========================================================================= -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">METHODOLOGY</div>
+          <h2 class="section-title">Our 6-Stage Engineering Process</h2>
+          <p class="section-subtitle">A structured, milestone-driven workflow ensuring continuous clarity, speed, and production quality from day one.</p>
+        </div>
+
+        <div class="process-grid" id="processContainer">
+          <!-- Populated dynamically from siteData.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         9. TECHNOLOGY / EXPERTISE
+         ========================================================================= -->
+    <section class="section section-alt" id="tech">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">TECH STACK</div>
+          <h2 class="section-title">Technologies We Work With</h2>
+          <p class="section-subtitle">Industry-standard modern frameworks, robust database systems, and automated cloud infrastructure.</p>
+        </div>
+
+        <div class="tech-grid" id="technologiesContainer">
+          <!-- Populated dynamically from siteData.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         10. ABOUT COMPANY
+         ========================================================================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div>
+            <div class="section-badge" id="aboutBadge">ABOUT DIYASEVA</div>
+            <h2 class="section-title" id="aboutHeadline">Senior Engineering Practice Built for Scalability</h2>
+            <p style="font-size: 1.1rem; color: var(--text-primary); font-weight: 500; margin-bottom: 20px;" id="aboutLead">
+              We partner with businesses to transform ambitious product ideas and operational friction into high-performing software.
+            </p>
+            <div id="aboutParagraphs">
+              <!-- Populated dynamically -->
+            </div>
+            <div class="about-highlights" id="aboutHighlights">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
+
+          <!-- Company Philosophy Card -->
+          <div>
+            <div class="glass-card" style="padding: 36px; border: 1px solid var(--border-glass); background: var(--gradient-card);">
+              <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 24px;">
+                <div class="brand-icon">DS</div>
+                <div>
+                  <h3 style="font-size: 1.25rem; margin-bottom: 4px;">Engineering Philosophy</h3>
+                  <div style="font-size: 0.82rem; color: var(--accent-cyan); font-family: var(--font-mono); font-weight: 600;">CLEAN CODE • ZERO TECH DEBT • 99.99% SLA</div>
+                </div>
+              </div>
+              <p style="font-size: 0.98rem; color: var(--text-secondary); line-height: 1.7;">
+                We treat software as an evolving business asset. Our focus is on maintainability, modern architecture, and clear documentation that gives you total ownership and freedom to scale without vendor lock-in.
+              </p>
+              
+              <div style="margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+                <div>
+                  <div style="font-size: 0.85rem; color: var(--text-primary); font-weight: 600;">Global Engineering Hubs</div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">San Francisco &amp; Bangalore</div>
+                </div>
+                <a href="#contact" class="btn btn-primary btn-sm">Project Inquiry</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         11. STATS SECTION
+         ========================================================================= -->
+    <section class="section section-alt" id="stats">
+      <div class="container">
+        <div class="stats-grid" id="statsContainer">
+          <!-- Populated dynamically from siteData.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         12. TESTIMONIALS SECTION
+         ========================================================================= -->
+    <section class="section" id="testimonialsSection">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">TESTIMONIALS</div>
+          <h2 class="section-title">Trusted by Engineering Leaders & CTOs</h2>
+          <p class="section-subtitle">Direct feedback on our technical execution, delivery velocity, and long-term partnership.</p>
+        </div>
+
+        <div class="testimonials-grid" id="testimonialsContainer">
+          <!-- Populated dynamically from siteData.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         13. HIGH CONVERTING CTA BANNER
+         ========================================================================= -->
+    <section class="section" id="ctaBannerSection">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-content">
+            <div class="section-badge" style="margin-bottom: 14px;">DISCUSS YOUR PRODUCT ROADMAP</div>
+            <h2 style="font-size: 2.3rem; margin-bottom: 16px;" id="ctaHeadline">Have a Mission-Critical Software Project?</h2>
+            <p style="font-size: 1.12rem; color: var(--text-secondary); margin-bottom: 32px;" id="ctaSubtext">
+              From architectural blueprint to full-scale enterprise launch, our senior engineering team is ready to evaluate your requirements and scope your solution.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+              <a href="#contact" class="btn btn-primary btn-lg" id="ctaButton">Submit Project Inquiry</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         14. CONTACT SECTION
+         ========================================================================= -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">DIRECT CONSULTATION</div>
+          <h2 class="section-title">Submit a Project Inquiry</h2>
+          <p class="section-subtitle">Whether you have a fully scoped requirement or need guidance exploring technical feasibility, we would love to discuss your roadmap.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Direct Channels -->
+          <div class="contact-channels" id="contactChannelsContainer">
+            <!-- Populated dynamically from siteData.json -->
+          </div>
+
+          <!-- Client-side Inquiry Form -->
+          <div class="contact-form-panel">
+            <h3 style="font-size: 1.25rem; margin-bottom: 6px;">Submit a Project Inquiry</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 24px;">Fill out this brief overview and our senior engineering team will respond within 24 business hours.</p>
+
+            <form id="projectInquiryForm">
+              <div class="form-group">
+                <label for="clientName" class="form-label">Your Name / Organization *</label>
+                <input type="text" id="clientName" class="form-input" placeholder="e.g. Dr. Arthur Sterling / PeakScale" required />
+              </div>
+
+              <div class="form-group">
+                <label for="clientEmail" class="form-label">Work Email Address *</label>
+                <input type="email" id="clientEmail" class="form-input" placeholder="e.g. arthur@peakscale.io" required />
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div class="form-group">
+                  <label for="projectType" class="form-label">Product Type</label>
+                  <select id="projectType" class="form-select">
+                    <option value="SaaS Platform">SaaS Platform</option>
+                    <option value="Headless CMS Mesh">Headless CMS Mesh</option>
+                    <option value="Custom Enterprise App">Custom Enterprise App</option>
+                    <option value="High-Performance Web App">High-Performance Web App</option>
+                    <option value="UI/UX Design System">UI/UX Design System</option>
+                    <option value="DevOps & SLA Support">DevOps &amp; SLA Support</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="projectBudget" class="form-label">Target Timeline</label>
+                  <select id="projectBudget" class="form-select">
+                    <option value="Immediate (Q4 Sprints)">Immediate (Q4 Sprints)</option>
+                    <option value="Starting within 30 days">Starting within 30 days</option>
+                    <option value="Planning / Feasibility stage">Planning / Feasibility</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="projectDetails" class="form-label">Technical Brief / Project Scope *</label>
+                <textarea id="projectDetails" class="form-textarea" placeholder="Describe the software you want to build, primary workflows, scaling targets, or existing tech stack..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                Submit Project Inquiry &rarr;
+              </button>
+
+              <div id="formStatusMessage" class="form-status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       15. INTERACTIVE CASE STUDY MODAL DIALOG
+       ========================================================================= -->
+  <div class="modal-backdrop" id="caseStudyModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header-sticky">
+        <span style="font-size: 0.85rem; font-weight: 700; color: var(--accent-cyan); text-transform: uppercase; letter-spacing: 0.05em;" id="modalTitle">Project Case Study</span>
+        <button class="modal-close-btn" aria-label="Close Case Study Viewer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="modalDynamicContent">
+        <!-- Injected dynamically by caseStudyModal.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       16. FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#home" class="brand-logo">
+            <div class="brand-icon">DS</div>
+            <span id="footerBrandName">Diyaseva</span>
+          </a>
+          <p class="footer-brand-bio" id="footerBio">
+            Diyaseva Technologies is a senior-led software engineering and design practice building high-performance SaaS platforms, headless CMS meshes, and custom enterprise software for forward-thinking organizations worldwide.
+          </p>
+          <div class="footer-socials" id="footerSocialLinks">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-heading">Navigation</div>
+          <ul class="footer-links" id="footerQuickLinks">
+            <!-- Populated dynamically -->
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Solutions</div>
+          <ul class="footer-links" id="footerServicesLinks">
+            <!-- Populated dynamically -->
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Legal & Compliance</div>
+          <ul class="footer-links" id="footerLegalLinks">
+            <!-- Populated dynamically -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div id="footerCopyright">© 2026 Diyaseva Technologies, Inc. All rights reserved.</div>
+        <div>Engineered with High-Performance Modern Architecture • ISO27001 &amp; SOC2 Aligned</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript Module -->
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

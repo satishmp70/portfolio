@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms and Conditions — Diyaseva Technologies</title>
+  <meta name="description" content="Terms and Conditions governing software engineering, SaaS consulting, and development services." />
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <link rel="stylesheet" href="/src/css/animations.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" id="termsBrandLogo">
+        <div class="brand-icon">DS</div>
+        <span id="termsCompanyName">Diyaseva Technologies</span>
+      </a>
+
+      <div class="nav-actions">
+        <a href="index.html" class="btn btn-secondary btn-sm">
+          ← Back to Home
+        </a>
+        <a href="index.html#contact" class="btn btn-primary btn-sm">
+          Project Inquiry
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="legal-page-header">
+    <div class="container container-narrow">
+      <div class="section-badge">LEGAL AGREEMENT</div>
+      <h1 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 14px;" id="termsTitle">Terms and Conditions</h1>
+      <p style="font-size: 1.1rem; color: var(--text-muted); max-width: 680px; margin: 0 auto 16px auto;" id="termsSubtitle">
+        Please review the general terms governing technology consulting, custom software development, and digital services.
+      </p>
+      <div style="font-size: 0.85rem; color: var(--accent-cyan); font-family: var(--font-mono);" id="termsLastUpdated">
+        Last Updated: September 20, 2026
+      </div>
+    </div>
+  </section>
+
+  <!-- Legal Body Content -->
+  <main class="legal-content-body">
+    <div class="container container-narrow" id="termsSectionsContainer">
+      <!-- Injected dynamically from siteData.json -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <div id="termsFooterCopyright">© 2026 Diyaseva Technologies, Inc. All rights reserved.</div>
+        <div><a href="privacy.html" class="footer-link">Privacy Policy</a> • <a href="index.html" class="footer-link">Home</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { getSiteData } from '/src/js/dataLoader.js';
+
+    async function loadTerms() {
+      const siteData = await getSiteData();
+      if (!siteData || !siteData.termsAndConditions) return;
+
+      const terms = siteData.termsAndConditions;
+      const comp = siteData.company;
+
+      document.title = `${terms.title} — ${comp.name}`;
+      
+      const compNameEl = document.getElementById('termsCompanyName');
+      const footerCopyEl = document.getElementById('termsFooterCopyright');
+      const titleEl = document.getElementById('termsTitle');
+      const subEl = document.getElementById('termsSubtitle');
+      const updatedEl = document.getElementById('termsLastUpdated');
+      const container = document.getElementById('termsSectionsContainer');
+
+      if (compNameEl) compNameEl.textContent = comp.name;
+      if (footerCopyEl) footerCopyEl.textContent = `© ${new Date().getFullYear()} ${comp.name}. All rights reserved.`;
+      if (titleEl) titleEl.textContent = terms.title;
+      if (subEl) subEl.textContent = terms.subtitle;
+      if (updatedEl) updatedEl.textContent = `Last Updated: ${terms.lastUpdated}`;
+
+      if (container && terms.sections) {
+        container.innerHTML = terms.sections.map(sec => `
+          <div class="legal-section-block">
+            <h3>${sec.title}</h3>
+            <p>${sec.content}</p>
+          </div>
+        `).join('');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadTerms);
+  </script>
+</body>
+</html>

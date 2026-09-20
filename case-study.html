@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engineering Case Study — Diyaseva Technologies</title>
+  <meta name="description" content="Detailed engineering case study, challenges, architecture solutions, and measurable outcomes." />
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <link rel="stylesheet" href="/src/css/animations.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header scrolled">
+    <div class="container nav-container">
+      <a href="index.html#projects" class="brand-logo" id="csBrandLogo">
+        <div class="brand-icon">DS</div>
+        <span id="csCompanyName">Diyaseva Technologies</span>
+      </a>
+
+      <div class="nav-actions">
+        <a href="index.html#projects" class="btn btn-secondary btn-sm">
+          ← Back to Selected Work
+        </a>
+        <a href="index.html#contact" class="btn btn-primary btn-sm">
+          Project Inquiry
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: calc(var(--header-height) + 40px); padding-bottom: 80px;">
+    <div class="container container-narrow" id="caseStudyContainer">
+      <!-- Injected dynamically based on URL parameter ?id=project-id -->
+      <div style="text-align: center; padding: 60px 0;">
+        <p style="color: var(--text-muted);">Loading case study data...</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <div id="csFooterCopyright">© 2026 Diyaseva Technologies, Inc. All rights reserved.</div>
+        <div><a href="index.html" class="footer-link">Return to Home</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { getSiteData } from '/src/js/dataLoader.js';
+    import { getIcon } from '/src/js/icons.js';
+
+    async function loadStandaloneCaseStudy() {
+      const siteData = await getSiteData();
+      if (!siteData) return;
+
+      // Update Branding
+      const brandName = document.getElementById('csCompanyName');
+      const footerCopyright = document.getElementById('csFooterCopyright');
+      if (brandName) brandName.textContent = siteData.company.name;
+      if (footerCopyright) footerCopyright.textContent = `© ${new Date().getFullYear()} ${siteData.company.name}. All rights reserved.`;
+
+      // Get project ID from query params
+      const params = new URLSearchParams(window.location.search);
+      const projectId = params.get('id') || (siteData.projects[0] ? siteData.projects[0].id : null);
+      
+      const project = siteData.projects.find(p => p.id === projectId) || siteData.projects[0];
+      const container = document.getElementById('caseStudyContainer');
+
+      if (!project || !container) {
+        if (container) {
+          container.innerHTML = `
+            <div style="text-align: center; padding: 80px 0;">
+              <h2>Case Study Not Found</h2>
+              <p style="color: var(--text-muted); margin-bottom: 24px;">The requested case study could not be located.</p>
+              <a href="index.html#projects" class="btn btn-primary">Return to Projects</a>
+            </div>
+          `;
+        }
+        return;
+      }
+
+      document.title = `${project.title} — Case Study | ${siteData.company.name}`;
+      const cs = project.caseStudy || {};
+      const metrics = cs.results || [];
+      const features = cs.keyFeatures || [];
+      const processSteps = cs.developmentProcess || [];
+      const technologies = project.technologies || [];
+
+      container.innerHTML = `
+        <div style="margin-bottom: 36px;">
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px; flex-wrap: wrap;">
+            <span class="project-badge" style="position: static;">${project.category}</span>
+            <span style="font-size: 0.85rem; color: var(--text-subtle);">${project.clientType || ''}</span>
+          </div>
+
+          <h1 style="font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 16px;">${project.title}</h1>
+          <p style="font-size: 1.2rem; color: var(--text-primary); font-weight: 500; line-height: 1.5; margin-bottom: 24px;">
+            ${cs.headline || project.description}
+          </p>
+
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px;">
+            ${technologies.map(t => `<span class="tech-tag">${t}</span>`).join('')}
+          </div>
+        </div>
+
+        <!-- Featured Project Interface Mockup -->
+        <div class="hero-visual-frame" style="margin-bottom: 48px;">
+          <img src="${project.image}" alt="${project.title}" style="width: 100%; height: auto; display: block;" />
+        </div>
+
+        <!-- Impact / Metrics Grid -->
+        ${metrics.length ? `
+          <div style="margin-bottom: 48px;">
+            <h3 style="font-size: 1.25rem; margin-bottom: 20px; color: var(--text-primary);">Measurable Impact & Results</h3>
+            <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+              ${metrics.map(m => `
+                <div class="stat-card" style="padding: 20px;">
+                  <div class="stat-value" style="font-size: 2rem;">${m.metric}</div>
+                  <div class="stat-desc" style="color: var(--text-secondary); font-size: 0.88rem;">${m.label}</div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        <!-- The Challenge & Solution Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 48px;">
+          <div class="glass-card">
+            <h3 style="font-size: 1.2rem; margin-bottom: 12px; color: #f87171;">The Challenge</h3>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65;">${cs.challenge || 'Details unavailable'}</p>
+          </div>
+          <div class="glass-card">
+            <h3 style="font-size: 1.2rem; margin-bottom: 12px; color: var(--accent-emerald);">Our Engineering Solution</h3>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65;">${cs.solution || 'Details unavailable'}</p>
+          </div>
+        </div>
+
+        <!-- Key Features List -->
+        ${features.length ? `
+          <div class="glass-card" style="margin-bottom: 48px; padding: 32px;">
+            <h3 style="font-size: 1.25rem; margin-bottom: 20px;">Key Architectural Features</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+              ${features.map(f => `
+                <div style="display: flex; gap: 12px; align-items: flex-start;">
+                  <div style="color: var(--accent-cyan); margin-top: 2px;">${getIcon('check')}</div>
+                  <span style="font-size: 0.95rem; color: var(--text-secondary);">${f}</span>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        <!-- Development Process Breakdown -->
+        ${processSteps.length ? `
+          <div style="margin-bottom: 48px;">
+            <h3 style="font-size: 1.25rem; margin-bottom: 24px;">Development Lifecycle & Milestones</h3>
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+              ${processSteps.map(st => `
+                <div class="glass-card" style="padding: 20px 24px; display: flex; gap: 20px; align-items: center;">
+                  <div style="font-family: var(--font-mono); font-weight: 700; color: var(--accent-cyan); font-size: 1rem; min-width: 140px;">
+                    ${st.phase}
+                  </div>
+                  <div style="color: var(--text-secondary); font-size: 0.92rem;">
+                    ${st.detail}
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        <!-- Bottom CTA -->
+        <div class="cta-banner" style="padding: 40px; margin-top: 60px;">
+          <h3 style="font-size: 1.6rem; margin-bottom: 12px;">Need a Similar High-Scale Platform?</h3>
+          <p style="color: var(--text-secondary); margin-bottom: 24px;">Let's discuss how Diyaseva Technologies can architect a scalable solution for your business.</p>
+          <a href="index.html#contact" class="btn btn-primary btn-lg">Project Inquiry</a>
+        </div>
+      `;
+    }
+
+    document.addEventListener('DOMContentLoaded', loadStandaloneCaseStudy);
+  </script>
+</body>
+</html>
