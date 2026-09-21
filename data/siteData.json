@@ -54,7 +54,7 @@
     },
     "seo": {
       "siteUrl": "https://diyaseva.com",
-      "ogImage": "/src/assets/images/hero-mockup.svg",
+      "ogImage": "/images/hero-mockup.svg",
       "keywords": "Diyaseva, SaaS development, custom software engineering, headless CMS solutions, enterprise web applications, B2B software studio"
     }
   },
@@ -306,10 +306,10 @@
       "category": "SaaS",
       "clientType": "Cloud Infrastructure & DevOps Vendor (San Francisco, CA)",
       "description": "A high-throughput monitoring platform that ingests server metrics, tracks usage spikes, and automates multi-tier enterprise billing with zero sync latency.",
-      "image": "/src/assets/images/projects/project-saas.svg",
+      "image": "/images/projects/project-saas.svg",
       "technologies": ["React 18", "TypeScript", "Node.js", "PostgreSQL", "TimescaleDB", "Redis", "Stripe API", "Docker"],
       "url": "#projects",
-      "caseStudyUrl": "case-study.html?id=cloudmetrics-saas-platform",
+      "caseStudyUrl": "/case-study/?id=cloudmetrics-saas-platform",
       "featured": true,
       "caseStudy": {
         "headline": "Real-Time Telemetry Streaming and Automated Usage-Based Billing for 300+ Enterprise Tenants",
@@ -345,10 +345,10 @@
       "category": "CMS",
       "clientType": "Digital Publishing & Global Media Group (New York, NY)",
       "description": "An enterprise headless CMS mesh empowering 120+ editorial staff to draft, review, localize, and publish content across 8 international frontends instantaneously.",
-      "image": "/src/assets/images/projects/project-cms.svg",
+      "image": "/images/projects/project-cms.svg",
       "technologies": ["Next.js 14", "TypeScript", "Strapi Headless CMS", "GraphQL", "Tailwind CSS", "AWS S3", "CloudFront"],
       "url": "#projects",
-      "caseStudyUrl": "case-study.html?id=omnipress-headless-cms",
+      "caseStudyUrl": "/case-study/?id=omnipress-headless-cms",
       "featured": true,
       "caseStudy": {
         "headline": "Unified Multilingual Content Infrastructure Delivering Sub-Second Page Loads Globally",
@@ -384,10 +384,10 @@
       "category": "Custom Software",
       "clientType": "Supply Chain & Regional Logistics Enterprise (Chicago, IL)",
       "description": "A purpose-built logistics operations portal featuring live GPS vehicle tracking, automated route payload balancing, and barcode warehouse scanning.",
-      "image": "/src/assets/images/projects/project-custom.svg",
+      "image": "/images/projects/project-custom.svg",
       "technologies": ["Vue 3", "Python FastAPI", "PostgreSQL", "Redis", "Leaflet GIS", "WebSockets", "Docker"],
       "url": "#projects",
-      "caseStudyUrl": "case-study.html?id=logiops-custom-software",
+      "caseStudyUrl": "/case-study/?id=logiops-custom-software",
       "featured": true,
       "caseStudy": {
         "headline": "Automating Multi-Hub Fleet Dispatch and Real-Time Warehouse Inventory Scanning",
@@ -423,10 +423,10 @@
       "category": "Web App",
       "clientType": "B2B Financial Services & Cross-Border Payments (London, UK)",
       "description": "An enterprise financial gateway facilitating automated multi-currency transfers, instant ledger reconciliation, and strict fraud detection checks.",
-      "image": "/src/assets/images/projects/project-fintech.svg",
+      "image": "/images/projects/project-fintech.svg",
       "technologies": ["React", "TypeScript", "Go (Golang)", "PostgreSQL", "Apache Kafka", "Redis", "Tailwind CSS"],
       "url": "#projects",
-      "caseStudyUrl": "case-study.html?id=finvault-banking-gateway",
+      "caseStudyUrl": "/case-study/?id=finvault-banking-gateway",
       "featured": true,
       "caseStudy": {
         "headline": "Sub-Second Multi-Currency Settlements with Double-Entry Cryptographic Ledger",

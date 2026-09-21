@@ -13,6 +13,13 @@ import { setupContactForm } from './contact.js';
 import { setupEstimator } from './estimator.js';
 
 let appSiteData = null;
+let revealObserver = null;
+
+/** --- Observe dynamically rendered .reveal elements so they never stay hidden --- */
+function observeReveals(scope = document) {
+  if (!revealObserver) return;
+  scope.querySelectorAll('.reveal:not(.active)').forEach(el => revealObserver.observe(el));
+}
 
 async function init() {
   appSiteData = await getSiteData();
@@ -52,8 +59,7 @@ async function init() {
   setupCardGlow();
 }
 
-/** --- Route Active Matcher Helper --- */
-function isLinkActive(href) {
+/** --- Route Active Matcher Helper --- */function isLinkActive(href) {
   const rawPath = window.location.pathname.replace(/\/index\.html$/, '/');
   const path = rawPath.endsWith('/') ? rawPath : rawPath + '/';
   const hash = window.location.hash;
@@ -167,7 +173,14 @@ function renderHero() {
 
   if (heroBadge) heroBadge.textContent = appSiteData.hero.badge;
   if (heroHeadline) {
-    heroHeadline.innerHTML = `${appSiteData.hero.headline.replace('High-Growth Enterprises', '<span class="hero-gradient-text">High-Growth Enterprises</span>')}`;
+    const headline = appSiteData.hero.headline || '';
+    // Wrap the final sentence/segment in a gradient span for visual emphasis
+    const lastDotIndex = headline.lastIndexOf('.');
+    if (lastDotIndex > 0 && lastDotIndex < headline.length - 1) {
+      heroHeadline.innerHTML = `${headline.slice(0, lastDotIndex + 1)} <span class="hero-gradient-text">${headline.slice(lastDotIndex + 1).trim()}</span>`;
+    } else {
+      heroHeadline.textContent = headline;
+    }
   }
   if (heroSubtext) heroSubtext.textContent = appSiteData.hero.subtext;
   
@@ -283,7 +296,7 @@ function renderProjects(category = 'All') {
         </div>
       </div>
     </div>
-  `).join('');
+  `).join('').replaceAll('case-study.html?id=', '/case-study/?id=');
 
   // Bind Case Study button listeners
   container.querySelectorAll('.js-view-case-study').forEach(btn => {
@@ -295,11 +308,14 @@ function renderProjects(category = 'All') {
       }
     });
   });
+
+  // Ensure freshly rendered cards become visible (they may render after the initial observer pass)
+  observeReveals(container);
 }
 
 /** --- Render Why Choose Us --- */
 function renderWhyChooseUs() {
-  const container = document.getElementById('whyUsContainer');
+  const container = document.getElementById('whyUsContainer') || document.getElementById('whyChooseUsContainer');
   if (!container || !appSiteData.whyChooseUs) return;
 
   container.innerHTML = appSiteData.whyChooseUs.map((w, idx) => `
@@ -525,7 +541,7 @@ function renderFooter() {
   const quickLinks = document.getElementById('footerQuickLinks');
   const servicesLinks = document.getElementById('footerServicesLinks');
   const legalLinks = document.getElementById('footerLegalLinks');
-  const socialLinks = document.getElementById('footerSocialLinks');
+  const socialLinks = document.getElementById('footerSocialLinks') || document.getElementById('footerSocials');
   const copyright = document.getElementById('footerCopyright');
 
   if (brandName) brandName.textContent = appSiteData.company.name;
@@ -539,7 +555,7 @@ function renderFooter() {
 
   if (servicesLinks && appSiteData.services) {
     servicesLinks.innerHTML = appSiteData.services.map(s => `
-      <li><a href="index.html#services" class="footer-link">${s.title}</a></li>
+      <li><a href="/services/" class="footer-link">${s.title}</a></li>
     `).join('');
   }
 
@@ -564,16 +580,28 @@ function renderFooter() {
   }
 }
 
-/** --- Spotlight Card Glow On Mouse Move --- */
+/** --- Spotlight Card Glow On Mouse Move (rAF-throttled) --- */
 function setupCardGlow() {
-  document.addEventListener('mousemove', (e) => {
+  let frame = null;
+  let lastEvent = null;
+
+  const applyGlow = () => {
+    frame = null;
+    if (!lastEvent) return;
     document.querySelectorAll('.glass-card, .project-card, .estimator-wrapper').forEach(card => {
       const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
+      const x = lastEvent.clientX - rect.left;
+      const y = lastEvent.clientY - rect.top;
       card.style.setProperty('--mouse-x', `${x}px`);
       card.style.setProperty('--mouse-y', `${y}px`);
     });
+  };
+
+  document.addEventListener('mousemove', (e) => {
+    lastEvent = e;
+    if (!frame) {
+      frame = requestAnimationFrame(applyGlow);
+    }
   });
 }
 
@@ -620,7 +648,7 @@ function setupScrollObserver() {
   const revealElements = document.querySelectorAll('.reveal');
   if (!revealElements.length) return;
 
-  const observer = new IntersectionObserver((entries, obs) => {
+  revealObserver = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
@@ -632,7 +660,7 @@ function setupScrollObserver() {
     rootMargin: '0px 0px -40px 0px'
   });
 
-  revealElements.forEach(el => observer.observe(el));
+  revealElements.forEach(el => revealObserver.observe(el));
 }
 
 // Bootstrap on DOM ready

@@ -40,8 +40,16 @@ export function openCaseStudyModal(project) {
   if (!modalBackdrop || !project) return;
   lastFocusedElement = document.activeElement;
 
-  const modalContainer = modalBackdrop.querySelector('#modalDynamicContent');
+  // Support both markup variants: dedicated content container or generic modal body
+  const modalContainer = modalBackdrop.querySelector('#modalDynamicContent')
+    || modalBackdrop.querySelector('.modal-body');
   if (!modalContainer) return;
+
+  // Update the modal title/badge when present (projects subpage variant)
+  const modalTitleEl = modalBackdrop.querySelector('#modalTitle');
+  const modalBadgeEl = modalBackdrop.querySelector('#modalBadge');
+  if (modalTitleEl) modalTitleEl.textContent = project.title || 'Project Case Study';
+  if (modalBadgeEl) modalBadgeEl.textContent = project.category || '';
 
   const cs = project.caseStudy || {};
   const metrics = cs.results || [];
@@ -126,16 +134,19 @@ export function openCaseStudyModal(project) {
     </div>
 
     <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 24px; border-top: 1px solid var(--border-subtle); flex-wrap: wrap; gap: 16px;">
-      <a href="${project.url || '#'}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-        ${getIcon('externalLink')} Visit Live Project Demo
-      </a>
-      <a href="case-study.html?id=${project.id}" class="btn btn-secondary">
+      ${project.url && !project.url.startsWith('#') ? `
+        <a href="${project.url}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          ${getIcon('externalLink')} Visit Live Project Demo
+        </a>
+      ` : ''}
+      <a href="/case-study/?id=${project.id}" class="btn ${project.url && !project.url.startsWith('#') ? 'btn-secondary' : 'btn-primary'}">
         Open as Standalone Page ${getIcon('arrowRight')}
       </a>
     </div>
   `;
 
   modalBackdrop.classList.add('open');
+  modalBackdrop.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
 
   const closeBtn = modalBackdrop.querySelector('.modal-close-btn');
@@ -145,6 +156,7 @@ export function openCaseStudyModal(project) {
 export function closeCaseStudyModal() {
   if (!modalBackdrop) return;
   modalBackdrop.classList.remove('open');
+  modalBackdrop.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
   if (lastFocusedElement) {
     lastFocusedElement.focus();
