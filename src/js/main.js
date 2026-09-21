@@ -29,10 +29,12 @@ async function init() {
   renderHero();
   renderCapabilities();
   renderServices();
+  renderIndustries();
   renderProjectFilters();
   renderProjects('All');
   renderWhyChooseUs();
   renderProcess();
+  renderTechMarquee();
   renderTechnologies();
   renderAbout();
   renderStats();
@@ -50,6 +52,30 @@ async function init() {
   setupCardGlow();
 }
 
+/** --- Route Active Matcher Helper --- */
+function isLinkActive(href) {
+  const rawPath = window.location.pathname.replace(/\/index\.html$/, '/');
+  const path = rawPath.endsWith('/') ? rawPath : rawPath + '/';
+  const hash = window.location.hash;
+
+  // Handle hash anchors (e.g. "/#estimator" or "#estimator")
+  if (href.includes('#')) {
+    const parts = href.split('#');
+    const targetPath = parts[0] ? (parts[0].endsWith('/') ? parts[0] : parts[0] + '/') : '/';
+    const targetHash = '#' + parts[1];
+    return path === targetPath && hash === targetHash;
+  }
+
+  // Handle root home link
+  const normHref = href.endsWith('/') ? href : href + '/';
+  if (normHref === '/') {
+    return (path === '/' || path === '') && (!hash || hash === '#home');
+  }
+
+  // Handle subpage directory matching (e.g. "/services/")
+  return path === normHref || path.startsWith(normHref);
+}
+
 /** --- Render Navigation --- */
 function renderNavigation() {
   const brandEl = document.getElementById('navbarBrand');
@@ -65,24 +91,69 @@ function renderNavigation() {
         <span class="brand-badge">${appSiteData.navigation.brand.badge}</span>
       </div>
     `;
+    brandEl.setAttribute('href', '/');
   }
 
   if (linksEl && appSiteData.navigation.links) {
-    linksEl.innerHTML = appSiteData.navigation.links.map(l => `
-      <li><a href="${l.href}" class="nav-link">${l.label}</a></li>
-    `).join('');
+    linksEl.innerHTML = appSiteData.navigation.links.map(l => {
+      const active = isLinkActive(l.href);
+      return `<li><a href="${l.href}" class="nav-link ${active ? 'active' : ''}">${l.label}</a></li>`;
+    }).join('');
   }
 
   if (mobileLinksEl && appSiteData.navigation.links) {
-    mobileLinksEl.innerHTML = appSiteData.navigation.links.map(l => `
-      <li><a href="${l.href}" class="mobile-nav-link">${l.label}</a></li>
-    `).join('');
+    mobileLinksEl.innerHTML = appSiteData.navigation.links.map(l => {
+      const active = isLinkActive(l.href);
+      return `<li><a href="${l.href}" class="mobile-nav-link ${active ? 'active' : ''}">${l.label}</a></li>`;
+    }).join('');
   }
 
   if (ctaBtn && appSiteData.navigation.ctaButton) {
     ctaBtn.textContent = appSiteData.navigation.ctaButton.label;
     ctaBtn.setAttribute('href', appSiteData.navigation.ctaButton.href);
   }
+}
+
+/** --- Render Industries & Domain Expertise (eSparkBiz & ScaleAcres Inspired) --- */
+function renderIndustries() {
+  const container = document.getElementById('industriesContainer');
+  if (!container || !appSiteData.industries) return;
+
+  container.innerHTML = appSiteData.industries.map((ind, idx) => `
+    <div class="glass-card industry-card reveal delay-${(idx % 3) + 1}">
+      <div>
+        <div class="industry-header">
+          <div class="industry-icon-box">${getIcon(ind.icon)}</div>
+          <div>
+            <h3 class="industry-title">${ind.name}</h3>
+          </div>
+        </div>
+
+        <div class="industry-tagline">${ind.tagline}</div>
+        <p class="industry-description">${ind.description}</p>
+
+        <div class="compliance-badge-list">
+          ${(ind.compliance || []).map(comp => `
+            <span class="compliance-pill">${comp}</span>
+          `).join('')}
+        </div>
+
+        <ul class="industry-capabilities">
+          ${(ind.capabilities || []).map(cap => `
+            <li class="industry-capability-item">
+              ${getIcon('check')}
+              <span>${cap}</span>
+            </li>
+          `).join('')}
+        </ul>
+      </div>
+
+      <div class="industry-metric-badge">
+        <span class="industry-metric-label">Verified Production Impact</span>
+        <span class="industry-metric-val">${ind.metric}</span>
+      </div>
+    </div>
+  `).join('');
 }
 
 /** --- Render Hero --- */
@@ -259,6 +330,39 @@ function renderProcess() {
           <li class="process-deliverable-item">${d}</li>
         `).join('')}
       </ul>
+    </div>
+  `).join('');
+}
+
+/** --- Render Tech Marquee Slider --- */
+function renderTechMarquee() {
+  const marqueeTrack = document.getElementById('techMarqueeTrack');
+  if (!marqueeTrack) return;
+
+  const defaultMarquee = [
+    { name: 'React', icon: 'react', category: 'Frontend' },
+    { name: 'Next.js', icon: 'nextjs', category: 'Framework' },
+    { name: 'Node.js', icon: 'nodejs', category: 'Backend' },
+    { name: 'Vercel', icon: 'vercel', category: 'Edge Cloud' },
+    { name: 'Firebase', icon: 'firebase', category: 'Cloud Backend' },
+    { name: 'AWS', icon: 'aws', category: 'Infrastructure' },
+    { name: 'MongoDB', icon: 'mongodb', category: 'Database' },
+    { name: 'TypeScript', icon: 'typescript', category: 'Language' },
+    { name: 'GraphQL', icon: 'graphql', category: 'API Mesh' },
+    { name: 'PostgreSQL', icon: 'postgresql', category: 'Relational DB' },
+    { name: 'Docker', icon: 'docker', category: 'Containers' },
+    { name: 'Tailwind CSS', icon: 'tailwind', category: 'Styling' }
+  ];
+
+  const techList = appSiteData.marqueeTechnologies || defaultMarquee;
+  // Duplicate array for infinite seamless looping
+  const combined = [...techList, ...techList];
+
+  marqueeTrack.innerHTML = combined.map(item => `
+    <div class="tech-marquee-item">
+      <span class="tech-marquee-icon">${getIcon(item.icon)}</span>
+      <span class="tech-marquee-name">${item.name}</span>
+      <span class="tech-marquee-cat">${item.category}</span>
     </div>
   `).join('');
 }
@@ -506,6 +610,9 @@ function setupNavigationEvents() {
       }
     });
   }
+
+  // Update active navigation state on hash navigation
+  window.addEventListener('hashchange', renderNavigation);
 }
 
 /** --- Scroll Reveal Intersection Observer --- */

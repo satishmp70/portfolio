@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selected Engineering Work & Case Studies — Diyaseva Technologies</title>
+  <meta name="description" content="Explore production SaaS platforms, enterprise headless CMS implementations, and custom web applications engineered by Diyaseva Technologies." />
+  <meta name="keywords" content="Software case studies, SaaS portfolio, Headless CMS examples, Diyaseva projects, Web application development" />
+
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-container">
+      <a href="/" class="brand-logo" id="navbarBrand" aria-label="Diyaseva Home">
+        <div class="brand-icon">DS</div>
+        <div class="brand-logo-content">
+          <span class="brand-title">Diyaseva</span>
+          <span class="brand-badge">Engineering</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links" id="navbarLinks">
+          <!-- Populated by main.js -->
+        </ul>
+      </nav>
+
+      <!-- Nav CTA -->
+      <div class="nav-actions">
+        <a href="/contact/" class="btn btn-primary btn-sm" id="navbarCta">Book a Consultation</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <!-- SVG icon inserted by JS -->
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+    <div class="mobile-nav-content">
+      <ul class="mobile-nav-links" id="mobileNavLinks">
+        <!-- Populated by main.js -->
+      </ul>
+      <div class="mobile-nav-actions">
+        <a href="/contact/" class="btn btn-primary btn-full">Book a Consultation</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a>
+        <span>/</span>
+        <span class="current">Selected Work</span>
+      </div>
+      <div class="hero-badge">PROVEN PRODUCTION TRACK RECORD</div>
+      <h1 class="page-title">Architected for Speed, Reliability, and Scale.</h1>
+      <p class="page-subtitle">
+        A curated selection of mission-critical SaaS platforms, headless CMS ecosystems, and custom software systems built for high-growth startups and global enterprises.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <!-- Filter Bar -->
+      <div class="project-filters" id="projectFilterContainer">
+        <!-- Populated by main.js -->
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projectsContainer">
+        <!-- Populated by main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Engineering Philosophy Callout -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-badge">ENGINEERING INTEGRITY</div>
+        <h2 class="section-title">Zero Mockups. 100% Real Production Code.</h2>
+        <p class="section-subtitle">
+          Every case study represents tested software deployed into live environments with automated CI/CD pipelines, strict code reviews, and measurable business outcomes.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="section-cta">
+    <div class="container">
+      <div class="cta-card reveal">
+        <div class="cta-content">
+          <div class="section-badge">START A TECHNICAL CONVERSATION</div>
+          <h2 class="cta-headline" id="ctaHeadline">Have a similar project in mind?</h2>
+          <p class="cta-subtext" id="ctaSubtext">Let's discuss how we can tailor our architectural patterns and delivery framework to your platform's specific requirements.</p>
+        </div>
+        <div class="cta-action">
+          <a href="/contact/" class="btn btn-white btn-lg" id="ctaButton">Book a Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="footer-logo">
+            <div class="brand-icon">DS</div>
+            <span class="brand-title" id="footerBrandName">Diyaseva Technologies</span>
+          </div>
+          <p class="footer-bio" id="footerBio"></p>
+          <div class="footer-social-links" id="footerSocialLinks"></div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links" id="footerQuickLinks"></ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links" id="footerServicesLinks"></ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Legal & Compliance</h4>
+          <ul class="footer-links" id="footerLegalLinks"></ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright" id="footerCopyright"></div>
+        <div class="footer-badge">Engineered for High-Growth Teams</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Technical Case Study Modal -->
+  <div class="case-study-modal" id="caseStudyModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-header-titles">
+          <span class="modal-badge" id="modalBadge">SaaS Architecture</span>
+          <h3 class="modal-title" id="modalTitle">Project Technical Deep-Dive</h3>
+        </div>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Case Study Modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <div class="modal-body" id="modalBody">
+        <!-- Populated dynamically by caseStudyModal.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript App -->
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

@@ -1,9 +1,8 @@
 /**
  * =========================================================================
- * CONTACT & INQUIRY FORM INTERACTIONS
+ * CONTACT & CONSULTATION LEAD CAPTURE HANDLER
  * =========================================================================
- * Client-side contact handling without backend dependencies.
- * Generates pre-formatted mailto inquiries and provides WhatsApp direct links.
+ * Minimalist, high-conversion consultation capture with automated mailto formatting.
  */
 
 export function setupContactForm(companyData) {
@@ -16,38 +15,40 @@ export function setupContactForm(companyData) {
     e.preventDefault();
 
     const name = form.querySelector('#clientName')?.value.trim();
+    const company = form.querySelector('#clientCompany')?.value.trim() || 'Not specified';
     const email = form.querySelector('#clientEmail')?.value.trim();
     const projectType = form.querySelector('#projectType')?.value;
-    const budget = form.querySelector('#projectBudget')?.value;
+    const timeline = form.querySelector('#projectBudget')?.value;
     const message = form.querySelector('#projectDetails')?.value.trim();
 
     if (!name || !email || !message) {
       if (statusEl) {
         statusEl.className = 'form-status error';
-        statusEl.textContent = 'Please fill out your name, email, and project description.';
+        statusEl.textContent = 'Please fill out all required fields (Name, Email, and Project Brief).';
       }
       return;
     }
 
-    const companyEmail = companyData?.contact?.email || 'contact@yourcompany.com';
-    const subject = encodeURIComponent(`New Project Inquiry from ${name} [${projectType || 'General'}]`);
+    const companyEmail = companyData?.contact?.email || 'hello@diyaseva.com';
+    const subject = encodeURIComponent(`Consultation Request: ${company} (${name}) — [${projectType || 'General'}]`);
     const body = encodeURIComponent(
       `Name: ${name}\n` +
-      `Email: ${email}\n` +
-      `Service Needed: ${projectType || 'Not specified'}\n` +
-      `Estimated Budget: ${budget || 'Flexible'}\n\n` +
-      `Project Details:\n${message}\n`
+      `Company: ${company}\n` +
+      `Work Email: ${email}\n` +
+      `Project Scope: ${projectType || 'Not specified'}\n` +
+      `Target Timeline: ${timeline || 'Flexible'}\n\n` +
+      `Project Brief & Requirements:\n${message}\n`
     );
 
     // Show success feedback
     if (statusEl) {
       statusEl.className = 'form-status success';
-      statusEl.innerHTML = `Preparing email client... If your email app does not open automatically, <a href="mailto:${companyEmail}?subject=${subject}&body=${body}" style="text-decoration: underline; color: var(--accent-cyan);">click here to send directly</a>.`;
+      statusEl.innerHTML = `Preparing consultation request... If your mail client does not launch automatically, <a href="mailto:${companyEmail}?subject=${subject}&body=${body}" style="text-decoration: underline; color: var(--accent-cyan);">click here to dispatch directly</a>.`;
     }
 
-    // Launch email client
+    // Launch mail client
     setTimeout(() => {
       window.location.href = `mailto:${companyEmail}?subject=${subject}&body=${body}`;
-    }, 600);
+    }, 500);
   });
 }

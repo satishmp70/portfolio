@@ -1,11 +1,12 @@
 /**
  * =========================================================================
- * SVG ICONS LIBRARY
+ * SVG ICONS LIBRARY (Vercel & Linear Grade)
  * =========================================================================
- * Clean, lightweight, inline SVG icons for services, features, and UI controls.
+ * Clean, lightweight, inline SVG icons for services, features, frameworks, and UI controls.
  */
 
 export const icons = {
+  // Service & Architecture Icons
   saas: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/><path d="m11 13 2 2 4-4"/></svg>`,
   
   cms: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>`,
@@ -30,6 +31,45 @@ export const icons = {
   
   shieldCheck: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>`,
   
+  sparkles: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>`,
+
+  // Industry Verticals Icons
+  health: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5v14"/><path d="M5 12h14"/></svg>`,
+
+  fintech: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/><path d="M6 15h2"/><path d="M14 15h4"/></svg>`,
+
+  ecommerce: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>`,
+
+  logistics: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="13" x="1" y="3" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>`,
+
+  proptech: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
+
+  // Tech Brand & Framework SVG Icons
+  react: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="-11.5 -10.23174 23 20.46348" fill="currentColor"><circle cx="0" cy="0" r="2.05" fill="#61dafb"/><g stroke="#61dafb" stroke-width="1" fill="none"><ellipse rx="11" ry="4.2"/><ellipse rx="11" ry="4.2" transform="rotate(60)"/><ellipse rx="11" ry="4.2" transform="rotate(120)"/></g></svg>`,
+  
+  nextjs: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 180 180" fill="none"><mask id="nextMask" maskUnits="userSpaceOnUse" x="0" y="0" width="180" height="180"><circle cx="90" cy="90" r="90" fill="#000"/></mask><g mask="url(#nextMask)"><circle cx="90" cy="90" r="90" fill="#000"/><path d="M149.508 157.438L69.1478 54H54V125.97H66.1136V69.3836L139.999 164.845C143.333 162.614 146.509 160.137 149.508 157.438Z" fill="url(#nextGrad)"/><rect x="115" y="54" width="12" height="72" fill="#fff"/></g><defs><linearGradient id="nextGrad" x1="109" y1="116.5" x2="144.5" y2="160.5" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs></svg>`,
+  
+  nodejs: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 32 32" fill="none"><path d="M16 3L3 10.5V25.5L16 33L29 25.5V10.5L16 3Z" stroke="#68A063" stroke-width="2" fill="none"/><path d="M16 11V25M10 14L16 18L22 14" stroke="#68A063" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+  
+  vercel: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 116 100" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M57.5 0L115 100H0L57.5 0Z"/></svg>`,
+  
+  firebase: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4.5 19.5L10 3.5l3.5 6.5L9 19.5H4.5z" fill="#FFA000"/><path d="M19.5 19.5L13.5 10l-3.5 6.5L13.5 21l6-1.5z" fill="#F57C00"/><path d="M4.5 19.5L13.5 21 9 19.5H4.5z" fill="#FFCA28"/></svg>`,
+  
+  aws: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9a4 4 0 0 1 7.4-2 3.5 3.5 0 0 1 5.6 4.3A3 3 0 0 1 18 17H6a4 4 0 0 1 0-8"/><path d="M7 19c4.5 2.5 9 1.5 11-1"/><path d="M17 16l2 2-2 2"/></svg>`,
+  
+  mongodb: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#13AA52" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C12 2 6 8 6 14C6 17.5 8.5 20.5 12 22C15.5 20.5 18 17.5 18 14C18 8 12 2 12 2Z"/><path d="M12 2V22"/></svg>`,
+  
+  typescript: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"><rect width="20" height="20" x="2" y="2" rx="4" fill="#3178C6"/><path d="M11.5 9H6.5V11H8V18H10V11H11.5V9Z" fill="#FFF"/><path d="M17.5 12.5C17.5 10.5 16 9.5 14 9.5H12V18H14C16.5 18 17.5 16.5 17.5 15C17.5 13.5 16.5 13 15.5 12.5C16.5 12 17.5 11.5 17.5 12.5Z" stroke="#FFF" stroke-width="1.2" fill="none"/></svg>`,
+  
+  graphql: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E10098" stroke-width="2"><circle cx="12" cy="4" r="2"/><circle cx="19" cy="8" r="2"/><circle cx="19" cy="16" r="2"/><circle cx="12" cy="20" r="2"/><circle cx="5" cy="16" r="2"/><circle cx="5" cy="8" r="2"/><path d="M12 4l7 4v8l-7 4-7-4V8z"/></svg>`,
+  
+  postgresql: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#336791" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6c0 1.657 3.582 3 8 3s8-1.343 8-3-3.582-3-8-3-8 1.343-8 3Z"/><path d="M4 6v6c0 1.657 3.582 3 8 3s8-1.343 8-3V6"/><path d="M4 12v6c0 1.657 3.582 3 8 3s8-1.343 8-3v-6"/></svg>`,
+  
+  docker: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2496ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 13.5c-.8-.2-2-.1-2.8.4-.7-.6-1.8-.9-2.8-.8-1-1.6-2.9-2.6-4.9-2.6H3.5C2.7 10.5 2 11.2 2 12c0 4.4 3.6 8 8 8 5 0 9.2-3.6 9.9-8.5.7.1 1.4 0 2.1-.5z"/><path d="M5 9.5h2.5V12H5zM8.5 9.5H11V12H8.5zM12 9.5h2.5V12H12zM5 6h2.5v2.5H5zM8.5 6H11v2.5H8.5zM12 6h2.5v2.5H12zM8.5 2.5H11V5H8.5z"/></svg>`,
+  
+  tailwind: `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#38BDF8"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.335 6.182 14.975 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.335 13.382 8.975 12 6.001 12z"/></svg>`,
+
+  // General UI Icons
   arrowRight: `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>`,
   
   externalLink: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>`,

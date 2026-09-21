@@ -5,25 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Engineering Case Study — Diyaseva Technologies</title>
   <meta name="description" content="Detailed engineering case study, challenges, architecture solutions, and measurable outcomes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/src/css/style.css" />
-  <link rel="stylesheet" href="/src/css/animations.css" />
 </head>
 <body>
 
   <!-- Header -->
   <header class="site-header scrolled">
     <div class="container nav-container">
-      <a href="index.html#projects" class="brand-logo" id="csBrandLogo">
+      <a href="/" class="brand-logo" id="csBrandLogo">
         <div class="brand-icon">DS</div>
         <span id="csCompanyName">Diyaseva Technologies</span>
       </a>
 
       <div class="nav-actions">
-        <a href="index.html#projects" class="btn btn-secondary btn-sm">
+        <a href="/projects/" class="btn btn-secondary btn-sm">
           ← Back to Selected Work
         </a>
-        <a href="index.html#contact" class="btn btn-primary btn-sm">
-          Project Inquiry
+        <a href="/contact/" class="btn btn-primary btn-sm">
+          Book a Consultation
         </a>
       </div>
     </div>
@@ -43,7 +45,7 @@
     <div class="container">
       <div class="footer-bottom" style="border-top: none; padding-top: 0;">
         <div id="csFooterCopyright">© 2026 Diyaseva Technologies, Inc. All rights reserved.</div>
-        <div><a href="index.html" class="footer-link">Return to Home</a></div>
+        <div><a href="/" class="footer-link">Return to Home</a></div>
       </div>
     </div>
   </footer>
@@ -75,7 +77,7 @@
             <div style="text-align: center; padding: 80px 0;">
               <h2>Case Study Not Found</h2>
               <p style="color: var(--text-muted); margin-bottom: 24px;">The requested case study could not be located.</p>
-              <a href="index.html#projects" class="btn btn-primary">Return to Projects</a>
+              <a href="/projects/" class="btn btn-primary">Return to Projects</a>
             </div>
           `;
         }
@@ -98,90 +100,92 @@
 
           <h1 style="font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 16px;">${project.title}</h1>
           <p style="font-size: 1.2rem; color: var(--text-primary); font-weight: 500; line-height: 1.5; margin-bottom: 24px;">
-            ${cs.headline || project.description}
+            ${project.description}
           </p>
 
-          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px;">
-            ${technologies.map(t => `<span class="tech-tag">${t}</span>`).join('')}
+          <div style="border-radius: var(--radius-xl); overflow: hidden; margin-bottom: 40px; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-lg);">
+            <img src="${project.image}" alt="${project.title}" style="width: 100%; height: auto; display: block;" />
           </div>
         </div>
 
-        <!-- Featured Project Interface Mockup -->
-        <div class="hero-visual-frame" style="margin-bottom: 48px;">
-          <img src="${project.image}" alt="${project.title}" style="width: 100%; height: auto; display: block;" />
-        </div>
-
-        <!-- Impact / Metrics Grid -->
+        <!-- Metrics Grid -->
         ${metrics.length ? `
           <div style="margin-bottom: 48px;">
-            <h3 style="font-size: 1.25rem; margin-bottom: 20px; color: var(--text-primary);">Measurable Impact & Results</h3>
-            <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+            <h3 style="font-size: 1.3rem; margin-bottom: 20px;">Measurable Production Impact</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
               ${metrics.map(m => `
-                <div class="stat-card" style="padding: 20px;">
+                <div class="stat-card" style="text-align: left;">
                   <div class="stat-value" style="font-size: 2rem;">${m.metric}</div>
-                  <div class="stat-desc" style="color: var(--text-secondary); font-size: 0.88rem;">${m.label}</div>
+                  <div class="stat-label" style="margin-bottom: 4px;">${m.label}</div>
+                  <div class="stat-desc" style="font-size: 0.85rem;">${m.detail}</div>
                 </div>
               `).join('')}
             </div>
           </div>
         ` : ''}
 
-        <!-- The Challenge & Solution Grid -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 48px;">
-          <div class="glass-card">
-            <h3 style="font-size: 1.2rem; margin-bottom: 12px; color: #f87171;">The Challenge</h3>
-            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65;">${cs.challenge || 'Details unavailable'}</p>
+        <!-- Technical Challenges & Architecture -->
+        <div style="display: grid; grid-template-columns: 1fr; gap: 32px; margin-bottom: 48px;">
+          <div class="glass-card" style="padding: 32px;">
+            <h3 style="font-size: 1.3rem; margin-bottom: 14px; color: #e11d48; display: flex; align-items: center; gap: 8px;">
+              Technical Challenge & Constraints
+            </h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">
+              ${cs.challenge || 'High-throughput scaling and complex enterprise state requirements.'}
+            </p>
           </div>
-          <div class="glass-card">
-            <h3 style="font-size: 1.2rem; margin-bottom: 12px; color: var(--accent-emerald);">Our Engineering Solution</h3>
-            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65;">${cs.solution || 'Details unavailable'}</p>
+
+          <div class="glass-card" style="padding: 32px; border-color: var(--accent-blue-subtle);">
+            <h3 style="font-size: 1.3rem; margin-bottom: 14px; color: var(--accent-blue); display: flex; align-items: center; gap: 8px;">
+              Architectural Solution & Implementation
+            </h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">
+              ${cs.solution || 'Engineered modular serverless microservices with distributed caching and multi-tenant security isolation.'}
+            </p>
           </div>
         </div>
 
-        <!-- Key Features List -->
+        <!-- Technologies Used -->
+        <div style="margin-bottom: 48px;">
+          <h3 style="font-size: 1.3rem; margin-bottom: 16px;">Technology Foundation</h3>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            ${technologies.map(t => `<span class="tech-tag" style="font-size: 0.95rem; padding: 6px 14px;">${t}</span>`).join('')}
+          </div>
+        </div>
+
+        <!-- Key Engineering Features -->
         ${features.length ? `
-          <div class="glass-card" style="margin-bottom: 48px; padding: 32px;">
-            <h3 style="font-size: 1.25rem; margin-bottom: 20px;">Key Architectural Features</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
-              ${features.map(f => `
-                <div style="display: flex; gap: 12px; align-items: flex-start;">
-                  <div style="color: var(--accent-cyan); margin-top: 2px;">${getIcon('check')}</div>
-                  <span style="font-size: 0.95rem; color: var(--text-secondary);">${f}</span>
-                </div>
-              `).join('')}
-            </div>
-          </div>
-        ` : ''}
-
-        <!-- Development Process Breakdown -->
-        ${processSteps.length ? `
           <div style="margin-bottom: 48px;">
-            <h3 style="font-size: 1.25rem; margin-bottom: 24px;">Development Lifecycle & Milestones</h3>
-            <div style="display: flex; flex-direction: column; gap: 16px;">
-              ${processSteps.map(st => `
-                <div class="glass-card" style="padding: 20px 24px; display: flex; gap: 20px; align-items: center;">
-                  <div style="font-family: var(--font-mono); font-weight: 700; color: var(--accent-cyan); font-size: 1rem; min-width: 140px;">
-                    ${st.phase}
-                  </div>
-                  <div style="color: var(--text-secondary); font-size: 0.92rem;">
-                    ${st.detail}
-                  </div>
-                </div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 20px;">Key Engineering Features</h3>
+            <ul class="service-deliverables" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              ${features.map(f => `
+                <li class="service-deliverable-item" style="background: var(--bg-secondary); padding: 14px 18px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+                  ${getIcon('check')}
+                  <span>${f}</span>
+                </li>
               `).join('')}
-            </div>
+            </ul>
           </div>
         ` : ''}
 
-        <!-- Bottom CTA -->
-        <div class="cta-banner" style="padding: 40px; margin-top: 60px;">
-          <h3 style="font-size: 1.6rem; margin-bottom: 12px;">Need a Similar High-Scale Platform?</h3>
-          <p style="color: var(--text-secondary); margin-bottom: 24px;">Let's discuss how Diyaseva Technologies can architect a scalable solution for your business.</p>
-          <a href="index.html#contact" class="btn btn-primary btn-lg">Project Inquiry</a>
+        <!-- CTA Callout -->
+        <div class="cta-card" style="margin-top: 60px;">
+          <div class="cta-content">
+            <h2 class="cta-headline">Need an architecture like this?</h2>
+            <p class="cta-subtext">Let's discuss how we can adapt this architectural blueprint for your organization.</p>
+          </div>
+          <div class="cta-action">
+            <a href="/contact/" class="btn btn-white btn-lg">Book a Consultation</a>
+          </div>
         </div>
       `;
     }
 
-    document.addEventListener('DOMContentLoaded', loadStandaloneCaseStudy);
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadStandaloneCaseStudy);
+    } else {
+      loadStandaloneCaseStudy();
+    }
   </script>
 </body>
 </html>

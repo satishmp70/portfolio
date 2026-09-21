@@ -118,14 +118,14 @@ export function setupEstimator() {
         const projectDetailsTextarea = document.getElementById('projectDetails');
 
         if (projectTypeSelect) {
-          if (state.type === 'saas') projectTypeSelect.value = 'SaaS Platform';
-          if (state.type === 'cms') projectTypeSelect.value = 'Headless CMS Mesh';
-          if (state.type === 'custom') projectTypeSelect.value = 'Custom Enterprise App';
+          if (state.type === 'saas') projectTypeSelect.value = 'Custom SaaS Development';
+          if (state.type === 'cms') projectTypeSelect.value = 'Headless CMS Architecture';
+          if (state.type === 'custom') projectTypeSelect.value = 'Legacy System Modernization';
           if (state.type === 'api') projectTypeSelect.value = 'High-Performance Web App';
         }
 
         if (projectDetailsTextarea) {
-          projectDetailsTextarea.value = `Hello Diyaseva Team,\n\nWe would like to submit a project inquiry for building a ${blueprint.title} with the following target specifications:\n- Concurrency / Scale: ${state.scale.toUpperCase()}\n- Selected Capabilities: ${state.features.join(', ')}\n- Recommended Stack: ${combinedTech.join(', ')}\n- Estimated Timeline: ${minWeeks}-${maxWeeks} Weeks\n\nPlease let us know your availability for an initial technical architecture discussion.`;
+          projectDetailsTextarea.value = `Hello Diyaseva Team,\n\nWe would like to book a technical consultation for building a ${blueprint.title} with the following target specifications:\n- Concurrency / Scale: ${state.scale.toUpperCase()}\n- Selected Capabilities: ${state.features.join(', ')}\n- Recommended Stack: ${combinedTech.join(', ')}\n- Estimated Timeline: ${minWeeks}-${maxWeeks} Weeks\n\nPlease let us know your availability for an initial architecture discussion.`;
         }
       };
     }

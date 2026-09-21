@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Technology Stack & Architecture — Diyaseva Technologies</title>
+  <meta name="description" content="Explore the modern tech stack and enterprise architecture standards utilized by Diyaseva Technologies: React, Next.js, Node.js, TypeScript, PostgreSQL, AWS, and Headless CMS." />
+  <meta name="keywords" content="Tech stack, Next.js, React, Node.js, TypeScript, PostgreSQL, AWS, Headless CMS, Diyaseva architecture" />
+
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-container">
+      <a href="/" class="brand-logo" id="navbarBrand" aria-label="Diyaseva Home">
+        <div class="brand-icon">DS</div>
+        <div class="brand-logo-content">
+          <span class="brand-title">Diyaseva</span>
+          <span class="brand-badge">Engineering</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links" id="navbarLinks">
+          <!-- Populated by main.js -->
+        </ul>
+      </nav>
+
+      <!-- Nav CTA -->
+      <div class="nav-actions">
+        <a href="/contact/" class="btn btn-primary btn-sm" id="navbarCta">Book a Consultation</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <!-- SVG icon inserted by JS -->
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+    <div class="mobile-nav-content">
+      <ul class="mobile-nav-links" id="mobileNavLinks">
+        <!-- Populated by main.js -->
+      </ul>
+      <div class="mobile-nav-actions">
+        <a href="/contact/" class="btn btn-primary btn-full">Book a Consultation</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="/">Home</a>
+        <span>/</span>
+        <span class="current">Technology Stack</span>
+      </div>
+      <div class="hero-badge">MODERN ENGINEERING FOUNDATION</div>
+      <h1 class="page-title">Enterprise-Grade Tools & Cloud Infrastructure.</h1>
+      <p class="page-subtitle">
+        We select best-in-class frameworks, typed languages, and distributed cloud services designed for extreme performance, type safety, and infinite scalability.
+      </p>
+    </div>
+  </section>
+
+  <!-- Continuous Tech Marquee -->
+  <section class="tech-marquee-section">
+    <div class="marquee-track" id="techMarqueeTrack">
+      <!-- Populated by main.js with React, Next.js, Node.js, TypeScript, PostgreSQL, AWS, etc. -->
+    </div>
+  </section>
+
+  <!-- Technologies Grid Section -->
+  <section class="section section-alt" id="tech">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-badge">STACK BREAKDOWN</div>
+        <h2 class="section-title">Specialized Frameworks & Tooling.</h2>
+        <p class="section-subtitle">
+          Organized across frontend, backend, databases, headless content mesh, and cloud DevOps environments.
+        </p>
+      </div>
+
+      <div class="technologies-grid" id="technologiesContainer">
+        <!-- Populated by main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture Principles -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-badge">CORE PRINCIPLES</div>
+        <h2 class="section-title">How We Select & Evaluate Technologies.</h2>
+        <p class="section-subtitle">
+          We prioritize battle-tested technologies with strong ecosystem support, predictable LTS cycles, and zero vendor lock-in.
+        </p>
+      </div>
+
+      <div class="why-us-grid">
+        <div class="glass-card why-card reveal">
+          <div class="why-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div class="why-content">
+            <h4>End-to-End Type Safety</h4>
+            <p>Strict TypeScript across client, server, and database ORMs ensures errors are caught at compile-time rather than in production.</p>
+          </div>
+        </div>
+
+        <div class="glass-card why-card reveal delay-1">
+          <div class="why-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+          </div>
+          <div class="why-content">
+            <h4>Decoupled Headless Microservices</h4>
+            <p>Independent services communicate via high-performance REST and GraphQL APIs, preventing monolithic bottlenecks.</p>
+          </div>
+        </div>
+
+        <div class="glass-card why-card reveal delay-2">
+          <div class="why-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <div class="why-content">
+            <h4>Automated CI/CD & Edge Delivery</h4>
+            <p>Every PR triggers automated unit, integration, and lint checks with instant preview deployments on global edge networks.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="section-cta">
+    <div class="container">
+      <div class="cta-card reveal">
+        <div class="cta-content">
+          <div class="section-badge">START A TECHNICAL CONVERSATION</div>
+          <h2 class="cta-headline" id="ctaHeadline">Need guidance on your technology stack?</h2>
+          <p class="cta-subtext" id="ctaSubtext">Schedule an architectural consultation with our principal engineers to evaluate your stack, audit performance, or plan a migration.</p>
+        </div>
+        <div class="cta-action">
+          <a href="/contact/" class="btn btn-white btn-lg" id="ctaButton">Book a Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="footer-logo">
+            <div class="brand-icon">DS</div>
+            <span class="brand-title" id="footerBrandName">Diyaseva Technologies</span>
+          </div>
+          <p class="footer-bio" id="footerBio"></p>
+          <div class="footer-social-links" id="footerSocialLinks"></div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links" id="footerQuickLinks"></ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links" id="footerServicesLinks"></ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Legal & Compliance</h4>
+          <ul class="footer-links" id="footerLegalLinks"></ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright" id="footerCopyright"></div>
+        <div class="footer-badge">Engineered for High-Growth Teams</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript App -->
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

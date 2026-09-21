@@ -66,47 +66,62 @@
       "badge": "Engineering"
     },
     "links": [
-      { "label": "Services", "href": "#services" },
-      { "label": "Work", "href": "#projects" },
-      { "label": "Methodology", "href": "#why-us" },
-      { "label": "Process", "href": "#process" },
-      { "label": "Stack", "href": "#tech" },
-      { "label": "Estimator", "href": "#estimator" },
-      { "label": "About", "href": "#about" }
+      { "label": "Services", "href": "/services/" },
+      { "label": "Industries", "href": "/industries/" },
+      { "label": "Stack", "href": "/tech-stack/" },
+      { "label": "Work", "href": "/projects/" },
+      { "label": "Estimator", "href": "/estimator/" },
+      { "label": "About", "href": "/about/" },
+      { "label": "Contact", "href": "/contact/" }
     ],
     "ctaButton": {
-      "label": "Project Inquiry",
-      "href": "#contact"
+      "label": "Book a Consultation",
+      "href": "/contact/"
     }
   },
 
   "hero": {
-    "badge": "SENIOR SOFTWARE ENGINEERING & DESIGN PRACTICE",
-    "headline": "Engineering Resilient Digital Products for High-Growth Enterprises",
-    "subtext": "We design and build high-throughput SaaS platforms, headless CMS ecosystems, and custom software systems with sub-second performance, strict typing, and zero technical debt.",
+    "badge": "PREMIUM SAAS & HEADLESS CMS SOFTWARE AGENCY",
+    "headline": "Next-Generation SaaS & Custom CMS Solutions.",
+    "subtext": "We build scalable, high-performance web applications and headless content management systems for modern brands.",
     "ctaPrimary": {
-      "label": "Explore Selected Work",
-      "href": "#projects"
+      "label": "Book a Consultation",
+      "href": "/contact/"
     },
     "ctaSecondary": {
-      "label": "Request Technical Proposal",
-      "href": "#contact"
+      "label": "Explore Featured Projects",
+      "href": "/projects/"
     },
     "trustPills": [
-      "Multi-Tenant SaaS",
-      "Headless CMS Mesh",
-      "Event-Driven Microservices",
-      "SOC2 / ISO27001 Aligned"
+      "Custom SaaS Platforms",
+      "Headless CMS Architecture",
+      "Legacy Modernization",
+      "AI & Automation Workflows"
     ]
   },
 
+  "marqueeTechnologies": [
+    { "name": "React", "icon": "react", "category": "Frontend" },
+    { "name": "Next.js", "icon": "nextjs", "category": "Framework" },
+    { "name": "Node.js", "icon": "nodejs", "category": "Backend" },
+    { "name": "Vercel", "icon": "vercel", "category": "Edge Cloud" },
+    { "name": "Firebase", "icon": "firebase", "category": "Cloud Backend" },
+    { "name": "AWS", "icon": "aws", "category": "Infrastructure" },
+    { "name": "MongoDB", "icon": "mongodb", "category": "Database" },
+    { "name": "TypeScript", "icon": "typescript", "category": "Language" },
+    { "name": "GraphQL", "icon": "graphql", "category": "API Mesh" },
+    { "name": "PostgreSQL", "icon": "postgresql", "category": "Relational DB" },
+    { "name": "Docker", "icon": "docker", "category": "Containers" },
+    { "name": "Tailwind CSS", "icon": "tailwind", "category": "Styling" }
+  ],
+
   "services": [
     {
-      "id": "saas-development",
+      "id": "custom-saas",
       "icon": "saas",
-      "title": "SaaS Platform Engineering",
-      "tagline": "Subscription & Multi-Tenant Systems",
-      "description": "End-to-end engineering of scalable subscription software with multi-tier billing, fine-grained access control, real-time analytics, and automated onboarding.",
+      "title": "Custom SaaS Development",
+      "tagline": "Building Scalable Cloud Software from MVP to Enterprise",
+      "description": "End-to-end engineering of scalable subscription software with multi-tenant data isolation, automated Stripe/Paddle billing, real-time analytics, and low-latency microservices.",
       "deliverables": [
         "Multi-Tenant Tenant Isolation & RBAC",
         "Stripe & Paddle Billing Integration",
@@ -115,61 +130,61 @@
       ]
     },
     {
-      "id": "cms-development",
+      "id": "headless-cms",
       "icon": "cms",
-      "title": "Headless CMS & Content Meshes",
-      "tagline": "Omnichannel Content Infrastructure",
-      "description": "Bespoke content architectures that decouple editorial management from high-speed frontend delivery, empowering global marketing and publishing teams.",
+      "title": "Headless CMS Architecture",
+      "tagline": "API-First Content Delivery",
+      "description": "Bespoke content infrastructures that decouple editorial management from high-speed frontend delivery (Contentful, Strapi, Sanity), empowering omnichannel publishing.",
       "deliverables": [
-        "Headless CMS Setup (Strapi, Sanity, Payload)",
-        "Instant Live Preview & Staging Workflows",
-        "Multilingual & Regional Content Sync",
-        "GraphQL / REST Content API Mesh"
+        "Headless CMS Setup (Contentful, Strapi, Sanity)",
+        "Instant Live Preview & Editorial Workflows",
+        "Multilingual & Regional Content Mesh",
+        "GraphQL / REST Content API Delivery"
       ]
     },
     {
-      "id": "custom-software",
+      "id": "legacy-modernization",
       "icon": "code",
-      "title": "Custom Enterprise Software",
-      "tagline": "Tailored Operational Systems",
-      "description": "Purpose-built business platforms that replace inefficient legacy tooling with automated workflows, seamless ERP integrations, and resilient databases.",
+      "title": "Legacy System Modernization",
+      "tagline": "Upgrading Outdated Tech Stacks",
+      "description": "Transforming brittle, monolithic legacy systems into resilient, high-speed microservices and modernized cloud architectures with zero data loss.",
       "deliverables": [
-        "Automated Dispatch & Inventory Engines",
-        "Legacy Data Migration & Synchronization",
-        "Internal Tooling & Secure Admin Portals",
-        "High-Security Compliance Workflows"
+        "Monolith to Microservices Refactoring",
+        "Legacy Data Migration & Schema Optimization",
+        "Zero-Downtime Database Transition",
+        "Automated CI/CD & Cloud Containerization"
+      ]
+    },
+    {
+      "id": "ai-automation",
+      "icon": "cpu",
+      "title": "AI & Automation Integration",
+      "tagline": "Building Smart Tools & Backend AI Workflows",
+      "description": "Integrating custom LLMs, vector search, intelligent document automation, and high-throughput event queues to supercharge operational efficiency.",
+      "deliverables": [
+        "LLM & Vector Embeddings Integration",
+        "Automated Intelligent Data Pipelines",
+        "Real-Time Event Queues (Kafka / Redis)",
+        "Custom Workflow Automation Agents"
       ]
     },
     {
       "id": "web-app-development",
       "icon": "web",
       "title": "High-Performance Web Apps",
-      "tagline": "Fast, Responsive, Interactive",
+      "tagline": "Sub-Second Edge Rendering",
       "description": "Sub-second loading Single Page Applications (SPAs) and Progressive Web Apps built with modern TypeScript, React, and serverless edge caching.",
       "deliverables": [
-        "Edge-Rendered Next.js & React Frameworks",
+        "Edge-Rendered Next.js & React SPAs",
         "Offline Capabilities & Real-Time Sync",
         "Core Web Vitals 95+ Optimization",
         "Automated CI/CD Deployment Pipelines"
       ]
     },
     {
-      "id": "ui-ux-design",
-      "icon": "design",
-      "title": "UI/UX & Design Systems",
-      "tagline": "Product Design That Converts",
-      "description": "Data-informed product design combining accessible typography, responsive component libraries, and interactive prototypes for high product adoption.",
-      "deliverables": [
-        "Figma Component Design Systems",
-        "Interactive Prototypes & User Testing",
-        "Design Tokens & Tailwind/CSS Frameworks",
-        "Accessibility (WCAG 2.1 AA) Compliance"
-      ]
-    },
-    {
       "id": "maintenance-support",
       "icon": "support",
-      "title": "DevOps, Cloud & 24/7 SLA",
+      "title": "Cloud Infrastructure & 24/7 SLA",
       "tagline": "Reliability, Security & Evolution",
       "description": "Proactive infrastructure monitoring, automated vulnerability scanning, database tuning, and guaranteed SLA response times for continuous uptime.",
       "deliverables": [
@@ -178,6 +193,99 @@
         "Automated Automated Backups & Disaster Recovery",
         "Dedicated Tier-1 Engineering SLA"
       ]
+    }
+  ],
+
+  "industries": [
+    {
+      "id": "healthcare",
+      "name": "Healthcare & Life Sciences",
+      "icon": "health",
+      "tagline": "HIPAA-Compliant Digital Health & Clinical Workflows",
+      "description": "Architecting resilient health portals, telehealth streaming, EHR/EMR FHIR integrations, and patient management systems with strict data privacy.",
+      "compliance": ["HIPAA Compliant", "HITRUST Ready", "HL7 / FHIR", "SOC 2 Type II"],
+      "capabilities": [
+        "Real-Time Telehealth Video & Encrypted Chat",
+        "EHR/EMR Bi-directional FHIR Interoperability",
+        "Patient Vital Telemetry & IoMT Device Sync",
+        "End-to-End Encrypted Medical Records Vault"
+      ],
+      "metric": "100% HIPAA Audit Compliance"
+    },
+    {
+      "id": "fintech",
+      "name": "FinTech & Banking",
+      "icon": "fintech",
+      "tagline": "High-Throughput Financial Systems & Payment Meshes",
+      "description": "Building mission-critical digital banking, ledger accounting, algorithmic risk assessment, and secure payment processing engines.",
+      "compliance": ["PCI-DSS Level 1", "SOC 2 Type II", "ISO 27001", "GDPR / CCPA"],
+      "capabilities": [
+        "Stripe, Adyen, and Plaid Payment Orchestration",
+        "Immutable Double-Entry Ledger Infrastructure",
+        "Real-Time Fraud Detection & Risk Scoring",
+        "Multi-Currency FX & Automated Reconciliation"
+      ],
+      "metric": "99.999% Transaction Execution SLA"
+    },
+    {
+      "id": "ecommerce",
+      "name": "E-Commerce & Retail",
+      "icon": "ecommerce",
+      "tagline": "Composable Commerce & Omnichannel Content Meshes",
+      "description": "Ultra-fast headless storefronts, multi-warehouse inventory synchronization, and high-concurrency flash sale architecture.",
+      "compliance": ["PCI-DSS", "WCAG 2.1 AA", "GDPR", "Core Web Vitals 95+"],
+      "capabilities": [
+        "Headless Shopify Plus & Medusa Architecture",
+        "Sub-50ms Global Edge Caching & Edge SSR",
+        "Real-Time Multi-Warehouse Inventory Mesh",
+        "AI Semantic Search & Personalization Engine"
+      ],
+      "metric": "<0.4s Instant Page Load Time"
+    },
+    {
+      "id": "logistics",
+      "name": "Logistics & Supply Chain",
+      "icon": "logistics",
+      "tagline": "Real-Time Fleet Telemetry & Warehouse Automation",
+      "description": "Distributed freight dispatch, live IoT tracking pipelines, dynamic route optimization algorithms, and automated customs clearance portals.",
+      "compliance": ["ISO 9001", "SOC 2", "ELD Compliant", "Real-Time IoT"],
+      "capabilities": [
+        "Live GPS Geofencing & Event Streaming",
+        "Dynamic Route Optimization & Fuel Telemetry",
+        "Automated Warehouse WMS & Barcode Sync",
+        "Carrier API Integrations (FedEx, UPS, Freight)"
+      ],
+      "metric": "12M+ Daily Ingested GPS Telemetry"
+    },
+    {
+      "id": "proptech",
+      "name": "Real Estate & PropTech",
+      "icon": "proptech",
+      "tagline": "MLS Feeds, Virtual Staging & Tenant SaaS",
+      "description": "High-capacity property listing portals with real-time MLS/IDX synchronization, 3D interactive floor plans, and automated lease workflows.",
+      "compliance": ["RESO Certified", "Fair Housing Act", "SOC 2", "SSL/TLS 1.3"],
+      "capabilities": [
+        "Real-Time RESO Web API & MLS Data Ingestion",
+        "Digital Lease Signing & Automated Tenant Screening",
+        "Interactive 3D Virtual Tour & CAD Viewer",
+        "Automated Rent Collection & Maintenance Portal"
+      ],
+      "metric": "400k+ Properties Indexed in Real-Time"
+    },
+    {
+      "id": "saas",
+      "name": "High-Growth B2B SaaS",
+      "icon": "saas",
+      "tagline": "Multi-Tenant Architecture & Cloud Scale",
+      "description": "Enterprise SaaS architectures with automated provisioning, self-serve tier upgrades, enterprise SSO/SAML, and sub-100ms API SLA.",
+      "compliance": ["SOC 2 Type II", "SAML 2.0 / Okta", "GDPR", "OWASP Top 10"],
+      "capabilities": [
+        "Multi-Tenant Database Partitioning & RBAC",
+        "Enterprise SAML/SSO (Okta, Azure AD, Google)",
+        "Automated Metered Billing & Usage Invoicing",
+        "High-Concurrency GraphQL & REST Microservices"
+      ],
+      "metric": "Sub-80ms Average Global Latency"
     }
   ],
 
@@ -538,19 +646,19 @@
   },
 
   "cta": {
-    "badge": "DISCUSS YOUR PRODUCT ROADMAP",
-    "headline": "Have a Mission-Critical Software Project?",
-    "subtext": "From architectural blueprint to full-scale enterprise launch, our senior engineering team is ready to evaluate your requirements and scope your solution.",
-    "buttonText": "Submit Project Inquiry",
+    "badge": "SCALE YOUR DIGITAL ARCHITECTURE",
+    "headline": "Ready to Build Your Next SaaS or Custom CMS?",
+    "subtext": "From initial blueprint to enterprise production launch, our senior engineering team is ready to evaluate your requirements and scope your solution.",
+    "buttonText": "Book a Consultation",
     "buttonHref": "#contact",
     "secondaryText": "or email our engineering leads directly at",
     "email": "hello@diyaseva.com"
   },
 
   "contact": {
-    "badge": "DIRECT CONSULTATION",
-    "title": "Submit a Project Inquiry",
-    "subtitle": "Whether you have a fully scoped technical specification or need senior guidance exploring feasibility, our engineering leads are ready to connect.",
+    "badge": "START A CONVERSATION",
+    "title": "Book a Technical Consultation",
+    "subtitle": "Tell us about your product roadmap, tech stack requirements, or architecture modernization goals. Our leads will respond within 24 hours.",
     "channels": {
       "email": {
         "label": "Direct Project RFP",
@@ -648,17 +756,17 @@
     "about": "Diyaseva Technologies is a senior-led software engineering and design practice building high-performance SaaS platforms, headless CMS meshes, and custom enterprise software for forward-thinking organizations worldwide.",
     "copyright": "© 2026 Diyaseva Technologies, Inc. All rights reserved.",
     "quickLinks": [
-      { "label": "Services", "href": "index.html#services" },
-      { "label": "Selected Work", "href": "index.html#projects" },
-      { "label": "Methodology", "href": "index.html#why-us" },
-      { "label": "Process", "href": "index.html#process" },
-      { "label": "Tech Stack", "href": "index.html#tech" },
-      { "label": "About", "href": "index.html#about" },
-      { "label": "Project Inquiry", "href": "index.html#contact" }
+      { "label": "Services", "href": "/services/" },
+      { "label": "Industries", "href": "/industries/" },
+      { "label": "Selected Work", "href": "/projects/" },
+      { "label": "Tech Stack", "href": "/tech-stack/" },
+      { "label": "Scope Estimator", "href": "/estimator/" },
+      { "label": "About & Process", "href": "/about/" },
+      { "label": "Book a Consultation", "href": "/contact/" }
     ],
     "legalLinks": [
-      { "label": "Terms & Conditions", "href": "terms.html" },
-      { "label": "Privacy Policy", "href": "privacy.html" }
+      { "label": "Terms & Conditions", "href": "/terms/" },
+      { "label": "Privacy Policy", "href": "/privacy/" }
     ]
   }
 }

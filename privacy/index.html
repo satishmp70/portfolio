@@ -4,26 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — Diyaseva Technologies</title>
-  <meta name="description" content="Privacy Policy detailing how Diyaseva Technologies collects, uses, and safeguards client information." />
+  <meta name="description" content="Privacy Policy governing information handling, data security, and client confidentiality." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/src/css/style.css" />
-  <link rel="stylesheet" href="/src/css/animations.css" />
 </head>
 <body>
 
   <!-- Header -->
   <header class="site-header scrolled">
     <div class="container nav-container">
-      <a href="index.html" class="brand-logo" id="privacyBrandLogo">
+      <a href="/" class="brand-logo" id="privacyBrandLogo">
         <div class="brand-icon">DS</div>
         <span id="privacyCompanyName">Diyaseva Technologies</span>
       </a>
 
       <div class="nav-actions">
-        <a href="index.html" class="btn btn-secondary btn-sm">
+        <a href="/" class="btn btn-secondary btn-sm">
           ← Back to Home
         </a>
-        <a href="index.html#contact" class="btn btn-primary btn-sm">
-          Project Inquiry
+        <a href="/contact/" class="btn btn-primary btn-sm">
+          Book a Consultation
         </a>
       </div>
     </div>
@@ -32,12 +34,12 @@
   <!-- Page Header -->
   <section class="legal-page-header">
     <div class="container container-narrow">
-      <div class="section-badge">DATA & CONFIDENTIALITY</div>
+      <div class="section-badge">DATA GOVERNANCE</div>
       <h1 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 14px;" id="privacyTitle">Privacy Policy</h1>
       <p style="font-size: 1.1rem; color: var(--text-muted); max-width: 680px; margin: 0 auto 16px auto;" id="privacySubtitle">
-        How we handle data, protect privacy, and ensure confidentiality when you visit our website or contact us.
+        How we handle data, protect privacy, and ensure client confidentiality when you visit our website or communicate with Diyaseva Technologies.
       </p>
-      <div style="font-size: 0.85rem; color: var(--accent-cyan); font-family: var(--font-mono);" id="privacyLastUpdated">
+      <div style="font-size: 0.85rem; color: var(--accent-blue); font-family: var(--font-mono);" id="privacyLastUpdated">
         Last Updated: September 20, 2026
       </div>
     </div>
@@ -55,7 +57,7 @@
     <div class="container">
       <div class="footer-bottom" style="border-top: none; padding-top: 0;">
         <div id="privacyFooterCopyright">© 2026 Diyaseva Technologies, Inc. All rights reserved.</div>
-        <div><a href="terms.html" class="footer-link">Terms & Conditions</a> • <a href="index.html" class="footer-link">Home</a></div>
+        <div><a href="/terms/" class="footer-link">Terms & Conditions</a> • <a href="/" class="footer-link">Home</a></div>
       </div>
     </div>
   </footer>
@@ -65,37 +67,40 @@
 
     async function loadPrivacy() {
       const siteData = await getSiteData();
-      if (!siteData || !siteData.privacyPolicy) return;
+      if (!siteData) return;
 
-      const priv = siteData.privacyPolicy;
-      const comp = siteData.company;
+      const brandName = document.getElementById('privacyCompanyName');
+      const footerCopyright = document.getElementById('privacyFooterCopyright');
+      if (brandName) brandName.textContent = siteData.company.name;
+      if (footerCopyright) footerCopyright.textContent = `© ${new Date().getFullYear()} ${siteData.company.name}. All rights reserved.`;
 
-      document.title = `${priv.title} — ${comp.name}`;
-      
-      const compNameEl = document.getElementById('privacyCompanyName');
-      const footerCopyEl = document.getElementById('privacyFooterCopyright');
+      const privacyData = siteData.privacyPolicy;
+      if (!privacyData) return;
+
       const titleEl = document.getElementById('privacyTitle');
       const subEl = document.getElementById('privacySubtitle');
       const updatedEl = document.getElementById('privacyLastUpdated');
       const container = document.getElementById('privacySectionsContainer');
 
-      if (compNameEl) compNameEl.textContent = comp.name;
-      if (footerCopyEl) footerCopyEl.textContent = `© ${new Date().getFullYear()} ${comp.name}. All rights reserved.`;
-      if (titleEl) titleEl.textContent = priv.title;
-      if (subEl) subEl.textContent = priv.subtitle;
-      if (updatedEl) updatedEl.textContent = `Last Updated: ${priv.lastUpdated}`;
+      if (titleEl) titleEl.textContent = privacyData.title;
+      if (subEl) subEl.textContent = privacyData.subtitle;
+      if (updatedEl) updatedEl.textContent = `Last Updated: ${privacyData.lastUpdated}`;
 
-      if (container && priv.sections) {
-        container.innerHTML = priv.sections.map(sec => `
-          <div class="legal-section-block">
-            <h3>${sec.title}</h3>
+      if (container && privacyData.sections) {
+        container.innerHTML = privacyData.sections.map(sec => `
+          <div class="legal-section">
+            <h2>${sec.title}</h2>
             <p>${sec.content}</p>
           </div>
         `).join('');
       }
     }
 
-    document.addEventListener('DOMContentLoaded', loadPrivacy);
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadPrivacy);
+    } else {
+      loadPrivacy();
+    }
   </script>
 </body>
 </html>

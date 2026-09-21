@@ -5,25 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terms and Conditions — Diyaseva Technologies</title>
   <meta name="description" content="Terms and Conditions governing software engineering, SaaS consulting, and development services." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/src/css/style.css" />
-  <link rel="stylesheet" href="/src/css/animations.css" />
 </head>
 <body>
 
   <!-- Header -->
   <header class="site-header scrolled">
     <div class="container nav-container">
-      <a href="index.html" class="brand-logo" id="termsBrandLogo">
+      <a href="/" class="brand-logo" id="termsBrandLogo">
         <div class="brand-icon">DS</div>
         <span id="termsCompanyName">Diyaseva Technologies</span>
       </a>
 
       <div class="nav-actions">
-        <a href="index.html" class="btn btn-secondary btn-sm">
+        <a href="/" class="btn btn-secondary btn-sm">
           ← Back to Home
         </a>
-        <a href="index.html#contact" class="btn btn-primary btn-sm">
-          Project Inquiry
+        <a href="/contact/" class="btn btn-primary btn-sm">
+          Book a Consultation
         </a>
       </div>
     </div>
@@ -37,7 +39,7 @@
       <p style="font-size: 1.1rem; color: var(--text-muted); max-width: 680px; margin: 0 auto 16px auto;" id="termsSubtitle">
         Please review the general terms governing technology consulting, custom software development, and digital services.
       </p>
-      <div style="font-size: 0.85rem; color: var(--accent-cyan); font-family: var(--font-mono);" id="termsLastUpdated">
+      <div style="font-size: 0.85rem; color: var(--accent-blue); font-family: var(--font-mono);" id="termsLastUpdated">
         Last Updated: September 20, 2026
       </div>
     </div>
@@ -55,7 +57,7 @@
     <div class="container">
       <div class="footer-bottom" style="border-top: none; padding-top: 0;">
         <div id="termsFooterCopyright">© 2026 Diyaseva Technologies, Inc. All rights reserved.</div>
-        <div><a href="privacy.html" class="footer-link">Privacy Policy</a> • <a href="index.html" class="footer-link">Home</a></div>
+        <div><a href="/privacy/" class="footer-link">Privacy Policy</a> • <a href="/" class="footer-link">Home</a></div>
       </div>
     </div>
   </footer>
@@ -65,37 +67,40 @@
 
     async function loadTerms() {
       const siteData = await getSiteData();
-      if (!siteData || !siteData.termsAndConditions) return;
+      if (!siteData) return;
 
-      const terms = siteData.termsAndConditions;
-      const comp = siteData.company;
+      const brandName = document.getElementById('termsCompanyName');
+      const footerCopyright = document.getElementById('termsFooterCopyright');
+      if (brandName) brandName.textContent = siteData.company.name;
+      if (footerCopyright) footerCopyright.textContent = `© ${new Date().getFullYear()} ${siteData.company.name}. All rights reserved.`;
 
-      document.title = `${terms.title} — ${comp.name}`;
-      
-      const compNameEl = document.getElementById('termsCompanyName');
-      const footerCopyEl = document.getElementById('termsFooterCopyright');
+      const termsData = siteData.termsAndConditions;
+      if (!termsData) return;
+
       const titleEl = document.getElementById('termsTitle');
       const subEl = document.getElementById('termsSubtitle');
       const updatedEl = document.getElementById('termsLastUpdated');
       const container = document.getElementById('termsSectionsContainer');
 
-      if (compNameEl) compNameEl.textContent = comp.name;
-      if (footerCopyEl) footerCopyEl.textContent = `© ${new Date().getFullYear()} ${comp.name}. All rights reserved.`;
-      if (titleEl) titleEl.textContent = terms.title;
-      if (subEl) subEl.textContent = terms.subtitle;
-      if (updatedEl) updatedEl.textContent = `Last Updated: ${terms.lastUpdated}`;
+      if (titleEl) titleEl.textContent = termsData.title;
+      if (subEl) subEl.textContent = termsData.subtitle;
+      if (updatedEl) updatedEl.textContent = `Last Updated: ${termsData.lastUpdated}`;
 
-      if (container && terms.sections) {
-        container.innerHTML = terms.sections.map(sec => `
-          <div class="legal-section-block">
-            <h3>${sec.title}</h3>
+      if (container && termsData.sections) {
+        container.innerHTML = termsData.sections.map(sec => `
+          <div class="legal-section">
+            <h2>${sec.title}</h2>
             <p>${sec.content}</p>
           </div>
         `).join('');
       }
     }
 
-    document.addEventListener('DOMContentLoaded', loadTerms);
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadTerms);
+    } else {
+      loadTerms();
+    }
   </script>
 </body>
 </html>
