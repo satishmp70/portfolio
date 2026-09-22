@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Vistarsolution — SaaS, Headless CMS & Custom Software Engineering</title>
+  <meta name="description" content="Senior-led engineering studio building SaaS platforms, headless CMS systems, and custom software — from architecture to launch." />
+  <meta name="keywords" content="Vistarsolution, SaaS development, headless CMS, custom software development, cloud infrastructure, AI automation" />
+  <meta name="author" content="Vistarsolution" />
+
+  <!-- OpenGraph Social Sharing -->
+  <meta property="og:title" content="Vistarsolution — SaaS, Headless CMS & Custom Software Engineering" />
+  <meta property="og:description" content="Senior-led engineering studio building SaaS platforms, headless CMS systems, and custom software." />
+  <meta property="og:image" content="/images/hero-mockup.svg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Preconnect Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Core Stylesheet -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <script type="module" crossorigin src="/assets/dataLoader-DErINc11.js"></script>
+  <script type="module" crossorigin src="/assets/icons-B18VjFVw.js"></script>
+  <script type="module" crossorigin src="/assets/main-CRASTAjG.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/dataLoader--lTJ_fCA.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. NAVIGATION / HEADER
+       ========================================================================= -->
+  <!-- Top utility bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <a href="mailto:hello@vistarsolution.com" id="topBarEmail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>hello@vistarsolution.com</span></a>
+        <a href="tel:+917021067824" id="topBarPhone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>+91 70210 67824</span></a>
+      </div>
+      <div class="top-bar-right">
+        <span id="topBarLocation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg><span>Nalasopara West</span></span>
+        <div class="top-bar-socials" id="topBarSocials"></div>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="/" class="brand-logo" id="navbarBrand" aria-label="Vistarsolution Home">
+        <img src="/images/logo/logo.png" alt="Vistarsolution" class="brand-logo-img" width="720" height="188" />
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="navbarLinks">
+          <!-- Populated dynamically by main.js from siteData.json -->
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="/contact/" class="btn btn-primary btn-sm" id="navbarCta">Book a Consultation</a>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+    <div class="mobile-nav-content">
+      <ul class="mobile-nav-links" id="mobileNavLinks">
+        <!-- Populated dynamically -->
+      </ul>
+      <div class="mobile-nav-actions">
+        <a href="/contact/" class="btn btn-primary btn-block">Book a Consultation</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- =========================================================================
+         2. HERO
+         ========================================================================= -->
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="section-badge" id="heroBadge">SOFTWARE ENGINEERING STUDIO</div>
+
+            <h1 class="hero-headline" id="heroHeadline">
+              Software built to scale with <span class="hero-gradient-text">your business.</span>
+            </h1>
+            <p class="hero-subtext" id="heroSubtext">
+              We design and build SaaS platforms, headless CMS systems, and custom software — from architecture to launch.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="/contact/" class="btn btn-primary btn-lg" id="heroCtaPrimary">Book a Consultation</a>
+              <a href="/projects/" class="btn btn-secondary btn-lg" id="heroCtaSecondary">See Our Work</a>
+            </div>
+
+            <div class="hero-trust-bar">
+              <div class="hero-pills" id="heroPills">
+                <!-- Populated dynamically -->
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual-wrapper">
+            <div class="hero-visual-frame">
+              <img src="/images/hero-mockup.svg" alt="Vistarsolution cloud metrics dashboard interface" width="880" height="560" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. CLIENTS (name + logo)
+         ========================================================================= -->
+    <section class="clients-strip" aria-label="Our clients">
+      <div class="container clients-inner">
+        <div class="clients-label">Trusted by</div>
+        <div class="clients-marquee" id="clientsContainer" data-marquee="true">
+          <!-- Populated dynamically from siteData.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. SERVICES (compact teaser → /services/)
+         ========================================================================= -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">SERVICES</div>
+          <h2 class="section-title">What we build</h2>
+          <p class="section-subtitle">Six core disciplines, delivered by senior engineers.</p>
+        </div>
+
+        <div class="services-grid" id="servicesContainer">
+          <!-- Populated dynamically (compact cards) -->
+        </div>
+
+        <div class="section-footer-cta">
+          <a href="/services/" class="btn btn-secondary btn-md">All services &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. STATS BAND
+         ========================================================================= -->
+    <section class="stats-band" id="stats" aria-label="Company metrics">
+      <div class="container">
+        <div class="stats-grid" id="statsContainer">
+          <!-- Populated dynamically from siteData.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. INDUSTRIES (we serve every sector → /services/#industries)
+         ========================================================================= -->
+    <section class="section section-alt" id="industries">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">INDUSTRIES</div>
+          <h2 class="section-title">Built for any industry</h2>
+          <p class="section-subtitle">Our services apply to every sector — here are some we work with most.</p>
+        </div>
+
+        <div class="industries-block" id="industriesContainer" data-limit="12">
+          <!-- Populated dynamically from siteData.json -->
+        </div>
+
+        <div class="section-footer-cta">
+          <a href="/services/#industries" class="btn btn-secondary btn-md">Services &amp; industries &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. FEATURED WORK (3 featured → /projects/)
+         ========================================================================= -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">FEATURED WORK</div>
+          <h2 class="section-title">Selected projects</h2>
+          <p class="section-subtitle">Production systems with measurable results.</p>
+        </div>
+
+        <div class="projects-grid" id="projectsContainer" data-featured="true" data-limit="3">
+          <!-- Populated dynamically from siteData.json -->
+        </div>
+
+        <div class="section-footer-cta">
+          <a href="/projects/" class="btn btn-secondary btn-md">All projects &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. TECH STRIP (marquee only → /tech-stack/)
+         ========================================================================= -->
+    <section class="tech-strip" id="tech" aria-label="Technologies we use">
+      <div class="container tech-strip-inner">
+        <div class="tech-strip-label">
+          <strong>Built with a modern stack</strong>
+          <a href="/tech-stack/" class="link-arrow">Full tech stack &rarr;</a>
+        </div>
+      </div>
+      <div class="tech-marquee-wrapper">
+        <div class="tech-marquee-track" id="techMarqueeTrack">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         9. WHY US (3 of 6 → /about/)
+         ========================================================================= -->
+    <section class="section section-alt" id="why-us">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">WHY VISTARSOLUTION</div>
+          <h2 class="section-title">How we work</h2>
+          <p class="section-subtitle">Engineering-first, transparent, and built to last.</p>
+        </div>
+
+        <div class="why-grid" id="whyChooseUsContainer" data-limit="3">
+          <!-- Populated dynamically from siteData.json -->
+        </div>
+
+        <div class="section-footer-cta">
+          <a href="/about/" class="btn btn-secondary btn-md">About us &amp; our process &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         10. TESTIMONIALS
+         ========================================================================= -->
+    <section class="section" id="testimonialsSection">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge">CLIENT FEEDBACK</div>
+          <h2 class="section-title">Trusted by engineering leaders</h2>
+        </div>
+
+        <div class="testimonials-grid" id="testimonialsContainer">
+          <!-- Populated dynamically from siteData.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         11. CTA BANNER (form lives on /contact/)
+         ========================================================================= -->
+    <section class="section-cta">
+      <div class="container">
+        <div class="cta-card reveal">
+          <div class="cta-inner">
+            <div class="cta-content">
+              <div class="section-badge">LET'S TALK</div>
+              <h2 class="cta-headline" id="ctaHeadline">Ready to build your next platform?</h2>
+              <p class="cta-subtext" id="ctaSubtext">Tell us what you're building. We'll scope it with you and respond within 24 hours.</p>
+            </div>
+            <div class="cta-action">
+              <a href="/contact/" class="btn btn-white btn-lg" id="ctaButton">Book a Consultation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       12. FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-brand-col">
+          <div class="footer-logo">
+            <img src="/images/logo/logo.png" alt="Vistarsolution" class="brand-logo-img" width="720" height="188" />
+          </div>
+          <p class="footer-bio" id="footerBio"></p>
+          <div class="social-links-row" id="footerSocialLinks">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links" id="footerQuickLinks">
+            <!-- Populated dynamically -->
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links" id="footerServicesLinks">
+            <!-- Populated dynamically -->
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">Legal</h4>
+          <ul class="footer-links" id="footerLegalLinks">
+            <!-- Populated dynamically -->
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div id="footerCopyright">© 2026 Vistarsolution LLP. All rights reserved.</div>
+        <div class="footer-badge">Engineered for high-growth teams</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Bootstrap -->
+</body>
+</html>
