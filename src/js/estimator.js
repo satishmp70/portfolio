@@ -220,7 +220,7 @@ export function setupEstimator() {
         }
 
         if (projectDetailsTextarea) {
-          projectDetailsTextarea.value = `Hello Diyaseva Team,\n\nWe would like to book a technical consultation for building a ${blueprint.title} with the following target specifications:\n- Concurrency / Scale: ${state.scale.toUpperCase()}\n- Selected Capabilities: ${state.features.join(', ')}\n- Recommended Stack: ${combinedTech.join(', ')}\n- Estimated Timeline: ${minWeeks}-${maxWeeks} Weeks\n\nPlease let us know your availability for an initial architecture discussion.`;
+          projectDetailsTextarea.value = `Hello Vistarsolution Team,\n\nWe would like to book a technical consultation for building a ${blueprint.title} with the following target specifications:\n- Concurrency / Scale: ${state.scale.toUpperCase()}\n- Selected Capabilities: ${state.features.join(', ')}\n- Recommended Stack: ${combinedTech.join(', ')}\n- Estimated Timeline: ${minWeeks}-${maxWeeks} Weeks\n\nPlease let us know your availability for an initial architecture discussion.`;
         }
       };
     }

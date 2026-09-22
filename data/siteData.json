@@ -1,294 +1,280 @@
 {
   "company": {
-    "name": "Diyaseva Technologies",
-    "legalName": "Diyaseva Technologies, Inc.",
-    "shortName": "Diyaseva",
-    "tagline": "Senior Engineering Practice for Scalable SaaS, Headless CMS & Enterprise Software",
-    "description": "We are a senior-led software engineering and product design studio. We architect high-performance SaaS platforms, headless CMS ecosystems, and mission-critical cloud applications for companies that demand architectural rigor and long-term reliability.",
-    "yearFounded": 2019,
-    "heroTrustStatement": "SaaS Platforms • Headless CMS • Cloud Infrastructure • Custom Software",
+    "name": "Vistarsolution",
+    "legalName": "Vistarsolution LLP",
+    "shortName": "Vistarsolution",
+    "tagline": "SaaS, Headless CMS & Custom Software Engineering",
+    "description": "A senior-led engineering studio building SaaS platforms, headless CMS systems, and custom software for companies that need reliability at scale.",
+    "yearFounded": 2026,
     "capabilities": [
-      "SaaS Multi-Tenant Architecture",
-      "Headless CMS & Content Meshes",
-      "High-Throughput Web Applications",
-      "Custom Enterprise Software",
-      "UI/UX Product Design Systems",
-      "Cloud Infrastructure & DevOps",
-      "Real-Time APIs & Event Streaming",
-      "Database & Query Optimization"
+      "SaaS Platforms",
+      "Headless CMS",
+      "Web Applications",
+      "Custom Software",
+      "Product Design",
+      "Cloud & DevOps",
+      "Real-Time APIs",
+      "AI Automation"
     ],
     "stats": [
       {
-        "value": "48+",
-        "label": "Enterprise Platforms Delivered",
-        "description": "Production-grade SaaS platforms, web applications, and bespoke systems built for global clients."
+        "value": "10+",
+        "label": "Platforms delivered"
       },
       {
         "value": "99.99%",
-        "label": "Production Uptime SLA",
-        "description": "Fault-tolerant architectures with automated failover, zero-downtime CI/CD, and edge caching."
+        "label": "Production uptime"
       },
       {
         "value": "12M+",
-        "label": "Daily Events Ingested",
-        "description": "High-concurrency data streaming pipelines handling real-time telemetry and transaction traffic."
+        "label": "Events processed daily"
       },
       {
-        "value": "4.9 / 5.0",
-        "label": "Client Satisfaction Rating",
-        "description": "Recognized for transparent agile sprints, clean codebases, and long-term engineering partnership."
+        "value": "4.9 / 5",
+        "label": "Client rating"
       }
     ],
     "contact": {
-      "email": "hello@diyaseva.com",
-      "phone": "+1 (415) 890-3420",
-      "whatsapp": "+14158903420",
-      "location": "San Francisco, CA & Bangalore, KA (Global Engineering Hubs)",
-      "availability": "Available for Q4 / 2026 Engineering Sprints"
+      "email": "hello@vistarsolution.com",
+      "phone": "+91 70210 67824",
+      "whatsapp": "+917021067824",
+      "location": "Yashwant Gaurav Phase 1, Nalasopara West",
+      "availability": "Available for Q4 2026 engagements",
+      "form": {
+        "endpoint": "/api/contact.php",
+        "subject": "New Contact Form Enquiry"
+      }
     },
     "socialLinks": {
-      "github": "https://github.com/diyaseva",
-      "linkedin": "https://linkedin.com/company/diyaseva",
-      "twitter": "https://twitter.com/diyaseva",
-      "dribbble": "https://dribbble.com/diyaseva"
+      "linkedin": "https://www.linkedin.com/in/vistar-solution-8ba651439/",
+      "x": "https://x.com/vistarsolutiont",
+      "facebook": "https://www.facebook.com/profile.php?id=61594652131246",
+      "instagram": "https://www.instagram.com/vistarsolution/"
     },
     "seo": {
-      "siteUrl": "https://diyaseva.com",
+      "siteUrl": "https://vistarsolution.com",
       "ogImage": "/images/hero-mockup.svg",
-      "keywords": "Diyaseva, SaaS development, custom software engineering, headless CMS solutions, enterprise web applications, B2B software studio"
+      "keywords": "Vistarsolution, SaaS development, custom software engineering, headless CMS, enterprise web applications, B2B software studio"
     }
   },
-
   "navigation": {
     "brand": {
-      "name": "Diyaseva",
-      "shortName": "Diyaseva",
-      "badge": "Engineering"
+      "name": "Vistarsolution",
+      "shortName": "Vistarsolution",
+      "logo": "/images/logo/logo.png"
     },
     "links": [
-      { "label": "Services", "href": "/services/" },
-      { "label": "Industries", "href": "/industries/" },
-      { "label": "Stack", "href": "/tech-stack/" },
-      { "label": "Work", "href": "/projects/" },
-      { "label": "Estimator", "href": "/estimator/" },
-      { "label": "About", "href": "/about/" },
-      { "label": "Contact", "href": "/contact/" }
+      {
+        "label": "About",
+        "href": "/about/"
+      },
+      {
+        "label": "Services",
+        "href": "/services/"
+      },
+      {
+        "label": "Stack",
+        "href": "/tech-stack/"
+      },
+      {
+        "label": "Work",
+        "href": "/projects/"
+      },
+      {
+        "label": "Estimator",
+        "href": "/estimator/"
+      },
+      {
+        "label": "Contact",
+        "href": "/contact/"
+      }
     ],
     "ctaButton": {
       "label": "Book a Consultation",
       "href": "/contact/"
     }
   },
-
   "hero": {
-    "badge": "PREMIUM SAAS & HEADLESS CMS SOFTWARE AGENCY",
-    "headline": "Next-Generation SaaS & Custom CMS Solutions.",
-    "subtext": "We build scalable, high-performance web applications and headless content management systems for modern brands.",
+    "badge": "SOFTWARE ENGINEERING STUDIO",
+    "headline": "Software built to scale with your business.",
+    "subtext": "We design and build SaaS platforms, headless CMS systems, and custom software — from architecture to launch.",
     "ctaPrimary": {
       "label": "Book a Consultation",
       "href": "/contact/"
     },
     "ctaSecondary": {
-      "label": "Explore Featured Projects",
+      "label": "See Our Work",
       "href": "/projects/"
     },
     "trustPills": [
-      "Custom SaaS Platforms",
-      "Headless CMS Architecture",
+      "SaaS Platforms",
+      "Headless CMS",
       "Legacy Modernization",
-      "AI & Automation Workflows"
+      "AI & Automation"
     ]
   },
-
   "marqueeTechnologies": [
-    { "name": "React", "icon": "react", "category": "Frontend" },
-    { "name": "Next.js", "icon": "nextjs", "category": "Framework" },
-    { "name": "Node.js", "icon": "nodejs", "category": "Backend" },
-    { "name": "Vercel", "icon": "vercel", "category": "Edge Cloud" },
-    { "name": "Firebase", "icon": "firebase", "category": "Cloud Backend" },
-    { "name": "AWS", "icon": "aws", "category": "Infrastructure" },
-    { "name": "MongoDB", "icon": "mongodb", "category": "Database" },
-    { "name": "TypeScript", "icon": "typescript", "category": "Language" },
-    { "name": "GraphQL", "icon": "graphql", "category": "API Mesh" },
-    { "name": "PostgreSQL", "icon": "postgresql", "category": "Relational DB" },
-    { "name": "Docker", "icon": "docker", "category": "Containers" },
-    { "name": "Tailwind CSS", "icon": "tailwind", "category": "Styling" }
+    {
+      "name": "React",
+      "logo": "react",
+      "category": "Frontend"
+    },
+    {
+      "name": "Next.js",
+      "logo": "nextdotjs",
+      "category": "Framework"
+    },
+    {
+      "name": "Node.js",
+      "logo": "nodedotjs",
+      "category": "Backend"
+    },
+    {
+      "name": "Vercel",
+      "logo": "vercel",
+      "category": "Edge Cloud"
+    },
+    {
+      "name": "Firebase",
+      "logo": "firebase",
+      "category": "Cloud Backend"
+    },
+    {
+      "name": "AWS",
+      "icon": "aws",
+      "category": "Infrastructure"
+    },
+    {
+      "name": "MongoDB",
+      "logo": "mongodb",
+      "category": "Database"
+    },
+    {
+      "name": "TypeScript",
+      "logo": "typescript",
+      "category": "Language"
+    },
+    {
+      "name": "GraphQL",
+      "logo": "graphql",
+      "category": "API"
+    },
+    {
+      "name": "PostgreSQL",
+      "logo": "postgresql",
+      "category": "Database"
+    },
+    {
+      "name": "Docker",
+      "logo": "docker",
+      "category": "Containers"
+    },
+    {
+      "name": "Tailwind CSS",
+      "logo": "tailwindcss",
+      "category": "Styling"
+    }
   ],
-
   "services": [
     {
       "id": "custom-saas",
       "icon": "saas",
       "title": "Custom SaaS Development",
-      "tagline": "Building Scalable Cloud Software from MVP to Enterprise",
-      "description": "End-to-end engineering of scalable subscription software with multi-tenant data isolation, automated Stripe/Paddle billing, real-time analytics, and low-latency microservices.",
+      "description": "Multi-tenant platforms with billing, analytics, and role-based access built in.",
       "deliverables": [
-        "Multi-Tenant Tenant Isolation & RBAC",
-        "Stripe & Paddle Billing Integration",
-        "Real-Time Telemetry & Metric Streaming",
-        "High-Availability Cloud Microservices"
+        "Multi-tenant architecture & RBAC",
+        "Stripe / Paddle billing",
+        "Real-time analytics",
+        "Cloud microservices"
       ]
     },
     {
       "id": "headless-cms",
       "icon": "cms",
       "title": "Headless CMS Architecture",
-      "tagline": "API-First Content Delivery",
-      "description": "Bespoke content infrastructures that decouple editorial management from high-speed frontend delivery (Contentful, Strapi, Sanity), empowering omnichannel publishing.",
+      "description": "Decoupled content platforms for fast, omnichannel publishing.",
       "deliverables": [
-        "Headless CMS Setup (Contentful, Strapi, Sanity)",
-        "Instant Live Preview & Editorial Workflows",
-        "Multilingual & Regional Content Mesh",
-        "GraphQL / REST Content API Delivery"
+        "Contentful, Strapi & Sanity setup",
+        "Live preview & editorial workflows",
+        "Multilingual content",
+        "GraphQL / REST content APIs"
       ]
     },
     {
       "id": "legacy-modernization",
       "icon": "code",
-      "title": "Legacy System Modernization",
-      "tagline": "Upgrading Outdated Tech Stacks",
-      "description": "Transforming brittle, monolithic legacy systems into resilient, high-speed microservices and modernized cloud architectures with zero data loss.",
+      "title": "Legacy Modernization",
+      "description": "Move monolithic systems to modern cloud architectures with zero data loss.",
       "deliverables": [
-        "Monolith to Microservices Refactoring",
-        "Legacy Data Migration & Schema Optimization",
-        "Zero-Downtime Database Transition",
-        "Automated CI/CD & Cloud Containerization"
+        "Monolith to microservices",
+        "Data migration & schema cleanup",
+        "Zero-downtime cutover",
+        "CI/CD & containerization"
       ]
     },
     {
       "id": "ai-automation",
       "icon": "cpu",
-      "title": "AI & Automation Integration",
-      "tagline": "Building Smart Tools & Backend AI Workflows",
-      "description": "Integrating custom LLMs, vector search, intelligent document automation, and high-throughput event queues to supercharge operational efficiency.",
+      "title": "AI & Automation",
+      "description": "LLMs, vector search, and event pipelines that remove manual work from operations.",
       "deliverables": [
-        "LLM & Vector Embeddings Integration",
-        "Automated Intelligent Data Pipelines",
-        "Real-Time Event Queues (Kafka / Redis)",
-        "Custom Workflow Automation Agents"
+        "LLM & vector search integration",
+        "Document automation",
+        "Event queues (Kafka / Redis)",
+        "Workflow agents"
       ]
     },
     {
       "id": "web-app-development",
       "icon": "web",
       "title": "High-Performance Web Apps",
-      "tagline": "Sub-Second Edge Rendering",
-      "description": "Sub-second loading Single Page Applications (SPAs) and Progressive Web Apps built with modern TypeScript, React, and serverless edge caching.",
+      "description": "Fast, accessible web and progressive apps with edge rendering.",
       "deliverables": [
-        "Edge-Rendered Next.js & React SPAs",
-        "Offline Capabilities & Real-Time Sync",
-        "Core Web Vitals 95+ Optimization",
-        "Automated CI/CD Deployment Pipelines"
+        "Edge-rendered applications",
+        "Offline & real-time sync",
+        "Core Web Vitals 95+",
+        "Automated deployments"
       ]
     },
     {
       "id": "maintenance-support",
       "icon": "support",
-      "title": "Cloud Infrastructure & 24/7 SLA",
-      "tagline": "Reliability, Security & Evolution",
-      "description": "Proactive infrastructure monitoring, automated vulnerability scanning, database tuning, and guaranteed SLA response times for continuous uptime.",
+      "title": "Cloud & 24/7 Support",
+      "description": "Monitoring, security patching, and SLA-backed support after launch.",
       "deliverables": [
-        "Kubernetes & Docker Container Orch.",
-        "Zero-Downtime Blue/Green Deployments",
-        "Automated Automated Backups & Disaster Recovery",
-        "Dedicated Tier-1 Engineering SLA"
+        "Kubernetes & Docker operations",
+        "Blue/green deployments",
+        "Backups & disaster recovery",
+        "Dedicated engineering SLA"
       ]
     }
   ],
-
-  "industries": [
-    {
-      "id": "healthcare",
-      "name": "Healthcare & Life Sciences",
-      "icon": "health",
-      "tagline": "HIPAA-Compliant Digital Health & Clinical Workflows",
-      "description": "Architecting resilient health portals, telehealth streaming, EHR/EMR FHIR integrations, and patient management systems with strict data privacy.",
-      "compliance": ["HIPAA Compliant", "HITRUST Ready", "HL7 / FHIR", "SOC 2 Type II"],
-      "capabilities": [
-        "Real-Time Telehealth Video & Encrypted Chat",
-        "EHR/EMR Bi-directional FHIR Interoperability",
-        "Patient Vital Telemetry & IoMT Device Sync",
-        "End-to-End Encrypted Medical Records Vault"
-      ],
-      "metric": "100% HIPAA Audit Compliance"
-    },
-    {
-      "id": "fintech",
-      "name": "FinTech & Banking",
-      "icon": "fintech",
-      "tagline": "High-Throughput Financial Systems & Payment Meshes",
-      "description": "Building mission-critical digital banking, ledger accounting, algorithmic risk assessment, and secure payment processing engines.",
-      "compliance": ["PCI-DSS Level 1", "SOC 2 Type II", "ISO 27001", "GDPR / CCPA"],
-      "capabilities": [
-        "Stripe, Adyen, and Plaid Payment Orchestration",
-        "Immutable Double-Entry Ledger Infrastructure",
-        "Real-Time Fraud Detection & Risk Scoring",
-        "Multi-Currency FX & Automated Reconciliation"
-      ],
-      "metric": "99.999% Transaction Execution SLA"
-    },
-    {
-      "id": "ecommerce",
-      "name": "E-Commerce & Retail",
-      "icon": "ecommerce",
-      "tagline": "Composable Commerce & Omnichannel Content Meshes",
-      "description": "Ultra-fast headless storefronts, multi-warehouse inventory synchronization, and high-concurrency flash sale architecture.",
-      "compliance": ["PCI-DSS", "WCAG 2.1 AA", "GDPR", "Core Web Vitals 95+"],
-      "capabilities": [
-        "Headless Shopify Plus & Medusa Architecture",
-        "Sub-50ms Global Edge Caching & Edge SSR",
-        "Real-Time Multi-Warehouse Inventory Mesh",
-        "AI Semantic Search & Personalization Engine"
-      ],
-      "metric": "<0.4s Instant Page Load Time"
-    },
-    {
-      "id": "logistics",
-      "name": "Logistics & Supply Chain",
-      "icon": "logistics",
-      "tagline": "Real-Time Fleet Telemetry & Warehouse Automation",
-      "description": "Distributed freight dispatch, live IoT tracking pipelines, dynamic route optimization algorithms, and automated customs clearance portals.",
-      "compliance": ["ISO 9001", "SOC 2", "ELD Compliant", "Real-Time IoT"],
-      "capabilities": [
-        "Live GPS Geofencing & Event Streaming",
-        "Dynamic Route Optimization & Fuel Telemetry",
-        "Automated Warehouse WMS & Barcode Sync",
-        "Carrier API Integrations (FedEx, UPS, Freight)"
-      ],
-      "metric": "12M+ Daily Ingested GPS Telemetry"
-    },
-    {
-      "id": "proptech",
-      "name": "Real Estate & PropTech",
-      "icon": "proptech",
-      "tagline": "MLS Feeds, Virtual Staging & Tenant SaaS",
-      "description": "High-capacity property listing portals with real-time MLS/IDX synchronization, 3D interactive floor plans, and automated lease workflows.",
-      "compliance": ["RESO Certified", "Fair Housing Act", "SOC 2", "SSL/TLS 1.3"],
-      "capabilities": [
-        "Real-Time RESO Web API & MLS Data Ingestion",
-        "Digital Lease Signing & Automated Tenant Screening",
-        "Interactive 3D Virtual Tour & CAD Viewer",
-        "Automated Rent Collection & Maintenance Portal"
-      ],
-      "metric": "400k+ Properties Indexed in Real-Time"
-    },
-    {
-      "id": "saas",
-      "name": "High-Growth B2B SaaS",
-      "icon": "saas",
-      "tagline": "Multi-Tenant Architecture & Cloud Scale",
-      "description": "Enterprise SaaS architectures with automated provisioning, self-serve tier upgrades, enterprise SSO/SAML, and sub-100ms API SLA.",
-      "compliance": ["SOC 2 Type II", "SAML 2.0 / Okta", "GDPR", "OWASP Top 10"],
-      "capabilities": [
-        "Multi-Tenant Database Partitioning & RBAC",
-        "Enterprise SAML/SSO (Okta, Azure AD, Google)",
-        "Automated Metered Billing & Usage Invoicing",
-        "High-Concurrency GraphQL & REST Microservices"
-      ],
-      "metric": "Sub-80ms Average Global Latency"
-    }
-  ],
-
+  "industries": {
+    "badge": "INDUSTRIES",
+    "title": "Built for any industry",
+    "intro": "Our services apply to every sector. These are some of the industries we work with most — if yours isn't listed, we've most likely built for it.",
+    "list": [
+      "Healthcare",
+      "FinTech & Banking",
+      "E-Commerce & Retail",
+      "Logistics & Supply Chain",
+      "Real Estate & PropTech",
+      "B2B SaaS",
+      "Education & EdTech",
+      "Manufacturing",
+      "Hospitality & Travel",
+      "Media & Publishing",
+      "Legal & Professional Services",
+      "Insurance",
+      "Automotive",
+      "Energy & Utilities",
+      "Agriculture",
+      "Non-profit & NGOs",
+      "Government & Public Sector",
+      "Startups & MSMEs"
+    ],
+    "note": "Don't see your industry? We can still help — every engagement starts with understanding your business."
+  },
   "projectCategories": [
     "All",
     "SaaS",
@@ -296,44 +282,71 @@
     "Web App",
     "Custom Software"
   ],
-
   "projects": [
     {
       "id": "cloudmetrics-saas-platform",
       "isPlaceholder": false,
       "badge": "SaaS Platform",
-      "title": "CloudMetrics — Multi-Cloud Telemetry & Automated Billing Engine",
+      "title": "CloudMetrics",
       "category": "SaaS",
-      "clientType": "Cloud Infrastructure & DevOps Vendor (San Francisco, CA)",
-      "description": "A high-throughput monitoring platform that ingests server metrics, tracks usage spikes, and automates multi-tier enterprise billing with zero sync latency.",
+      "clientType": "Cloud infrastructure vendor · San Francisco",
+      "description": "Real-time telemetry and automated usage-based billing for 300+ enterprise tenants.",
       "image": "/images/projects/project-saas.svg",
-      "technologies": ["React 18", "TypeScript", "Node.js", "PostgreSQL", "TimescaleDB", "Redis", "Stripe API", "Docker"],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+        "TimescaleDB",
+        "Redis",
+        "Stripe"
+      ],
       "url": "#projects",
       "caseStudyUrl": "/case-study/?id=cloudmetrics-saas-platform",
       "featured": true,
       "caseStudy": {
-        "headline": "Real-Time Telemetry Streaming and Automated Usage-Based Billing for 300+ Enterprise Tenants",
-        "overview": "CloudMetrics needed a modern infrastructure to ingest over 8,000 server metric events per second, calculate real-time usage tiers, and execute automated monthly Stripe billing reconciliation across multi-tenant clusters.",
-        "clientOverview": "Cloud Infrastructure & Telemetry Provider serving DevOps teams across North America and Europe.",
-        "challenge": "Legacy batch processing resulted in 4-hour data calculation delays, occasional billing discrepancies, and unacceptable dashboard lag during peak network traffic.",
-        "solution": "We architected an asynchronous event-driven pipeline using Redis Streams, optimized time-partitioned PostgreSQL storage, and engineered a responsive React SPA with live WebSockets.",
+        "headline": "Real-time telemetry and automated billing for 300+ enterprise tenants",
+        "overview": "CloudMetrics needed to ingest 8,000+ metric events per second, calculate usage tiers live, and reconcile monthly Stripe billing across tenants.",
+        "clientOverview": "Cloud infrastructure provider serving DevOps teams in North America and Europe.",
+        "challenge": "Batch processing caused 4-hour data delays, billing discrepancies, and dashboard lag at peak traffic.",
+        "solution": "An event-driven pipeline on Redis Streams, time-partitioned PostgreSQL storage, and a live WebSocket dashboard.",
         "keyFeatures": [
-          "Real-time WebSocket telemetry charts with sub-100ms render updates",
-          "Automated usage-tier calculation with Stripe Invoicing webhook sync",
-          "Fine-grained multi-tenant role-based permissions (RBAC) & audit logs",
-          "Customizable dashboard widgets with instant PDF and CSV report exports"
+          "Live telemetry charts with sub-100ms updates",
+          "Automated usage tiers synced to Stripe invoicing",
+          "Multi-tenant roles, permissions & audit logs"
         ],
         "developmentProcess": [
-          { "phase": "01 Discovery & Schema Design", "detail": "Mapped high-velocity time-series schema and optimized indexing patterns." },
-          { "phase": "02 High-Throughput Ingestion", "detail": "Engineered Node.js streaming microservices with strict rate-limiting." },
-          { "phase": "03 Interactive Frontend", "detail": "Constructed virtualized data tables, interactive graphs, and dark-mode UI." },
-          { "phase": "04 Stress Testing & Launch", "detail": "Conducted load tests up to 15k events/sec with zero packet loss before rollout." }
+          {
+            "phase": "01 Discovery",
+            "detail": "Mapped the time-series schema and indexing strategy."
+          },
+          {
+            "phase": "02 Ingestion",
+            "detail": "Built rate-limited streaming services."
+          },
+          {
+            "phase": "03 Dashboard",
+            "detail": "Virtualized tables and live charts."
+          },
+          {
+            "phase": "04 Launch",
+            "detail": "Load-tested to 15k events/sec before rollout."
+          }
         ],
-        "architectureNotes": "Decoupled Next.js frontend on Cloudflare Edge, connecting to microservices backed by TimescaleDB, Redis Cache, and PostgreSQL.",
+        "architectureNotes": "Edge-hosted Next.js frontend backed by TimescaleDB, Redis, and PostgreSQL microservices.",
         "results": [
-          { "metric": "< 85ms", "label": "Average Query Response Latency" },
-          { "metric": "99.99%", "label": "Platform Uptime Across Tenancies" },
-          { "metric": "100%", "label": "Automated Billing Accuracy" }
+          {
+            "metric": "< 85ms",
+            "label": "Query latency"
+          },
+          {
+            "metric": "99.99%",
+            "label": "Platform uptime"
+          },
+          {
+            "metric": "100%",
+            "label": "Billing accuracy"
+          }
         ]
       }
     },
@@ -341,38 +354,65 @@
       "id": "omnipress-headless-cms",
       "isPlaceholder": false,
       "badge": "Headless CMS",
-      "title": "OmniPress — Multi-Region Headless Content Hub & Editorial Mesh",
+      "title": "OmniPress",
       "category": "CMS",
-      "clientType": "Digital Publishing & Global Media Group (New York, NY)",
-      "description": "An enterprise headless CMS mesh empowering 120+ editorial staff to draft, review, localize, and publish content across 8 international frontends instantaneously.",
+      "clientType": "Global media group · New York",
+      "description": "One headless content hub powering 120+ editors and 8 international sites.",
       "image": "/images/projects/project-cms.svg",
-      "technologies": ["Next.js 14", "TypeScript", "Strapi Headless CMS", "GraphQL", "Tailwind CSS", "AWS S3", "CloudFront"],
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "Strapi",
+        "GraphQL",
+        "AWS S3",
+        "CloudFront"
+      ],
       "url": "#projects",
       "caseStudyUrl": "/case-study/?id=omnipress-headless-cms",
       "featured": true,
       "caseStudy": {
-        "headline": "Unified Multilingual Content Infrastructure Delivering Sub-Second Page Loads Globally",
-        "overview": "OmniPress replaces fractured legacy WordPress instances with a centralized, headless Strapi content engine powering multilingual web and mobile applications with edge caching.",
-        "clientOverview": "International Media Group with 8 localized digital magazines and over 4.5M monthly active readers.",
-        "challenge": "Editorial bottlenecks caused by slow preview builds, lack of granular workflow permissions, and inconsistent typography across international properties.",
-        "solution": "Implemented a modular Strapi CMS with custom validation hooks, Next.js Incremental Static Regeneration (ISR), and automated CDN purge pipelines.",
+        "headline": "One multilingual content platform with sub-second page loads worldwide",
+        "overview": "OmniPress replaced fragmented WordPress installs with a central Strapi content engine feeding web and mobile apps through edge caching.",
+        "clientOverview": "International media group with 8 localized magazines and 4.5M monthly readers.",
+        "challenge": "Slow preview builds, no granular editorial permissions, and inconsistent branding across regions.",
+        "solution": "A modular Strapi CMS with custom workflows, Next.js incremental static regeneration, and automated CDN purging.",
         "keyFeatures": [
-          "Dynamic visual block builder with side-by-side live mobile preview",
-          "Automated multi-language localization workflows with version rollback",
-          "Edge-cached GraphQL API delivering responses in under 40ms globally",
-          "Granular role-based editorial approval states (Draft, Review, Staged, Published)"
+          "Visual block builder with live mobile preview",
+          "Multi-language workflows with version rollback",
+          "Edge-cached GraphQL API under 40ms globally"
         ],
         "developmentProcess": [
-          { "phase": "01 Content Strategy", "detail": "Structured content schemas, relationship graphs, and localization models." },
-          { "phase": "02 Headless API Mesh", "detail": "Built Strapi extensions, AWS S3 image optimization, and CDN webhooks." },
-          { "phase": "03 Modern Frontend", "detail": "Created ultra-fast Next.js templates with dynamic OpenGraph generators." },
-          { "phase": "04 Migration & Training", "detail": "Migrated 85,000 legacy articles without broken links or SEO loss." }
+          {
+            "phase": "01 Content model",
+            "detail": "Structured schemas and localization rules."
+          },
+          {
+            "phase": "02 API layer",
+            "detail": "Strapi extensions, image pipeline, CDN hooks."
+          },
+          {
+            "phase": "03 Frontend",
+            "detail": "Next.js templates with dynamic OpenGraph."
+          },
+          {
+            "phase": "04 Migration",
+            "detail": "Moved 85,000 articles with zero SEO loss."
+          }
         ],
-        "architectureNotes": "Central Strapi Headless Core behind Cloudflare Enterprise CDN, querying Next.js dynamic static generation on Vercel Edge.",
+        "architectureNotes": "Central Strapi core behind Cloudflare CDN, rendered by Next.js on Vercel Edge.",
         "results": [
-          { "metric": "99", "label": "Google PageSpeed Core Web Vitals" },
-          { "metric": "65%", "label": "Reduction in Editorial Publishing Cycle Time" },
-          { "metric": "8 Regions", "label": "Unified Single Source of Truth" }
+          {
+            "metric": "99",
+            "label": "PageSpeed score"
+          },
+          {
+            "metric": "65%",
+            "label": "Faster publishing"
+          },
+          {
+            "metric": "8",
+            "label": "Regions unified"
+          }
         ]
       }
     },
@@ -380,245 +420,409 @@
       "id": "logiops-custom-software",
       "isPlaceholder": false,
       "badge": "Custom Software",
-      "title": "LogiOps — Intelligent Fleet Routing & Warehouse Dispatch Portal",
+      "title": "LogiOps",
       "category": "Custom Software",
-      "clientType": "Supply Chain & Regional Logistics Enterprise (Chicago, IL)",
-      "description": "A purpose-built logistics operations portal featuring live GPS vehicle tracking, automated route payload balancing, and barcode warehouse scanning.",
+      "clientType": "Regional logistics enterprise · Chicago",
+      "description": "Fleet dispatch, live GPS tracking, and warehouse scanning across 14 hubs.",
       "image": "/images/projects/project-custom.svg",
-      "technologies": ["Vue 3", "Python FastAPI", "PostgreSQL", "Redis", "Leaflet GIS", "WebSockets", "Docker"],
+      "technologies": [
+        "Vue",
+        "Python",
+        "FastAPI",
+        "PostgreSQL",
+        "Redis",
+        "Leaflet"
+      ],
       "url": "#projects",
       "caseStudyUrl": "/case-study/?id=logiops-custom-software",
       "featured": true,
       "caseStudy": {
-        "headline": "Automating Multi-Hub Fleet Dispatch and Real-Time Warehouse Inventory Scanning",
-        "overview": "LogiOps streamlined freight dispatch operations across 14 regional hubs, replacing manual phone coordination and spreadsheets with automated algorithm-driven route assignments.",
-        "clientOverview": "Midwest Freight Network operating 120 commercial vehicles and 14 warehouse fulfillment hubs.",
-        "challenge": "Manual dispatching caused route inefficiencies, delayed cargo tracking updates, and frequent warehouse check-in bottlenecks.",
-        "solution": "Engineered an asynchronous Python FastAPI system integrating live telematics, touch-optimized warehouse tablet UIs, and dynamic route optimization.",
+        "headline": "Automated fleet dispatch and real-time warehouse scanning",
+        "overview": "LogiOps replaced phone coordination and spreadsheets with algorithm-driven route assignment across 14 regional hubs.",
+        "clientOverview": "Midwest freight network with 120 vehicles and 14 fulfillment hubs.",
+        "challenge": "Manual dispatching caused inefficient routes, delayed tracking, and warehouse check-in bottlenecks.",
+        "solution": "An async FastAPI platform with live telematics, tablet-optimized warehouse UI, and dynamic route optimization.",
         "keyFeatures": [
-          "Interactive live fleet tracking map with real-time driver status feeds",
-          "High-speed QR and barcode scanning module with offline sync",
-          "Automated payload distribution engine ensuring zero axle weight violations",
-          "Instant automated delivery receipt generation with digital signatures"
+          "Live fleet map with driver status",
+          "Barcode scanning with offline sync",
+          "Automated payload balancing"
         ],
         "developmentProcess": [
-          { "phase": "01 Workflow Mapping", "detail": "Conducted on-site warehouse analysis and dispatch timing benchmarks." },
-          { "phase": "02 Route Algorithm", "detail": "Implemented Dijkstra-based heuristic routing engine in Python." },
-          { "phase": "03 Touch UI Prototyping", "detail": "Built high-contrast responsive interface optimized for rugged tablets." },
-          { "phase": "04 Fleet Staged Pilot", "detail": "Completed pilot validation across 20 vehicles before 100% rollout." }
+          {
+            "phase": "01 Workflow mapping",
+            "detail": "On-site warehouse and dispatch analysis."
+          },
+          {
+            "phase": "02 Routing engine",
+            "detail": "Heuristic route optimization in Python."
+          },
+          {
+            "phase": "03 Tablet UI",
+            "detail": "High-contrast interface for rugged devices."
+          },
+          {
+            "phase": "04 Pilot",
+            "detail": "20-vehicle pilot before full rollout."
+          }
         ],
-        "architectureNotes": "FastAPI asynchronous service cluster with Redis pub/sub for WebSocket map coordinates and relational PostgreSQL backend.",
+        "architectureNotes": "FastAPI services with Redis pub/sub for live map coordinates and a PostgreSQL backend.",
         "results": [
-          { "metric": "42 min", "label": "Daily Dispatch Planning Time Saved" },
-          { "metric": "99.8%", "label": "Warehouse Scanning Accuracy" },
-          { "metric": "+28%", "label": "Fleet Fuel & Route Efficiency Gain" }
+          {
+            "metric": "42 min",
+            "label": "Daily planning time saved"
+          },
+          {
+            "metric": "99.8%",
+            "label": "Scanning accuracy"
+          },
+          {
+            "metric": "+28%",
+            "label": "Route efficiency"
+          }
         ]
       }
     },
     {
       "id": "finvault-banking-gateway",
       "isPlaceholder": false,
-      "badge": "Fintech Web App",
-      "title": "FinVault — Multi-Currency Payment Gateway & Ledger Engine",
+      "badge": "FinTech",
+      "title": "FinVault",
       "category": "Web App",
-      "clientType": "B2B Financial Services & Cross-Border Payments (London, UK)",
-      "description": "An enterprise financial gateway facilitating automated multi-currency transfers, instant ledger reconciliation, and strict fraud detection checks.",
+      "clientType": "Cross-border payments provider · London",
+      "description": "Multi-currency payment gateway with instant ledger reconciliation and fraud checks.",
       "image": "/images/projects/project-fintech.svg",
-      "technologies": ["React", "TypeScript", "Go (Golang)", "PostgreSQL", "Apache Kafka", "Redis", "Tailwind CSS"],
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Go",
+        "PostgreSQL",
+        "Kafka",
+        "Redis"
+      ],
       "url": "#projects",
       "caseStudyUrl": "/case-study/?id=finvault-banking-gateway",
-      "featured": true,
+      "featured": false,
       "caseStudy": {
-        "headline": "Sub-Second Multi-Currency Settlements with Double-Entry Cryptographic Ledger",
-        "overview": "FinVault engineered a modern banking dashboard and API orchestration engine processing over $18M in monthly cross-border transactions across 32 currencies.",
-        "clientOverview": "Regulated Financial Services Provider connecting international merchants with banking rails.",
-        "challenge": "Legacy payment bridges suffered from slow FX settlement confirmations, manual reconciliation errors, and opaque transaction auditing.",
-        "solution": "Built a high-performance Go microservices architecture with Apache Kafka event streaming, strict double-entry ledger bookkeeping, and responsive client portal.",
+        "headline": "Sub-second multi-currency settlements on a double-entry ledger",
+        "overview": "FinVault processes $18M+ in monthly cross-border transactions across 32 currencies through a modern banking dashboard and API layer.",
+        "clientOverview": "Regulated financial services provider connecting merchants with banking rails.",
+        "challenge": "Slow FX settlement confirmations, manual reconciliation errors, and opaque transaction auditing.",
+        "solution": "Go microservices with Kafka event streaming, a strict double-entry ledger, and a responsive client portal.",
         "keyFeatures": [
-          "Instant multi-currency exchange calculations with real-time rate lock",
-          "Immutable double-entry ledger tracking every debit and credit transaction",
-          "Automated bank statement reconciliation using pattern-matching algorithms",
-          "Role-based multi-signatory approval workflows for high-value transfers"
+          "Real-time FX rate lock",
+          "Immutable double-entry ledger",
+          "Multi-signatory approvals for large transfers"
         ],
         "developmentProcess": [
-          { "phase": "01 Compliance & Specs", "detail": "Defined strict financial audit models, idempotency rules, and encryption." },
-          { "phase": "02 Core Ledger Engine", "detail": "Built transactional Go engine with ACID-compliant PostgreSQL schemas." },
-          { "phase": "03 Client Portal", "detail": "Developed React dashboard with live ledger updates and FX conversion widgets." },
-          { "phase": "04 Security & Penetration", "detail": "Passed independent SOC2 and ISO27001 vulnerability assessments." }
+          {
+            "phase": "01 Compliance",
+            "detail": "Audit models, idempotency rules, encryption."
+          },
+          {
+            "phase": "02 Ledger engine",
+            "detail": "ACID-compliant transactional core in Go."
+          },
+          {
+            "phase": "03 Client portal",
+            "detail": "Live ledger dashboard with FX widgets."
+          },
+          {
+            "phase": "04 Security",
+            "detail": "Passed independent SOC 2 and ISO 27001 assessments."
+          }
         ],
-        "architectureNotes": "Golang microservices handling high-throughput event processing via Apache Kafka, with strict TLS 1.3 encryption and PostgreSQL.",
+        "architectureNotes": "Go microservices with Kafka event processing, TLS 1.3, and PostgreSQL.",
         "results": [
-          { "metric": "< 120ms", "label": "Transaction Processing Latency" },
-          { "metric": "$18M+", "label": "Monthly Volume Processed" },
-          { "metric": "Zero", "label": "Reconciliation Discrepancies" }
+          {
+            "metric": "< 120ms",
+            "label": "Transaction latency"
+          },
+          {
+            "metric": "$18M+",
+            "label": "Monthly volume"
+          },
+          {
+            "metric": "Zero",
+            "label": "Reconciliation errors"
+          }
         ]
       }
     }
   ],
-
   "whyChooseUs": [
     {
       "icon": "target",
-      "title": "Business-First Engineering",
-      "description": "We don't build tech for the sake of tech. Every architecture decision and feature is aligned with your operational goals, revenue model, and user adoption targets."
+      "title": "Business-first engineering",
+      "description": "Every technical decision maps to a business outcome."
     },
     {
       "icon": "layers",
-      "title": "Scalable Cloud Architecture",
-      "description": "Systems architected from day one to handle high-concurrency traffic spikes, evolving data models, and enterprise workloads without requiring costly rewrites."
+      "title": "Built to scale",
+      "description": "Architectures that handle growth without costly rewrites."
     },
     {
       "icon": "codeCheck",
-      "title": "Clean, Documented Code",
-      "description": "Strict TypeScript typing, modular directory hierarchies, comprehensive API contracts, and automated tests make it effortless for your internal team to maintain."
+      "title": "Clean, documented code",
+      "description": "Typed, tested, and easy for your team to own."
     },
     {
       "icon": "cpu",
-      "title": "Battle-Tested Modern Stack",
-      "description": "We leverage mature, high-performance frameworks (React, Next.js, TypeScript, Node.js, Python, PostgreSQL, Docker) with strong ecosystem longevity."
+      "title": "Proven modern stack",
+      "description": "Mature tools with long-term ecosystem support."
     },
     {
       "icon": "messagesSquare",
-      "title": "Transparent Agile Sprints",
-      "description": "Weekly demo calls, direct Slack/Teams engineering access, clear milestone roadmaps, and zero ambiguity regarding scope, timelines, or technical trade-offs."
+      "title": "Transparent delivery",
+      "description": "Weekly demos, direct engineer access, no surprises."
     },
     {
       "icon": "shieldCheck",
-      "title": "Long-Term SLA & Partnership",
-      "description": "We stand behind what we ship with dedicated uptime monitoring, proactive security updates, performance tuning, and scalable evolutionary engineering."
+      "title": "Long-term partnership",
+      "description": "Monitoring, security updates, and ongoing evolution."
     }
   ],
-
   "process": [
     {
       "step": "01",
       "phase": "Discover",
-      "title": "Understanding & Technical Scope",
-      "summary": "Deep-dive analysis of your business logic, system dependencies, user flows, and technical requirements to define precise product specifications.",
-      "deliverables": ["System Architecture Blueprint", "Database Entity Models", "Milestone Roadmap & Timeline"]
+      "title": "Scope & requirements",
+      "summary": "We map your business logic, users, and constraints into a clear specification.",
+      "deliverables": [
+        "Architecture blueprint",
+        "Milestone roadmap"
+      ]
     },
     {
       "step": "02",
       "phase": "Architect",
-      "title": "System Design & Contracts",
-      "summary": "Select optimal technology stacks, design normalized database schemas, specify API contracts, and establish CI/CD environments.",
-      "deliverables": ["API Specifications (OpenAPI/GraphQL)", "Cloud Infrastructure Topology", "Security & Auth Protocols"]
+      "title": "System design",
+      "summary": "Stack selection, data models, API contracts, and CI/CD setup.",
+      "deliverables": [
+        "API specification",
+        "Infrastructure plan"
+      ]
     },
     {
       "step": "03",
       "phase": "Design",
-      "title": "UI/UX & Interactive Prototypes",
-      "summary": "Craft clean, accessible, and intuitive user interfaces with interactive Figma prototypes to validate workflows before writing code.",
-      "deliverables": ["Component Design System", "High-Fidelity Wireframes", "Validated User Journeys"]
+      "title": "UI/UX & prototypes",
+      "summary": "Interactive Figma prototypes validate workflows before code is written.",
+      "deliverables": [
+        "Design system",
+        "Validated user flows"
+      ]
     },
     {
       "step": "04",
       "phase": "Build",
-      "title": "Agile Engineering & Continuous QA",
-      "summary": "Write clean, modular, and type-safe code with automated unit tests, continuous integration builds, and weekly sprint staging demos.",
-      "deliverables": ["Modular Production Codebase", "Automated Test Suite", "Live Staging Preview URL"]
+      "title": "Agile engineering",
+      "summary": "Type-safe code, automated tests, and weekly staging demos.",
+      "deliverables": [
+        "Production codebase",
+        "Test suite",
+        "Staging URL"
+      ]
     },
     {
       "step": "05",
       "phase": "Deploy",
-      "title": "Production Launch & Verification",
-      "summary": "Execute zero-downtime production deployment, configure SSL/CDN edge networks, run load tests, and verify security firewalls.",
-      "deliverables": ["Live Production Deployment", "Speed & Security Audit Pass", "Operational Runbooks & Handoff"]
+      "title": "Launch",
+      "summary": "Zero-downtime deployment, load testing, and security verification.",
+      "deliverables": [
+        "Live deployment",
+        "Runbooks & handoff"
+      ]
     },
     {
       "step": "06",
       "phase": "Scale",
-      "title": "24/7 Monitoring & Evolution",
-      "summary": "Provide proactive performance monitoring, database optimization, dependency patching, and rapid feature iterations as your company grows.",
-      "deliverables": ["Uptime & Error Telemetry", "Database Optimization", "Continuous Feature Enhancements"]
+      "title": "Monitor & evolve",
+      "summary": "Proactive monitoring, optimization, and rapid feature iteration.",
+      "deliverables": [
+        "Uptime telemetry",
+        "Continuous improvements"
+      ]
     }
   ],
-
   "technologies": [
     {
-      "category": "Frontend Engineering",
-      "description": "Modern, responsive, accessible web interfaces and single-page applications.",
+      "category": "Frontend",
+      "description": "Responsive, accessible interfaces and single-page applications.",
       "skills": [
-        { "name": "React 18", "level": "Core" },
-        { "name": "Next.js 14", "level": "Core" },
-        { "name": "TypeScript", "level": "Core" },
-        { "name": "Tailwind CSS", "level": "Core" },
-        { "name": "Vue 3", "level": "Core" },
-        { "name": "Vite & Webpack", "level": "Core" },
-        { "name": "HTML5 / Modern CSS", "level": "Core" }
+        {
+          "name": "React",
+          "logo": "react"
+        },
+        {
+          "name": "Next.js",
+          "logo": "nextdotjs"
+        },
+        {
+          "name": "TypeScript",
+          "logo": "typescript"
+        },
+        {
+          "name": "Tailwind CSS",
+          "logo": "tailwindcss"
+        },
+        {
+          "name": "Vue",
+          "logo": "vuedotjs"
+        },
+        {
+          "name": "Vite",
+          "logo": "vite"
+        }
       ]
     },
     {
-      "category": "Backend & Microservices",
-      "description": "Secure, scalable server architectures, event streaming, and high-performance APIs.",
+      "category": "Backend & APIs",
+      "description": "Secure, scalable services, event streaming, and high-performance APIs.",
       "skills": [
-        { "name": "Node.js & Express", "level": "Core" },
-        { "name": "Python & FastAPI", "level": "Core" },
-        { "name": "Go (Golang)", "level": "Core" },
-        { "name": "RESTful & GraphQL APIs", "level": "Core" },
-        { "name": "WebSockets & SSE", "level": "Core" },
-        { "name": "Apache Kafka & RabbitMQ", "level": "Core" },
-        { "name": "NestJS", "level": "Core" }
+        {
+          "name": "Node.js",
+          "logo": "nodedotjs"
+        },
+        {
+          "name": "Python",
+          "logo": "python"
+        },
+        {
+          "name": "FastAPI",
+          "logo": "fastapi"
+        },
+        {
+          "name": "Go",
+          "logo": "go"
+        },
+        {
+          "name": "GraphQL",
+          "logo": "graphql"
+        },
+        {
+          "name": "REST APIs",
+          "logo": "openapiinitiative"
+        },
+        {
+          "name": "WebSockets",
+          "logo": "socketdotio"
+        },
+        {
+          "name": "Kafka",
+          "logo": "apachekafka"
+        },
+        {
+          "name": "RabbitMQ",
+          "logo": "rabbitmq"
+        }
       ]
     },
     {
       "category": "Databases & Caching",
-      "description": "High-availability relational data modeling, fast cache layers, and time-series storage.",
+      "description": "Relational modeling, caching layers, and time-series storage.",
       "skills": [
-        { "name": "PostgreSQL", "level": "Core" },
-        { "name": "Redis Cache", "level": "Core" },
-        { "name": "TimescaleDB", "level": "Core" },
-        { "name": "Prisma & Drizzle ORM", "level": "Core" },
-        { "name": "MongoDB", "level": "Core" },
-        { "name": "Supabase", "level": "Core" },
-        { "name": "MySQL", "level": "Core" }
+        {
+          "name": "PostgreSQL",
+          "logo": "postgresql"
+        },
+        {
+          "name": "Redis",
+          "logo": "redis"
+        },
+        {
+          "name": "TimescaleDB",
+          "logo": "timescale"
+        },
+        {
+          "name": "Prisma",
+          "logo": "prisma"
+        },
+        {
+          "name": "Drizzle",
+          "logo": "drizzle"
+        },
+        {
+          "name": "MongoDB",
+          "logo": "mongodb"
+        },
+        {
+          "name": "Supabase",
+          "logo": "supabase"
+        }
       ]
     },
     {
       "category": "Cloud, DevOps & CMS",
-      "description": "Automated deployment pipelines, containerization, cloud hosting, and headless platforms.",
+      "description": "Deployment pipelines, containers, cloud hosting, and headless platforms.",
       "skills": [
-        { "name": "Docker & Compose", "level": "Core" },
-        { "name": "AWS (S3, ECS, CloudFront)", "level": "Core" },
-        { "name": "Strapi Headless CMS", "level": "Core" },
-        { "name": "GitHub Actions CI/CD", "level": "Core" },
-        { "name": "Vercel & Cloudflare", "level": "Core" },
-        { "name": "Kubernetes", "level": "Core" },
-        { "name": "Nginx & SSL", "level": "Core" }
+        {
+          "name": "Docker",
+          "logo": "docker"
+        },
+        {
+          "name": "AWS",
+          "icon": "aws"
+        },
+        {
+          "name": "Kubernetes",
+          "logo": "kubernetes"
+        },
+        {
+          "name": "Vercel",
+          "logo": "vercel"
+        },
+        {
+          "name": "Cloudflare",
+          "logo": "cloudflare"
+        },
+        {
+          "name": "GitHub Actions",
+          "logo": "githubactions"
+        },
+        {
+          "name": "Firebase",
+          "logo": "firebase"
+        },
+        {
+          "name": "Strapi",
+          "logo": "strapi"
+        },
+        {
+          "name": "Contentful",
+          "logo": "contentful"
+        }
       ]
     }
   ],
-
   "about": {
-    "badge": "ABOUT DIYASEVA TECHNOLOGIES",
-    "headline": "Senior Engineering Practice Built for Architectural Longevity",
-    "lead": "We collaborate with ambitious founders, enterprise tech leaders, and growing technology companies to engineer resilient, high-performing digital platforms.",
+    "badge": "ABOUT VISTARSOLUTION",
+    "headline": "Engineering-first, from day one.",
+    "lead": "We work with founders and enterprise teams to turn product ideas into reliable, well-built software.",
     "paragraphs": [
-      "Founded with an engineering-first mindset, Diyaseva Technologies focuses exclusively on designing and developing digital software products that create measurable business impact. We believe that world-class software requires deep architectural foresight, rigorous quality standards, and close alignment with our clients' growth roadmaps.",
-      "Whether you are launching a complex multi-tenant SaaS application, transitioning to a flexible headless CMS architecture, or automating mission-critical business workflows, our team delivers modern codebases, transparent sprint communication, and lasting technical value."
+      "Vistarsolution was founded in 2026 with an engineering-first mindset. We focus on software that creates measurable business impact, backed by careful architecture and high quality standards.",
+      "Whether you are launching a multi-tenant SaaS product, moving to a headless CMS, or automating core workflows, you get a modern codebase, clear communication, and lasting technical value."
     ],
     "highlights": [
       {
-        "title": "Architectural Integrity",
-        "description": "Scalable schemas, clean component hierarchies, and automated test coverage engineered for zero technical debt."
+        "title": "Architectural integrity",
+        "description": "Scalable schemas, clean components, and test coverage from day one."
       },
       {
-        "title": "Direct Senior Engineering Access",
-        "description": "Work directly with senior architects who understand your product requirements, constraints, and enterprise security requirements."
+        "title": "Direct senior access",
+        "description": "You work with the architects who build your product, not account managers."
       }
     ]
   },
-
   "testimonials": {
     "showSection": true,
-    "badge": "CLIENT PERSPECTIVES",
-    "title": "Trusted by Engineering Leaders & CTOs",
-    "subtitle": "Direct feedback on our technical execution, delivery velocity, and long-term partnership.",
+    "badge": "CLIENT FEEDBACK",
+    "title": "Trusted by engineering leaders",
+    "subtitle": "What CTOs and product leads say about working with us.",
     "items": [
       {
         "id": "testimonial-1",
         "isPlaceholder": false,
-        "quote": "Diyaseva completely re-architected our core cloud telemetry pipeline. Query latencies dropped from over 4 seconds down to under 100 milliseconds, and their automated billing reconciliation has processed over 250 enterprise renewals flawlessly.",
+        "quote": "Vistarsolution re-architected our telemetry pipeline. Query latency dropped from 4 seconds to under 100ms, and billing has run flawlessly since.",
         "authorName": "Dr. Arthur Sterling",
         "authorRole": "VP of Infrastructure",
         "company": "PeakScale Cloud Networks",
@@ -627,7 +831,7 @@
       {
         "id": "testimonial-2",
         "isPlaceholder": false,
-        "quote": "Migrating 85,000 legacy articles across 8 international domains to a modern headless Strapi and Next.js mesh was a massive undertaking. Diyaseva delivered on time, with perfect SEO retention and a 65% faster publishing cycle.",
+        "quote": "They migrated 85,000 articles across 8 domains to a headless platform on time, with zero SEO loss and a 65% faster publishing cycle.",
         "authorName": "Elena Rostova",
         "authorRole": "Head of Digital Product",
         "company": "Novus Media Group",
@@ -636,7 +840,7 @@
       {
         "id": "testimonial-3",
         "isPlaceholder": false,
-        "quote": "The LogiOps dispatch portal they built for our fleet eliminated nearly an hour of daily planning overhead per dispatcher. The real-time mapping and QR barcode scanning on warehouse tablets work seamlessly.",
+        "quote": "The dispatch portal saved each dispatcher nearly an hour a day. Live mapping and warehouse scanning just work.",
         "authorName": "Marcus Vance",
         "authorRole": "VP of Operations",
         "company": "TransFreight Logistics",
@@ -644,129 +848,312 @@
       }
     ]
   },
-
   "cta": {
-    "badge": "SCALE YOUR DIGITAL ARCHITECTURE",
-    "headline": "Ready to Build Your Next SaaS or Custom CMS?",
-    "subtext": "From initial blueprint to enterprise production launch, our senior engineering team is ready to evaluate your requirements and scope your solution.",
+    "badge": "LET'S TALK",
+    "headline": "Ready to build your next platform?",
+    "subtext": "Tell us what you're building. We'll scope it with you and respond within 24 hours.",
     "buttonText": "Book a Consultation",
-    "buttonHref": "#contact",
-    "secondaryText": "or email our engineering leads directly at",
-    "email": "hello@diyaseva.com"
+    "buttonHref": "/contact/",
+    "secondaryText": "or email us at",
+    "email": "hello@vistarsolution.com"
   },
-
   "contact": {
-    "badge": "START A CONVERSATION",
-    "title": "Book a Technical Consultation",
-    "subtitle": "Tell us about your product roadmap, tech stack requirements, or architecture modernization goals. Our leads will respond within 24 hours.",
+    "badge": "GET IN TOUCH",
+    "title": "Book a Consultation",
+    "subtitle": "Tell us about your project. We respond within 24 hours.",
     "channels": {
       "email": {
-        "label": "Direct Project RFP",
-        "value": "hello@diyaseva.com",
-        "actionUrl": "mailto:hello@diyaseva.com?subject=Project%20Inquiry%20from%20Portfolio",
-        "hint": "Best for detailed RFPs, scopes & technical briefs"
+        "label": "Email",
+        "value": "hello@vistarsolution.com",
+        "supportValue": "support@vistarsolution.com",
+        "actionUrl": "mailto:hello@vistarsolution.com?subject=Project%20Inquiry",
+        "hint": "Best for RFPs and detailed briefs"
       },
       "whatsapp": {
-        "label": "Engineering Discussion",
-        "value": "+1 (415) 890-3420",
-        "actionUrl": "https://wa.me/14158903420?text=Hi%20Diyaseva,%20I'd%20like%20to%20discuss%20a%20software%20project.",
-        "hint": "Direct chat with a lead architect"
+        "label": "WhatsApp",
+        "value": "+91 70210 67824",
+        "actionUrl": "https://wa.me/917021067824?text=Hi%20Vistarsolution,%20I'd%20like%20to%20discuss%20a%20software%20project.",
+        "hint": "Quick chat with a lead engineer"
       },
       "location": {
-        "label": "Engineering Hubs",
-        "value": "San Francisco, CA & Bangalore, KA (Global Delivery)",
-        "hint": "Collaborating seamlessly across US, European & APAC zones"
+        "label": "Offices",
+        "value": "Yashwant Gaurav Phase 1, Nalasopara West",
+        "hint": "Working across US, EU & APAC time zones"
       }
     }
   },
-
   "termsAndConditions": {
-    "lastUpdated": "September 20, 2026",
+    "lastUpdated": "September 22, 2026",
     "title": "Terms and Conditions",
-    "subtitle": "Please review the general terms governing technology consulting, custom software development, and engineering services provided by Diyaseva Technologies.",
+    "subtitle": "The terms governing use of this website and the consulting, custom software development, SaaS engineering, and digital communication services provided by Vistarsolution LLP.",
     "sections": [
       {
-        "title": "1. Agreement & Scope of Services",
-        "content": "By accessing this website, requesting a technical proposal, or entering into a Statement of Work (SOW) with Diyaseva Technologies, Inc. (\"Company\", \"we\", \"us\", or \"our\"), you (\"Client\", \"you\") agree to be bound by these Terms and Conditions. Our services include SaaS product engineering, headless CMS implementation, web application development, custom software engineering, UI/UX design, and ongoing technical support as detailed in mutually executed project agreements."
+        "title": "1. Agreement & Acceptance",
+        "content": "This is a legally valid agreement between Vistarsolution LLP (\"we\", \"us\", or \"our\") and you (\"Client\", \"User\", or \"you\") that lays out the terms and conditions for the use of this website and all services offered under the Vistarsolution LLP name. By accessing this website, requesting a technical proposal, creating an account on any platform we operate, or entering into a Statement of Work (SOW) with us, you agree to be bound by these Terms and Conditions. If you do not agree, please do not use our website or services. Please read this agreement carefully.",
+        "items": [
+          "These Terms are governed by the laws, rules, and regulations of the Republic of India.",
+          "All notices, approvals, and acceptances under this agreement are considered as written and duly signed once they are electronically confirmed (for example, by email, WhatsApp, or acceptance through a project portal).",
+          "If you are accepting on behalf of a company or organization, you represent that you have the authority to bind that entity to these Terms."
+        ]
       },
       {
-        "title": "2. Proposals, Estimates & Statements of Work",
-        "content": "All project timelines, cost estimates, and deliverables described on this portfolio or in preliminary proposals are subject to formal confirmation in an executed Statement of Work. Any modifications to project scope requested during development will be documented and billed according to agreed-upon change order procedures."
+        "title": "2. Scope of Services",
+        "content": "Our services include SaaS product engineering, headless CMS implementation, web and mobile application development, custom software engineering, UI/UX design, cloud and DevOps setup, API and real-time integrations, AI automation, and ongoing technical support. Where a platform we build or host enables you to send SMS, email, WhatsApp, or push notifications to end users, that messaging capability is also covered by these Terms. The specific deliverables, timelines, and fees for each engagement are defined in a mutually executed project agreement or SOW."
       },
       {
-        "title": "3. Intellectual Property Rights",
-        "content": "Unless otherwise specified in writing in a specific SOW: Upon full receipt of agreed payment, all bespoke source code, visual assets, database schemas, and customized software developed specifically for the Client will become the exclusive property of the Client. The Company retains the rights to pre-existing generic libraries, proprietary developer utilities, and the non-exclusive right to display completed project summaries in its portfolio, unless a non-disclosure agreement (NDA) explicitly prohibits it."
+        "title": "3. Accounts & User Responsibility",
+        "content": "Where we provide you with an account, dashboard, admin panel, or API credentials, you are solely responsible for maintaining the confidentiality of those credentials and for all acts or omissions that occur under your account, including the content of any messages transmitted through the service. You agree to notify us immediately of any unauthorized use. We are not responsible for losses arising from your failure to safeguard your login details or from actions taken by persons you have given access to."
       },
       {
-        "title": "4. Client Obligations & Collaboration",
-        "content": "Successful project execution relies upon timely communication. The Client agrees to provide necessary access credentials, brand assets, API documentation, feedback, and staging approvals in a timely manner. Delays in providing necessary input may result in corresponding milestone timeline adjustments."
+        "title": "4. Service Usage Policy",
+        "content": "You agree to abide by all applicable local, national, and international laws and regulations while using our website, platforms, and services. The utilization of any messaging or communication service delivered by us is subject to the following conditions:",
+        "items": [
+          "Any illegal use of the services is strictly prohibited.",
+          "Messages or content containing sexual, racist, abusive, or discriminatory material, or any usage that may be considered harassment, is prohibited and you will be held solely responsible for it. Vistarsolution does not assume any liability for the content of messages sent by you or on your behalf.",
+          "You guarantee that the content you transmit always respects, and does not in any way conflict with, fundamental human rights (including the right to privacy and the prohibition of discrimination on any ground such as sex, race, colour, language, religion, political or other opinion, or national or social origin) and complies with Intellectual Property laws.",
+          "For SMS and voice communication in India, you are responsible for complying with TRAI regulations, including DLT registration of your entity, sender IDs, and message templates, and for honouring DND (Do Not Disturb) preferences.",
+          "You will use the services only for professional and business purposes."
+        ]
       },
       {
-        "title": "5. Payment Terms & Invoicing",
-        "content": "Invoices are issued according to project milestones (e.g., initial sprint deposit, design signoff, staging demo, and final production handover) or periodic retainer schedules as outlined in your SOW. Invoices are payable within fourteen (14) days of receipt unless otherwise agreed."
+        "title": "5. Prohibited Uses",
+        "content": "You accept that the services are provided for professional use only and you agree not to use them, or any software we deliver, to:",
+        "items": [
+          "Promote alcohol, tobacco, gambling, betting, adult content, dating services, or any form of deception or fraud.",
+          "Send unsolicited messages (mobile spam, email spam, or bulk promotional messages to recipients who have not opted in).",
+          "Impersonate any person or organization, spoof sender identities, or misrepresent your affiliation.",
+          "Transmit malware, phishing links, viruses, or any code designed to disrupt, damage, or gain unauthorized access to systems or data.",
+          "Collect, store, or process personal data of third parties without lawful basis and consent.",
+          "Reverse engineer, resell, sublicense, or exploit our proprietary tools, frameworks, or hosted platforms without written permission.",
+          "Attempt to bypass rate limits, security controls, or usage quotas of any service we operate.",
+          "Engage in any activity that violates applicable law, including the Information Technology Act, 2000 and the rules made thereunder."
+        ],
+        "note": "We reserve the right to suspend or terminate access immediately, without notice or refund, if we reasonably believe you have breached this section."
       },
       {
-        "title": "6. Confidentiality & Non-Disclosure",
-        "content": "Both parties agree to treat all non-public information, proprietary business workflows, customer data, and technical specifications disclosed during the engagement with strict confidentiality. Neither party will disclose such information to third parties without prior written consent."
+        "title": "6. Proposals, Estimates & Statements of Work",
+        "content": "All project timelines, cost estimates, and deliverables described on this portfolio, in the online estimator, or in preliminary proposals are indicative only and are subject to formal confirmation in an executed Statement of Work. Any modifications to project scope requested during development will be documented and billed according to agreed-upon change order procedures. Estimates are valid for thirty (30) days from the date issued unless stated otherwise."
       },
       {
-        "title": "7. Warranties, Support & Limitation of Liability",
-        "content": "We warrant that all software delivered will substantially conform to agreed technical specifications for a period of thirty (30) days following production release. To the maximum extent permitted by law, the Company is not liable for indirect, incidental, or consequential damages resulting from third-party hosting outages, upstream API changes, or unauthorized Client code alterations."
+        "title": "7. Client Obligations & Collaboration",
+        "content": "Successful project execution relies upon timely communication. The Client agrees to provide necessary access credentials, brand assets, API documentation, content, feedback, and staging approvals in a timely manner, and to designate a single point of contact authorized to make decisions. Delays in providing necessary input may result in corresponding milestone timeline adjustments. You are responsible for the accuracy and legality of all materials you supply to us."
       },
       {
-        "title": "8. Governing Law & Dispute Resolution",
-        "content": "These Terms and Conditions shall be governed by and construed in accordance with the laws of the State of California, United States, without regard to its conflict of law principles. Any dispute arising out of this agreement will be resolved through good-faith negotiation, followed if necessary by binding arbitration."
+        "title": "8. Payment Terms & Invoicing",
+        "content": "Invoices are issued according to project milestones (for example, initial sprint deposit, design sign-off, staging demo, and final production handover) or periodic retainer schedules as outlined in your SOW.",
+        "items": [
+          "Invoices are payable within fourteen (14) days of receipt unless otherwise agreed in writing.",
+          "All fees are exclusive of applicable taxes, including GST, which will be added to invoices as required by Indian law.",
+          "Overdue invoices may attract interest at 1.5% per month (or the maximum rate permitted by law), and we may pause work, withhold deliverables, or suspend hosted services until payment is received.",
+          "Third-party costs (cloud hosting, domain names, SMS or email gateway credits, paid APIs, licences) are billed at actual cost unless included in the SOW."
+        ]
       },
       {
-        "title": "9. Contact Information",
-        "content": "For questions regarding these Terms and Conditions or to request a tailored Master Services Agreement (MSA), please contact us at legal@diyaseva.com or hello@diyaseva.com."
+        "title": "9. Cancellation & Refunds",
+        "content": "Either party may cancel an engagement with fourteen (14) days' written notice. Upon cancellation, the Client is liable for all work completed and expenses incurred up to the effective date of cancellation. Initial deposits and milestone payments for completed phases are non-refundable. Prepaid messaging credits, subscription fees, and third-party service charges are non-refundable once consumed or purchased on your behalf. Any refund that is agreed to in writing will be processed within thirty (30) days to the original payment method."
+      },
+      {
+        "title": "10. Intellectual Property Rights",
+        "content": "Unless otherwise specified in writing in a specific SOW: upon full receipt of agreed payment, all bespoke source code, visual assets, database schemas, and customized software developed specifically for the Client will become the exclusive property of the Client. Vistarsolution LLP retains all rights to pre-existing generic libraries, proprietary developer utilities, frameworks, and know-how, and grants the Client a non-exclusive, perpetual licence to use these as embedded in the delivered work. Vistarsolution LLP retains the non-exclusive right to display completed project summaries, screenshots, and the Client's name and logo in its portfolio and marketing materials, unless a non-disclosure agreement (NDA) explicitly prohibits it. The Vistarsolution LLP name, logo, and website content are our property and may not be used without permission."
+      },
+      {
+        "title": "11. Confidentiality & Non-Disclosure",
+        "content": "Both parties agree to treat all non-public information, proprietary business workflows, customer data, credentials, and technical specifications disclosed during the engagement with strict confidentiality. Neither party will disclose such information to third parties without prior written consent, except as required by law. This obligation survives the termination of any engagement for a period of three (3) years, and indefinitely for trade secrets and personal data."
+      },
+      {
+        "title": "12. Third-Party Services & Integrations",
+        "content": "Our solutions frequently rely on third-party services such as cloud hosting providers, payment gateways, SMS/email/WhatsApp gateways, telecom operators, and external APIs. These services are governed by their own terms and availability. We are not responsible for outages, delivery failures, pricing changes, policy changes, or data handling practices of such third parties. Message delivery through telecom networks cannot be guaranteed and may be subject to carrier filtering, regulatory blocking, or network delays."
+      },
+      {
+        "title": "13. Warranties, Support & Limitation of Liability",
+        "content": "We warrant that all software delivered will substantially conform to the agreed technical specifications for a period of thirty (30) days following production release, during which we will correct reproducible defects at no additional cost. Beyond this period, support and maintenance are available under a separate agreement. Except as expressly stated, the services and website are provided \"as is\" without warranties of any kind, whether express or implied, including fitness for a particular purpose or uninterrupted availability.",
+        "items": [
+          "To the maximum extent permitted by law, Vistarsolution LLP is not liable for any indirect, incidental, special, or consequential damages, loss of profits, loss of data, or business interruption, including those resulting from third-party hosting outages, upstream API or telecom changes, or unauthorized Client code alterations.",
+          "Our total aggregate liability arising out of any engagement shall not exceed the fees paid by the Client to Vistarsolution LLP for that engagement in the six (6) months preceding the claim.",
+          "We assume no liability for the content of messages, communications, or data transmitted by you or your users through any platform we build, host, or operate."
+        ]
+      },
+      {
+        "title": "14. Indemnification",
+        "content": "You agree to indemnify, defend, and hold harmless Vistarsolution LLP, its team members, and its partners from and against any claims, damages, penalties, losses, and expenses (including reasonable legal fees) that may arise from third parties as a result of: (a) the content of messages or materials sent, uploaded, or published by you or your users; (b) your breach of these Terms or of any applicable law or regulation, including TRAI or data protection rules; (c) your infringement of any third party's intellectual property or privacy rights; or (d) any unauthorized use of your account."
+      },
+      {
+        "title": "15. Suspension & Termination",
+        "content": "We may suspend or terminate your access to any hosted service, account, or website feature, with or without notice, if you breach these Terms, fail to pay outstanding invoices, or if your use creates legal, security, or reputational risk for Vistarsolution LLP or its telecom and hosting partners. Upon termination, your right to use the services ceases immediately. Sections relating to payment, intellectual property, confidentiality, limitation of liability, indemnification, and governing law survive termination."
+      },
+      {
+        "title": "16. Changes to These Terms",
+        "content": "We reserve the right to modify these Terms and Conditions at any time. Updated terms will be posted on this page with a revised \"Last Updated\" date, and material changes affecting active engagements will be communicated by email. Your continued use of the website or services after such changes constitutes acceptance of the revised Terms."
+      },
+      {
+        "title": "17. Governing Law & Dispute Resolution",
+        "content": "These Terms and Conditions shall be governed by and construed in accordance with the laws of India, without regard to conflict of law principles. Any dispute arising out of or in connection with this agreement will first be resolved through good-faith negotiation between the parties. If unresolved within thirty (30) days, the dispute shall be referred to arbitration under the Arbitration and Conciliation Act, 1996, with the seat of arbitration at Mumbai, Maharashtra, and proceedings conducted in English. Subject to the foregoing, the courts at Mumbai, Maharashtra, India shall have exclusive jurisdiction."
+      },
+      {
+        "title": "18. Notices & Contact Information",
+        "content": "All notices under this agreement may be delivered electronically and will be deemed received on the day they are sent. For questions regarding these Terms and Conditions, to report a violation, or to request a tailored Master Services Agreement (MSA), please contact us at legal@vistarsolution.com or hello@vistarsolution.com, or write to Vistarsolution LLP, Yashwant Gaurav Phase 1, Nalasopara West, Maharashtra, India."
       }
     ]
   },
-
   "privacyPolicy": {
-    "lastUpdated": "September 20, 2026",
+    "lastUpdated": "September 22, 2026",
     "title": "Privacy Policy",
-    "subtitle": "How we handle data, protect privacy, and ensure client confidentiality when you visit our website or communicate with Diyaseva Technologies.",
+    "subtitle": "How Vistarsolution LLP collects, uses, protects, and discloses information when you visit our website, contact us, or use the services and platforms we provide.",
     "sections": [
       {
-        "title": "1. Information We Collect",
-        "content": "As a modern portfolio and engineering studio website, we respect your privacy. When you voluntarily contact us via email, WhatsApp, or contact inquiry links, we receive your email address, name, organization, phone number, and any project specifications you choose to share."
+        "title": "1. Introduction & Scope",
+        "content": "This Privacy Policy sets out the terms of collection, use, storage, and disclosure of information (including personal information) that may be collected by Vistarsolution LLP (\"we\", \"us\", or \"our\") from you at any time that you interact with us (\"Information\"), including when you visit this website (\"Site\"), when you request a proposal or use the project estimator, when you purchase or use any software, platform, or service delivered by us (\"Services\"), or when you contact our sales or support team by email, phone, or WhatsApp. Unless a contrary intention appears in our Terms and Conditions or any other Service Agreement executed with you, the Information collected or received by Vistarsolution LLP shall be used and protected in accordance with the terms set out below. By using the Site or Services, you consent to the practices described in this Policy."
       },
       {
-        "title": "2. How We Use Inquiries",
-        "content": "Information submitted through direct contact is used exclusively to respond to your project requests, prepare technical proposals, and coordinate software development consultations. We never sell, rent, or trade your contact information to third-party advertisers."
+        "title": "2. Personal Information We Collect",
+        "content": "Unless otherwise stated in a specific Service Agreement, the personal information collected during registration, while filling in contact or enquiry forms, or during the course of an engagement shall constitute your Personal Information. This may include:",
+        "items": [
+          "Identity and contact details: first name, last name, company or organization name, designation, email address, contact number, postal address, city, PIN/ZIP code, and country.",
+          "Business and project details: project requirements, technical specifications, budget ranges, timelines, and any documents or credentials you choose to share for the purpose of delivering the Services.",
+          "Account information: usernames, encrypted passwords, roles, and activity logs where we provide you with a dashboard, admin panel, or API access.",
+          "Billing information: GSTIN, billing address, and payment references. We do not store full card or bank details; payments are processed by third-party payment gateways.",
+          "Communication records: emails, WhatsApp messages, call notes, and support tickets exchanged with our team."
+        ]
       },
       {
-        "title": "3. Analytics & Cookies",
-        "content": "We may use lightweight, privacy-focused web telemetry to monitor aggregate page views, device screen sizes, and browser performance to optimize our website's speed and accessibility. We do not track personal identities across other websites."
+        "title": "3. Non-Personal & Technical Information",
+        "content": "When you visit the Site, we and our hosting or analytics providers may automatically collect non-personal, technical information such as your IP address, browser type and version, device type and screen size, operating system, referring URL, pages visited, time spent on pages, and approximate location derived from your IP address. This information is used in aggregate to monitor performance, diagnose problems, and improve the Site's speed, security, and accessibility. It is not used to identify you personally or to track you across other websites."
       },
       {
-        "title": "4. Data Security",
-        "content": "We implement industry-standard security protocols, including TLS 1.3 encryption, secure hosting configurations, and strict internal access controls to protect information transmitted to us."
+        "title": "4. How We Use Your Information",
+        "content": "We use the Information we collect for the following purposes:",
+        "items": [
+          "To respond to your enquiries, prepare technical proposals and estimates, and coordinate consultations.",
+          "To deliver, operate, maintain, and support the Services and platforms we build for you, including creating and managing accounts.",
+          "To issue invoices, process payments, and maintain accounting and tax records as required by Indian law.",
+          "To communicate project updates, milestone approvals, security notices, and changes to our terms or policies.",
+          "To send occasional information about our services, case studies, or offers where you have opted in; you may unsubscribe at any time.",
+          "To detect, prevent, and address fraud, security incidents, abuse, or violations of our Terms and Conditions.",
+          "To comply with applicable legal obligations and enforce our agreements."
+        ],
+        "note": "We never sell, rent, or trade your Personal Information to third-party advertisers or data brokers."
       },
       {
-        "title": "5. Contact & Rights",
-        "content": "If you wish to access, rectify, or request the deletion of any personal communications sent to us, please reach out to privacy@diyaseva.com or hello@diyaseva.com."
+        "title": "5. Sharing & Disclosure of Information",
+        "content": "Your Personal Information shall not be shared with any third party without your permission, provided that in the following cases your Personal Information may be shared without obtaining your prior consent:",
+        "items": [
+          "With team members, contractors, and affiliated entities of Vistarsolution LLP who need the information to deliver the Services and who are bound to safeguard it in accordance with this Privacy Policy.",
+          "With persons or companies that we have a strategic relationship with or that perform work for us or assist in the maintenance, development, distribution, and improvement of the Services (including, but not limited to, cloud hosting providers, payment gateways, SMS/email/WhatsApp gateways, analytics providers, and companies that help us process information or deliver Services to you), who are also obligated to protect your Personal Information and use it only for the purposes we specify.",
+          "With courts, regulators, law enforcement, or government authorities where required by law, court order, or legal process, or where we believe in good faith that disclosure is necessary to protect our rights, your safety, or the safety of others, or to investigate fraud or a security incident.",
+          "In connection with a merger, acquisition, restructuring, or sale of all or part of our business, in which case the recipient will be bound by this Privacy Policy.",
+          "In aggregated or anonymised form that cannot reasonably be used to identify you, for example in portfolio case studies or performance statistics."
+        ]
+      },
+      {
+        "title": "6. Client Data & End-User Information",
+        "content": "When we build, host, or maintain a platform on your behalf, we may process data belonging to your customers or end users (\"Client Data\"). In such cases you are the data controller and we act as a data processor on your instructions. We process Client Data only to the extent necessary to deliver the Services, do not use it for our own purposes, and delete or return it at the end of the engagement unless retention is required by law. You are responsible for obtaining all necessary consents from your end users and for ensuring your own privacy notices cover the platforms we build for you."
+      },
+      {
+        "title": "7. Cookies & Analytics",
+        "content": "The Site uses only essential cookies and lightweight, privacy-focused web analytics to understand aggregate page views, device screen sizes, and browser performance. We do not use advertising cookies or cross-site tracking. Where third-party embedded content (such as maps or videos) sets its own cookies, those are governed by the third party's privacy policy. You can control or delete cookies through your browser settings; disabling cookies may affect some Site features."
+      },
+      {
+        "title": "8. Data Security",
+        "content": "We implement industry-standard technical and organisational security measures to protect your Information, including TLS encryption for data in transit, encrypted storage of credentials, secure hosting configurations, role-based access controls, and strict internal access policies. Access to Personal Information is limited to personnel who need it to perform their duties. While we take reasonable steps to protect your Information, no method of transmission over the Internet or electronic storage is completely secure, and we cannot guarantee absolute security. If we become aware of a data breach affecting your Personal Information, we will notify you and the relevant authorities as required by applicable law."
+      },
+      {
+        "title": "9. Data Retention",
+        "content": "We retain Personal Information only for as long as necessary to fulfil the purposes for which it was collected, to deliver and support the Services, and to comply with legal, accounting, and tax obligations. Enquiry data that does not lead to an engagement is generally deleted within twenty-four (24) months. Project and billing records are retained for the period required under Indian law (typically eight years for financial records). Client Data is handled as described in Section 6."
+      },
+      {
+        "title": "10. Your Rights & Choices",
+        "content": "Subject to applicable law, including the Digital Personal Data Protection Act, 2023, you have the right to:",
+        "items": [
+          "Access the Personal Information we hold about you and request a copy.",
+          "Request correction of inaccurate or incomplete Personal Information.",
+          "Request deletion of your Personal Information, subject to our legal retention obligations.",
+          "Withdraw consent for marketing communications at any time by using the unsubscribe link or contacting us.",
+          "Nominate another person to exercise these rights on your behalf in the event of death or incapacity.",
+          "Raise a grievance with us, and if unresolved, with the Data Protection Board of India or other competent authority."
+        ],
+        "note": "To exercise any of these rights, write to privacy@vistarsolution.com. We will respond within thirty (30) days."
+      },
+      {
+        "title": "11. Third-Party Links & Services",
+        "content": "The Site and Services may contain links to third-party websites, tools, or platforms (such as GitHub, LinkedIn, payment gateways, or cloud consoles). We are not responsible for the privacy practices or content of those third parties, and this Privacy Policy does not apply to them. We encourage you to read the privacy policies of any third-party site you visit."
+      },
+      {
+        "title": "12. Children's Privacy",
+        "content": "Our Site and Services are intended for businesses and professionals and are not directed at children under eighteen (18) years of age. We do not knowingly collect Personal Information from children. If you believe a child has provided us with Personal Information, please contact us and we will delete it promptly."
+      },
+      {
+        "title": "13. International Data Transfers",
+        "content": "Vistarsolution LLP is based in India. Depending on the cloud and communication providers used in your project, your Information may be stored or processed on servers located outside India. Where this occurs, we take reasonable steps to ensure that your Information receives a level of protection consistent with this Privacy Policy and applicable Indian data protection law."
+      },
+      {
+        "title": "14. Changes to This Privacy Policy",
+        "content": "We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. Updated versions will be posted on this page with a revised \"Last Updated\" date. Material changes affecting active clients will be communicated by email. Your continued use of the Site or Services after such changes constitutes acceptance of the revised Policy."
+      },
+      {
+        "title": "15. Grievance Officer & Contact",
+        "content": "In accordance with the Information Technology Act, 2000 and the rules made thereunder, if you have any questions, concerns, or complaints about this Privacy Policy or the handling of your Personal Information, please contact our Grievance Officer at privacy@vistarsolution.com or hello@vistarsolution.com, or write to Vistarsolution LLP, Yashwant Gaurav Phase 1, Nalasopara West, Maharashtra, India. We aim to acknowledge grievances within forty-eight (48) hours and resolve them within thirty (30) days."
       }
     ]
   },
-
   "footer": {
-    "about": "Diyaseva Technologies is a senior-led software engineering and design practice building high-performance SaaS platforms, headless CMS meshes, and custom enterprise software for forward-thinking organizations worldwide.",
-    "copyright": "© 2026 Diyaseva Technologies, Inc. All rights reserved.",
+    "about": "A senior-led engineering studio building SaaS platforms, headless CMS systems, and custom software.",
+    "copyright": "© 2026 Vistarsolution LLP. All rights reserved.",
     "quickLinks": [
-      { "label": "Services", "href": "/services/" },
-      { "label": "Industries", "href": "/industries/" },
-      { "label": "Selected Work", "href": "/projects/" },
-      { "label": "Tech Stack", "href": "/tech-stack/" },
-      { "label": "Scope Estimator", "href": "/estimator/" },
-      { "label": "About & Process", "href": "/about/" },
-      { "label": "Book a Consultation", "href": "/contact/" }
+      {
+        "label": "About",
+        "href": "/about/"
+      },
+      {
+        "label": "Services",
+        "href": "/services/"
+      },
+      {
+        "label": "Work",
+        "href": "/projects/"
+      },
+      {
+        "label": "Tech Stack",
+        "href": "/tech-stack/"
+      },
+      {
+        "label": "Estimator",
+        "href": "/estimator/"
+      },
+      {
+        "label": "Contact",
+        "href": "/contact/"
+      }
     ],
     "legalLinks": [
-      { "label": "Terms & Conditions", "href": "/terms/" },
-      { "label": "Privacy Policy", "href": "/privacy/" }
+      {
+        "label": "Terms & Conditions",
+        "href": "/terms/"
+      },
+      {
+        "label": "Privacy Policy",
+        "href": "/privacy/"
+      }
+    ]
+  },
+  "clients": {
+    "badge": "OUR CLIENTS",
+    "title": "Trusted by growing businesses",
+    "items": [
+      {
+        "name": "Viora Healthcare",
+        "logo": "/images/clients/viora-healthcare.png",
+        "url": "https://viorahealthcare.in/"
+      },
+      {
+        "name": "Viva Homecare",
+        "logo": "/images/clients/viva-homecare.png",
+        "url": "https://vivahomecare.in/"
+      },
+      {
+        "name": "The Walk",
+        "logo": "/images/clients/the-walk.png",
+        "url": "https://thewalkphysio.com/"
+      }
     ]
   }
 }

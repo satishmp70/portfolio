@@ -12,7 +12,7 @@ All content across the entire website is driven by a single centralized JSON fil
 📁 **`data/siteData.json`**
 
 > 💡 **`data/siteData.json` acts as your site's database.**  
-> Whenever you edit this file, your main homepage, project portfolio cards, interactive case study modal, standalone case study pages, terms and conditions, privacy policy, and footer are updated automatically!
+> Whenever you edit this file, your main homepage, project cards, case study pages, terms and conditions, privacy policy, and footer are updated automatically!
 
 ---
 
@@ -65,15 +65,15 @@ To add a new project to your portfolio, append a new object to the `"projects"` 
   "id": "my-new-project-slug",
   "isPlaceholder": false,
   "badge": "SaaS Platform",
-  "title": "FinFlow — Real-Time Invoicing System",
+  "title": "FinFlow",
   "category": "SaaS",
   "clientType": "Fintech & Banking",
-  "description": "High-volume automated billing engine processing over 500k monthly invoices.",
-  "image": "/src/assets/images/projects/my-project-screenshot.png",
-  "technologies": ["React", "Node.js", "PostgreSQL", "Docker"],
+  "description": "Automated billing engine processing 500k+ invoices a month.",
+  "image": "/images/projects/my-project-screenshot.png",
+  "technologies": ["React", "Node.js", "PostgreSQL", "Docker"],   // shown on the case study page only
   "url": "https://my-live-project-demo.com",
-  "caseStudyUrl": "case-study.html?id=my-new-project-slug",
-  "featured": true,
+  "caseStudyUrl": "/case-study/?id=my-new-project-slug",
+  "featured": true,                                                // featured projects appear on the homepage
   "caseStudy": {
     "headline": "Streamlining Global Invoicing for 10,000+ Active Subscriptions",
     "overview": "Detailed overview of what was built and why.",
@@ -97,11 +97,11 @@ To add a new project to your portfolio, append a new object to the `"projects"` 
 
 ### 3. Adding Project Images
 Place your screenshot, mockup, or graphic into:
-📁 `src/assets/images/projects/`  
-Then reference its path in `siteData.json` (e.g. `"/src/assets/images/projects/my-screenshot.png"`).
+📁 `public/images/projects/`  
+Then reference its path in `siteData.json` (e.g. `"/images/projects/my-screenshot.png"`).
 
 ### 4. Customizing Services
-Edit the `"services"` array in `data/siteData.json` to change service names, taglines, descriptions, or deliverables.
+Edit the `"services"` array in `data/siteData.json` to change service names, descriptions, or deliverables. The homepage shows a compact card (icon, title, description); the Services page adds the deliverables list.
 
 ### 5. Managing Testimonials
 In `data/siteData.json`:
@@ -109,7 +109,7 @@ In `data/siteData.json`:
 - Update the `"testimonials.items"` list with client reviews.
 
 ### 6. Updating Terms & Conditions / Privacy Policy
-Edit `"termsAndConditions"` and `"privacyPolicy"` sections in `data/siteData.json`. All headers, clauses, and last-updated timestamps will automatically render on `terms.html` and `privacy.html`.
+Edit `"termsAndConditions"` and `"privacyPolicy"` sections in `data/siteData.json`. All headers, clauses, and last-updated timestamps will automatically render on `/terms/` and `/privacy/`.
 
 ---
 
@@ -119,30 +119,31 @@ Edit `"termsAndConditions"` and `"privacyPolicy"` sections in `data/siteData.jso
 portfolio/
 ├── data/
 │   └── siteData.json           # ⭐ SINGLE DATABASE FOR ALL SITE CONTENT
-├── index.html                  # Main landing page (15 comprehensive sections)
-├── case-study.html             # Standalone case study template page
-├── terms.html                  # Terms & Conditions page
-├── privacy.html                # Privacy Policy page
-├── robots.txt                  # Search engine crawling instructions
-├── sitemap.xml                 # XML sitemap
+├── index.html                  # Homepage
+├── services/index.html         # Services & industries
+├── tech-stack/index.html       # Technology stack page
+├── projects/index.html         # Selected work
+├── estimator/index.html        # Interactive scope estimator
+├── about/index.html            # About, process, testimonials
+├── contact/index.html          # Consultation form
+├── case-study/index.html       # Standalone case study (?id=project-id)
+├── terms/index.html            # Terms & Conditions
+├── privacy/index.html          # Privacy Policy
+├── public/
+│   └── images/                 # Static images (served from /images/...)
+├── robots.txt
+├── sitemap.xml
 ├── package.json                # Dev & build scripts (Vite)
 ├── vite.config.js              # Multi-page bundler configuration
 └── src/
     ├── css/
-    │   ├── style.css           # Premium B2B dark design system & tokens
-    │   └── animations.css      # Smooth micro-animations & accessibility queries
-    ├── js/
-    │   ├── dataLoader.js       # Central data loader
-    │   ├── main.js             # Dynamic renderer and navigation manager
-    │   ├── caseStudyModal.js   # Interactive modal case study reader
-    │   ├── projectFilter.js    # Category tab filtering logic
-    │   ├── contact.js          # Inquiry form & WhatsApp/mailto generator
-    │   └── icons.js            # Crisp inline SVG icons dictionary
-    └── assets/
-        └── images/
-            ├── hero-mockup.svg # SaaS telemetry hero graphic
-            ├── placeholder.svg # Generic project placeholder
-            └── projects/       # Sample vector mockups (SaaS, CMS, Custom)
+    │   └── style.css           # Design system (mobile-first, single accent colour)
+    └── js/
+        ├── dataLoader.js       # Central data loader
+        ├── main.js             # Dynamic renderer, navigation, scroll reveal
+        ├── estimator.js        # Scope estimator logic
+        ├── contact.js          # Inquiry form validation & mailto dispatch
+        └── icons.js            # Inline SVG icon dictionary
 ```
 
 ---

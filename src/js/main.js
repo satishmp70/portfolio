@@ -7,8 +7,6 @@
 
 import { getSiteData } from './dataLoader.js';
 import { getIcon } from './icons.js';
-import { setupProjectFilter } from './projectFilter.js';
-import { initCaseStudyModal, openCaseStudyModal } from './caseStudyModal.js';
 import { setupContactForm } from './contact.js';
 import { setupEstimator } from './estimator.js';
 
@@ -21,6 +19,20 @@ function observeReveals(scope = document) {
   scope.querySelectorAll('.reveal:not(.active)').forEach(el => revealObserver.observe(el));
 }
 
+/**
+ * Containers can limit how many items they show via data-limit="3"
+ * (homepage teasers) — subpages omit it and get the full list.
+ */
+function limitItems(container, items) {
+  const limit = parseInt(container.dataset.limit, 10);
+  return Number.isFinite(limit) && limit > 0 ? items.slice(0, limit) : items;
+}
+
+/** Compact cards on the homepage, detailed cards on subpages (data-variant="detailed") */
+function isDetailed(container) {
+  return container.dataset.variant === 'detailed';
+}
+
 async function init() {
   appSiteData = await getSiteData();
   if (!appSiteData) {
@@ -28,15 +40,20 @@ async function init() {
     return;
   }
 
-  // Update Page Title and Meta
-  document.title = `${appSiteData.company.name} — ${appSiteData.company.tagline}`;
+  // Only the homepage takes its title from data; subpages keep their own unique <title>
+  const isHomepage = /^\/(index\.html)?$/.test(window.location.pathname);
+  if (isHomepage) {
+    document.title = `${appSiteData.company.name} — ${appSiteData.company.tagline}`;
+  }
 
   // Initialize UI components
+  renderTopBar();
   renderNavigation();
   renderHero();
   renderCapabilities();
   renderServices();
   renderIndustries();
+  renderClients();
   renderProjectFilters();
   renderProjects('All');
   renderWhyChooseUs();
@@ -52,14 +69,13 @@ async function init() {
 
   // Setup interactive components & events
   setupEstimator();
-  initCaseStudyModal();
   setupContactForm(appSiteData.company);
   setupNavigationEvents();
   setupScrollObserver();
-  setupCardGlow();
 }
 
-/** --- Route Active Matcher Helper --- */function isLinkActive(href) {
+/** --- Route Active Matcher Helper --- */
+function isLinkActive(href) {
   const rawPath = window.location.pathname.replace(/\/index\.html$/, '/');
   const path = rawPath.endsWith('/') ? rawPath : rawPath + '/';
   const hash = window.location.hash;
@@ -82,6 +98,38 @@ async function init() {
   return path === normHref || path.startsWith(normHref);
 }
 
+/** --- Render top utility bar (email / phone / location / socials) --- */
+function renderTopBar() {
+  const comp = appSiteData.company || {};
+  const contact = comp.contact || {};
+  const emailEl = document.getElementById('topBarEmail');
+  const phoneEl = document.getElementById('topBarPhone');
+  const locEl = document.getElementById('topBarLocation');
+  const socialsEl = document.getElementById('topBarSocials');
+
+  if (emailEl && contact.email) {
+    emailEl.href = `mailto:${contact.email}`;
+    emailEl.querySelector('span').textContent = contact.email;
+  }
+  if (phoneEl && contact.phone) {
+    phoneEl.href = `tel:${(contact.whatsapp || contact.phone).replace(/[^0-9+]/g, '')}`;
+    phoneEl.querySelector('span').textContent = contact.phone;
+  }
+  if (locEl && contact.location) {
+    // Keep the top bar short: show the part before any parenthetical
+    locEl.querySelector('span').textContent = contact.location.split('(')[0].trim();
+  }
+  if (socialsEl && comp.socialLinks) {
+    const soc = comp.socialLinks;
+    socialsEl.innerHTML = [
+      soc.linkedin ? `<a href="${soc.linkedin}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">${getIcon('linkedin')}</a>` : '',
+      soc.x ? `<a href="${soc.x}" target="_blank" rel="noopener noreferrer" aria-label="X">${getIcon('x')}</a>` : '',
+      soc.facebook ? `<a href="${soc.facebook}" target="_blank" rel="noopener noreferrer" aria-label="Facebook">${getIcon('facebook')}</a>` : '',
+      soc.instagram ? `<a href="${soc.instagram}" target="_blank" rel="noopener noreferrer" aria-label="Instagram">${getIcon('instagram')}</a>` : ''
+    ].join('');
+  }
+}
+
 /** --- Render Navigation --- */
 function renderNavigation() {
   const brandEl = document.getElementById('navbarBrand');
@@ -90,14 +138,10 @@ function renderNavigation() {
   const ctaBtn = document.getElementById('navbarCta');
 
   if (brandEl) {
-    brandEl.innerHTML = `
-      <div class="brand-icon">DS</div>
-      <div class="brand-logo-content">
-        <span class="brand-title">${appSiteData.navigation.brand.name}</span>
-        <span class="brand-badge">${appSiteData.navigation.brand.badge}</span>
-      </div>
-    `;
+    const logo = appSiteData.navigation.brand.logo || '/images/logo/logo.png';
+    brandEl.innerHTML = `<img src="${logo}" alt="${appSiteData.company.name}" class="brand-logo-img" width="720" height="188" />`;
     brandEl.setAttribute('href', '/');
+    brandEl.setAttribute('aria-label', `${appSiteData.company.name} Home`);
   }
 
   if (linksEl && appSiteData.navigation.links) {
@@ -120,46 +164,50 @@ function renderNavigation() {
   }
 }
 
-/** --- Render Industries & Domain Expertise (eSparkBiz & ScaleAcres Inspired) --- */
+/** --- Render Industries (we serve every sector: heading + chip list) --- */
 function renderIndustries() {
   const container = document.getElementById('industriesContainer');
-  if (!container || !appSiteData.industries) return;
+  const ind = appSiteData.industries;
+  if (!container || !ind) return;
 
-  container.innerHTML = appSiteData.industries.map((ind, idx) => `
-    <div class="glass-card industry-card reveal delay-${(idx % 3) + 1}">
-      <div>
-        <div class="industry-header">
-          <div class="industry-icon-box">${getIcon(ind.icon)}</div>
-          <div>
-            <h3 class="industry-title">${ind.name}</h3>
-          </div>
-        </div>
-
-        <div class="industry-tagline">${ind.tagline}</div>
-        <p class="industry-description">${ind.description}</p>
-
-        <div class="compliance-badge-list">
-          ${(ind.compliance || []).map(comp => `
-            <span class="compliance-pill">${comp}</span>
-          `).join('')}
-        </div>
-
-        <ul class="industry-capabilities">
-          ${(ind.capabilities || []).map(cap => `
-            <li class="industry-capability-item">
-              ${getIcon('check')}
-              <span>${cap}</span>
-            </li>
-          `).join('')}
-        </ul>
-      </div>
-
-      <div class="industry-metric-badge">
-        <span class="industry-metric-label">Verified Production Impact</span>
-        <span class="industry-metric-val">${ind.metric}</span>
-      </div>
+  const list = limitItems(container, ind.list || []);
+  container.innerHTML = `
+    <div class="industry-chips">
+      ${list.map(name => `<span class="industry-chip">${getIcon('check')}<span>${name}</span></span>`).join('')}
+      <span class="industry-chip industry-chip-more">+ any other industry</span>
     </div>
-  `).join('');
+    ${ind.note ? `<p class="industry-note">${ind.note}</p>` : ''}
+  `;
+}
+
+/** --- Render Clients (name + logo only) --- */
+function renderClients() {
+  const container = document.getElementById('clientsContainer');
+  const clients = appSiteData.clients;
+  if (!container || !clients?.items?.length) return;
+
+  const card = (c) => {
+    const inner = `
+      <img src="${c.logo}" alt="${c.name} logo" class="client-logo" loading="lazy" width="48" height="48" />
+      <span class="client-text">
+        <span class="client-name">${c.name}</span>
+        ${c.industry ? `<span class="client-industry">${c.industry}</span>` : ''}
+      </span>`;
+    return c.url
+      ? `<a href="${c.url}" target="_blank" rel="noopener noreferrer" class="client-card">${inner}</a>`
+      : `<div class="client-card">${inner}</div>`;
+  };
+
+  if (container.dataset.marquee !== 'true') {
+    container.innerHTML = clients.items.map(card).join('');
+    return;
+  }
+
+  // Continuous marquee: repeat the list until it comfortably exceeds one screen,
+  // then duplicate that sequence so the -50% translate loops seamlessly.
+  const repeats = Math.max(1, Math.ceil(8 / clients.items.length));
+  const sequence = Array.from({ length: repeats }, () => clients.items).flat().map(card).join('');
+  container.innerHTML = `<div class="clients-track">${sequence}${sequence}</div>`;
 }
 
 /** --- Render Hero --- */
@@ -174,12 +222,17 @@ function renderHero() {
   if (heroBadge) heroBadge.textContent = appSiteData.hero.badge;
   if (heroHeadline) {
     const headline = appSiteData.hero.headline || '';
-    // Wrap the final sentence/segment in a gradient span for visual emphasis
+    // Wrap the final sentence in a gradient span; if there is only one sentence,
+    // highlight the last two words instead so the emphasis is always visible.
     const lastDotIndex = headline.lastIndexOf('.');
     if (lastDotIndex > 0 && lastDotIndex < headline.length - 1) {
       heroHeadline.innerHTML = `${headline.slice(0, lastDotIndex + 1)} <span class="hero-gradient-text">${headline.slice(lastDotIndex + 1).trim()}</span>`;
     } else {
-      heroHeadline.textContent = headline;
+      const words = headline.trim().split(/\s+/);
+      const tail = words.splice(-2).join(' ');
+      heroHeadline.innerHTML = words.length
+        ? `${words.join(' ')} <span class="hero-gradient-text">${tail}</span>`
+        : `<span class="hero-gradient-text">${tail}</span>`;
     }
   }
   if (heroSubtext) heroSubtext.textContent = appSiteData.hero.subtext;
@@ -220,23 +273,23 @@ function renderServices() {
   const container = document.getElementById('servicesContainer');
   if (!container || !appSiteData.services) return;
 
-  container.innerHTML = appSiteData.services.map((s, idx) => `
-    <div class="glass-card service-card reveal delay-${(idx % 3) + 1}">
-      <div>
-        <div class="service-icon-box">${getIcon(s.icon)}</div>
-        <div class="service-tagline">${s.tagline}</div>
-        <h3 class="service-title">${s.title}</h3>
-        <p class="service-description">${s.description}</p>
-      </div>
+  const detailed = isDetailed(container);
+  const items = limitItems(container, appSiteData.services);
 
-      <ul class="service-deliverables">
-        ${(s.deliverables || []).map(d => `
-          <li class="service-deliverable-item">
-            ${getIcon('check')}
-            <span>${d}</span>
-          </li>
-        `).join('')}
-      </ul>
+  container.innerHTML = items.map((s, idx) => `
+    <div class="card service-card reveal delay-${(idx % 3) + 1}" id="${detailed ? s.id : ''}">
+      <div class="icon-tile">${getIcon(s.icon)}</div>
+      <h3 class="service-title">${s.title}</h3>
+      <p class="service-description">${s.description}</p>
+
+      ${detailed && s.deliverables?.length ? `
+        <div class="service-includes-label">What's included</div>
+        <ul class="check-list">
+          ${s.deliverables.map(d => `<li>${getIcon('check')}<span>${d}</span></li>`).join('')}
+        </ul>
+      ` : `
+        <a href="/services/#${s.id}" class="link-arrow">Learn more ${getIcon('arrowRight')}</a>
+      `}
     </div>
   `).join('');
 }
@@ -266,48 +319,31 @@ function renderProjects(category = 'All') {
   const container = document.getElementById('projectsContainer');
   if (!container) return;
 
-  const filtered = (category === 'All')
-    ? appSiteData.projects
-    : appSiteData.projects.filter(p => p.category.toLowerCase() === category.toLowerCase());
+  // data-featured="true" shows only featured projects (homepage teaser)
+  let list = container.dataset.featured === 'true'
+    ? appSiteData.projects.filter(p => p.featured)
+    : appSiteData.projects;
 
-  container.innerHTML = filtered.map((p, idx) => `
-    <div class="project-card reveal delay-${(idx % 3) + 1}">
+  if (category !== 'All') {
+    list = list.filter(p => p.category.toLowerCase() === category.toLowerCase());
+  }
+  list = limitItems(container, list);
+
+  container.innerHTML = list.map((p, idx) => `
+    <a href="${p.caseStudyUrl || '#'}" class="card project-card reveal delay-${(idx % 3) + 1}">
       <div class="project-image-wrapper">
         <img src="${p.image}" alt="${p.title}" class="project-image" loading="lazy" />
-        <div class="project-badge">${p.badge || p.category}</div>
+        <span class="project-badge">${p.badge || p.category}</span>
       </div>
-      
+
       <div class="project-body">
         <div class="project-client-type">${p.clientType || ''}</div>
         <h3 class="project-title">${p.title}</h3>
         <p class="project-description">${p.description}</p>
-
-        <div class="project-tech-tags">
-          ${(p.technologies || []).map(t => `<span class="tech-tag">${t}</span>`).join('')}
-        </div>
-
-        <div class="project-actions">
-          <button class="btn btn-secondary btn-sm js-view-case-study" data-project-id="${p.id}">
-            Technical Architecture
-          </button>
-          <a href="${p.caseStudyUrl || '#'}" class="btn btn-primary btn-sm" style="margin-left: auto;">
-            Case Study ${getIcon('arrowRight')}
-          </a>
-        </div>
+        <span class="link-arrow">View case study ${getIcon('arrowRight')}</span>
       </div>
-    </div>
-  `).join('').replaceAll('case-study.html?id=', '/case-study/?id=');
-
-  // Bind Case Study button listeners
-  container.querySelectorAll('.js-view-case-study').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const pid = e.currentTarget.getAttribute('data-project-id');
-      const targetProject = appSiteData.projects.find(proj => proj.id === pid);
-      if (targetProject) {
-        openCaseStudyModal(targetProject);
-      }
-    });
-  });
+    </a>
+  `).join('');
 
   // Ensure freshly rendered cards become visible (they may render after the initial observer pass)
   observeReveals(container);
@@ -318,9 +354,9 @@ function renderWhyChooseUs() {
   const container = document.getElementById('whyUsContainer') || document.getElementById('whyChooseUsContainer');
   if (!container || !appSiteData.whyChooseUs) return;
 
-  container.innerHTML = appSiteData.whyChooseUs.map((w, idx) => `
-    <div class="glass-card why-card reveal delay-${(idx % 3) + 1}">
-      <div class="why-icon-wrap">${getIcon(w.icon)}</div>
+  container.innerHTML = limitItems(container, appSiteData.whyChooseUs).map((w, idx) => `
+    <div class="card why-card reveal delay-${(idx % 3) + 1}">
+      <div class="icon-tile">${getIcon(w.icon)}</div>
       <div class="why-content">
         <h4>${w.title}</h4>
         <p>${w.description}</p>
@@ -335,7 +371,7 @@ function renderProcess() {
   if (!container || !appSiteData.process) return;
 
   container.innerHTML = appSiteData.process.map((pr, idx) => `
-    <div class="process-card reveal delay-${(idx % 3) + 1}">
+    <div class="card process-card reveal delay-${(idx % 3) + 1}">
       <div class="process-step-number">${pr.step}</div>
       <div class="process-phase">${pr.phase}</div>
       <h3 class="process-title">${pr.title}</h3>
@@ -350,33 +386,28 @@ function renderProcess() {
   `).join('');
 }
 
+/**
+ * Technology logo: `logo` = brand SVG in /images/tech/<slug>.svg (Simple Icons),
+ * `icon` = inline icon from icons.js (used where no brand SVG exists, e.g. AWS).
+ */
+function techLogo(item) {
+  if (item.logo) return `<img src="/images/tech/${item.logo}.svg" alt="" loading="lazy" width="20" height="20" />`;
+  if (item.icon) return getIcon(item.icon);
+  return '<span class="tech-level-dot"></span>';
+}
+
 /** --- Render Tech Marquee Slider --- */
 function renderTechMarquee() {
   const marqueeTrack = document.getElementById('techMarqueeTrack');
-  if (!marqueeTrack) return;
+  if (!marqueeTrack || !appSiteData.marqueeTechnologies) return;
 
-  const defaultMarquee = [
-    { name: 'React', icon: 'react', category: 'Frontend' },
-    { name: 'Next.js', icon: 'nextjs', category: 'Framework' },
-    { name: 'Node.js', icon: 'nodejs', category: 'Backend' },
-    { name: 'Vercel', icon: 'vercel', category: 'Edge Cloud' },
-    { name: 'Firebase', icon: 'firebase', category: 'Cloud Backend' },
-    { name: 'AWS', icon: 'aws', category: 'Infrastructure' },
-    { name: 'MongoDB', icon: 'mongodb', category: 'Database' },
-    { name: 'TypeScript', icon: 'typescript', category: 'Language' },
-    { name: 'GraphQL', icon: 'graphql', category: 'API Mesh' },
-    { name: 'PostgreSQL', icon: 'postgresql', category: 'Relational DB' },
-    { name: 'Docker', icon: 'docker', category: 'Containers' },
-    { name: 'Tailwind CSS', icon: 'tailwind', category: 'Styling' }
-  ];
-
-  const techList = appSiteData.marqueeTechnologies || defaultMarquee;
   // Duplicate array for infinite seamless looping
+  const techList = appSiteData.marqueeTechnologies;
   const combined = [...techList, ...techList];
 
   marqueeTrack.innerHTML = combined.map(item => `
     <div class="tech-marquee-item">
-      <span class="tech-marquee-icon">${getIcon(item.icon)}</span>
+      <span class="tech-marquee-icon">${techLogo(item)}</span>
       <span class="tech-marquee-name">${item.name}</span>
       <span class="tech-marquee-cat">${item.category}</span>
     </div>
@@ -389,13 +420,13 @@ function renderTechnologies() {
   if (!container || !appSiteData.technologies) return;
 
   container.innerHTML = appSiteData.technologies.map((t, idx) => `
-    <div class="tech-category-card reveal delay-${(idx % 2) + 1}">
+    <div class="card tech-category-card reveal delay-${(idx % 2) + 1}">
       <h3 class="tech-cat-title">${t.category}</h3>
       <p class="tech-cat-desc">${t.description}</p>
       <div class="tech-pill-list">
         ${(t.skills || []).map(s => `
           <div class="tech-skill-pill">
-            <span class="tech-level-dot"></span>
+            <span class="tech-skill-logo">${techLogo(s)}</span>
             <span>${s.name}</span>
           </div>
         `).join('')}
@@ -437,7 +468,6 @@ function renderStats() {
     <div class="stat-card reveal delay-${(idx % 4) + 1}">
       <div class="stat-value">${st.value}</div>
       <div class="stat-label">${st.label}</div>
-      <div class="stat-desc">${st.description}</div>
     </div>
   `).join('');
 }
@@ -458,7 +488,7 @@ function renderTestimonials() {
     // Generate avatar initials
     const initials = tm.authorName.split(' ').map(n => n[0]).filter(Boolean).slice(0, 2).join('');
     return `
-      <div class="testimonial-card reveal delay-${(idx % 3) + 1}">
+      <div class="card testimonial-card reveal delay-${(idx % 3) + 1}">
         <div class="star-rating">
           ${Array(tm.rating || 5).fill(getIcon('star')).join('')}
         </div>
@@ -477,6 +507,8 @@ function renderTestimonials() {
 
 /** --- Render CTA Banner --- */
 function renderCtaBanner() {
+  // Subpages carry their own CTA copy in markup; only the homepage banner is data-driven
+  if (!document.getElementById('ctaBannerSection')) return;
   const ctaHeadline = document.getElementById('ctaHeadline');
   const ctaSubtext = document.getElementById('ctaSubtext');
   const ctaButton = document.getElementById('ctaButton');
@@ -506,6 +538,7 @@ function renderContact() {
       <div class="contact-details">
         <h4>${ch.email?.label || 'Email Us'}</h4>
         <a href="mailto:${comp.email}" class="contact-link">${comp.email}</a>
+        ${comp.supportEmail ? `<a href="mailto:${comp.supportEmail}" class="contact-link">${comp.supportEmail}</a>` : ''}
         <div class="contact-hint">${ch.email?.hint || 'Direct consultation and RFP submissions'}</div>
       </div>
     </div>
@@ -515,7 +548,7 @@ function renderContact() {
       <div class="contact-icon-wrap">${getIcon('whatsapp')}</div>
       <div class="contact-details">
         <h4>${ch.whatsapp?.label || 'WhatsApp'}</h4>
-        <a href="https://wa.me/${(comp.whatsapp || '').replace(/[^0-9]/g, '')}?text=Hi%20${encodeURIComponent(appSiteData.company?.shortName || 'Diyaseva')},%20I'd%20like%20to%20discuss%20a%20project%20inquiry." target="_blank" rel="noopener noreferrer" class="contact-link">
+        <a href="https://wa.me/${(comp.whatsapp || '').replace(/[^0-9]/g, '')}?text=Hi%20${encodeURIComponent(appSiteData.company?.shortName || 'Vistarsolution')},%20I'd%20like%20to%20discuss%20a%20project%20inquiry." target="_blank" rel="noopener noreferrer" class="contact-link">
           ${comp.phone || comp.whatsapp}
         </a>
         <div class="contact-hint">${ch.whatsapp?.hint || 'Instant chat & project scoping'}</div>
@@ -568,41 +601,17 @@ function renderFooter() {
   if (socialLinks && appSiteData.company.socialLinks) {
     const soc = appSiteData.company.socialLinks;
     socialLinks.innerHTML = `
-      ${soc.github ? `<a href="${soc.github}" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">${getIcon('github')}</a>` : ''}
       ${soc.linkedin ? `<a href="${soc.linkedin}" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">${getIcon('linkedin')}</a>` : ''}
-      ${soc.twitter ? `<a href="${soc.twitter}" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter">${getIcon('twitter')}</a>` : ''}
+      ${soc.x ? `<a href="${soc.x}" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="X">${getIcon('x')}</a>` : ''}
+      ${soc.facebook ? `<a href="${soc.facebook}" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">${getIcon('facebook')}</a>` : ''}
+      ${soc.instagram ? `<a href="${soc.instagram}" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">${getIcon('instagram')}</a>` : ''}
     `;
   }
 
   if (copyright) {
     const currentYear = new Date().getFullYear();
-    copyright.textContent = `© ${currentYear} ${appSiteData.company.name}. All rights reserved.`;
+    copyright.textContent = `© ${currentYear} ${appSiteData.company.legalName || appSiteData.company.name}. All rights reserved.`;
   }
-}
-
-/** --- Spotlight Card Glow On Mouse Move (rAF-throttled) --- */
-function setupCardGlow() {
-  let frame = null;
-  let lastEvent = null;
-
-  const applyGlow = () => {
-    frame = null;
-    if (!lastEvent) return;
-    document.querySelectorAll('.glass-card, .project-card, .estimator-wrapper').forEach(card => {
-      const rect = card.getBoundingClientRect();
-      const x = lastEvent.clientX - rect.left;
-      const y = lastEvent.clientY - rect.top;
-      card.style.setProperty('--mouse-x', `${x}px`);
-      card.style.setProperty('--mouse-y', `${y}px`);
-    });
-  };
-
-  document.addEventListener('mousemove', (e) => {
-    lastEvent = e;
-    if (!frame) {
-      frame = requestAnimationFrame(applyGlow);
-    }
-  });
 }
 
 /** --- Setup Sticky Navigation and Mobile Menu --- */
@@ -611,31 +620,41 @@ function setupNavigationEvents() {
   const hamburgerBtn = document.getElementById('hamburgerBtn');
   const mobileDrawer = document.getElementById('mobileNavDrawer');
 
-  // Sticky header background on scroll
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 30) {
-      header?.classList.add('scrolled');
-    } else {
-      header?.classList.remove('scrolled');
-    }
-  });
+  // Header border/shadow once the page is scrolled
+  const updateHeader = () => header?.classList.toggle('scrolled', window.scrollY > 10);
+  window.addEventListener('scroll', updateHeader, { passive: true });
+  updateHeader();
 
-  // Mobile menu toggle
   if (hamburgerBtn && mobileDrawer) {
-    hamburgerBtn.innerHTML = getIcon('hamburger');
+    const setMenu = (open) => {
+      mobileDrawer.classList.toggle('open', open);
+      mobileDrawer.setAttribute('aria-hidden', open ? 'false' : 'true');
+      hamburgerBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      hamburgerBtn.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+      hamburgerBtn.innerHTML = getIcon(open ? 'close' : 'hamburger');
+      document.body.classList.toggle('no-scroll', open);
+    };
+
+    setMenu(false);
+
     hamburgerBtn.addEventListener('click', () => {
-      const isOpen = mobileDrawer.classList.toggle('open');
-      hamburgerBtn.innerHTML = isOpen ? getIcon('close') : getIcon('hamburger');
-      hamburgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      setMenu(!mobileDrawer.classList.contains('open'));
     });
 
-    // Close mobile menu on link click
+    // Close on link click
     mobileDrawer.addEventListener('click', (e) => {
-      if (e.target.closest('a')) {
-        mobileDrawer.classList.remove('open');
-        hamburgerBtn.innerHTML = getIcon('hamburger');
-        hamburgerBtn.setAttribute('aria-expanded', 'false');
-      }
+      if (e.target.closest('a')) setMenu(false);
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileDrawer.classList.contains('open')) setMenu(false);
+    });
+
+    // Close if the viewport grows to desktop size while open
+    const desktopQuery = window.matchMedia('(min-width: 1024px)');
+    desktopQuery.addEventListener('change', (e) => {
+      if (e.matches) setMenu(false);
     });
   }
 

@@ -3,48 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Engineering Case Study — Diyaseva Technologies</title>
+  <title>Engineering Case Study — Vistarsolution</title>
   <meta name="description" content="Detailed engineering case study, challenges, architecture solutions, and measurable outcomes." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="stylesheet" href="/src/css/style.css" />
 </head>
 <body>
+  <!-- Top utility bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <a href="mailto:hello@vistarsolution.com" id="topBarEmail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>hello@vistarsolution.com</span></a>
+        <a href="tel:+917021067824" id="topBarPhone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>+91 70210 67824</span></a>
+      </div>
+      <div class="top-bar-right">
+        <span id="topBarLocation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg><span>Nalasopara West</span></span>
+        <div class="top-bar-socials" id="topBarSocials"></div>
+      </div>
+    </div>
+  </div>
 
-  <!-- Header -->
   <header class="site-header scrolled">
     <div class="container nav-container">
-      <a href="/" class="brand-logo" id="csBrandLogo">
-        <div class="brand-icon">DS</div>
-        <span id="csCompanyName">Diyaseva Technologies</span>
+      <a href="/" class="brand-logo" id="csBrandLogo" aria-label="Vistarsolution Home">
+        <img src="/images/logo/logo.png" alt="Vistarsolution" class="brand-logo-img" width="720" height="188" />
       </a>
 
       <div class="nav-actions">
-        <a href="/projects/" class="btn btn-secondary btn-sm">
-          ← Back to Selected Work
-        </a>
-        <a href="/contact/" class="btn btn-primary btn-sm">
-          Book a Consultation
-        </a>
+        <a href="/projects/" class="btn btn-secondary btn-sm">&larr; All Work</a>
+        <a href="/contact/" class="btn btn-primary btn-sm">Book a Consultation</a>
       </div>
     </div>
   </header>
 
-  <main style="padding-top: calc(var(--header-height) + 40px); padding-bottom: 80px;">
+  <main class="case-study-page">
     <div class="container container-narrow" id="caseStudyContainer">
       <!-- Injected dynamically based on URL parameter ?id=project-id -->
-      <div style="text-align: center; padding: 60px 0;">
-        <p style="color: var(--text-muted);">Loading case study data...</p>
+      <div class="not-found">
+        <p>Loading case study…</p>
       </div>
     </div>
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer">
+  <footer class="site-footer minimal">
     <div class="container">
-      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
-        <div id="csFooterCopyright">© 2026 Diyaseva Technologies, Inc. All rights reserved.</div>
+      <div class="footer-bottom">
+        <div id="csFooterCopyright">© 2026 Vistarsolution LLP. All rights reserved.</div>
         <div><a href="/" class="footer-link">Return to Home</a></div>
       </div>
     </div>
@@ -58,29 +66,26 @@
       const siteData = await getSiteData();
       if (!siteData) return;
 
-      // Update Branding
       const brandName = document.getElementById('csCompanyName');
       const footerCopyright = document.getElementById('csFooterCopyright');
-      if (brandName) brandName.textContent = siteData.company.name;
-      if (footerCopyright) footerCopyright.textContent = `© ${new Date().getFullYear()} ${siteData.company.name}. All rights reserved.`;
+      if (brandName) brandName.textContent = siteData.company.shortName || siteData.company.name;
+      if (footerCopyright) footerCopyright.textContent = `© ${new Date().getFullYear()} ${siteData.company.legalName || siteData.company.name}. All rights reserved.`;
 
-      // Get project ID from query params
       const params = new URLSearchParams(window.location.search);
-      const projectId = params.get('id') || (siteData.projects[0] ? siteData.projects[0].id : null);
-      
-      const project = siteData.projects.find(p => p.id === projectId) || siteData.projects[0];
+      const projectId = params.get('id');
+      const project = siteData.projects.find(p => p.id === projectId);
       const container = document.getElementById('caseStudyContainer');
+      if (!container) return;
 
-      if (!project || !container) {
-        if (container) {
-          container.innerHTML = `
-            <div style="text-align: center; padding: 80px 0;">
-              <h2>Case Study Not Found</h2>
-              <p style="color: var(--text-muted); margin-bottom: 24px;">The requested case study could not be located.</p>
-              <a href="/projects/" class="btn btn-primary">Return to Projects</a>
-            </div>
-          `;
-        }
+      if (!project) {
+        document.title = `Case Study Not Found — ${siteData.company.name}`;
+        container.innerHTML = `
+          <div class="not-found">
+            <h2>Case Study Not Found</h2>
+            <p>The requested case study could not be located.</p>
+            <a href="/projects/" class="btn btn-primary">Return to Projects</a>
+          </div>
+        `;
         return;
       }
 
@@ -90,91 +95,96 @@
       const features = cs.keyFeatures || [];
       const processSteps = cs.developmentProcess || [];
       const technologies = project.technologies || [];
+      // Only real URLs get a "Visit live site" link (sample projects use "#…" placeholders)
+      const liveUrl = /^https?:\/\//.test(project.url || '') ? project.url : '';
 
       container.innerHTML = `
-        <div style="margin-bottom: 36px;">
-          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px; flex-wrap: wrap;">
-            <span class="project-badge" style="position: static;">${project.category}</span>
-            <span style="font-size: 0.85rem; color: var(--text-subtle);">${project.clientType || ''}</span>
+        <div class="case-study-header">
+          <div class="case-study-meta">
+            <span class="project-badge">${project.category}</span>
+            ${project.isPlaceholder ? '<span class="sample-tag">SAMPLE PROJECT</span>' : ''}
+            <small>${project.clientType || ''}</small>
+            ${liveUrl ? `<a href="${liveUrl}" target="_blank" rel="noopener noreferrer" class="link-arrow">Visit live site ${getIcon('externalLink')}</a>` : ''}
           </div>
-
-          <h1 style="font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 16px;">${project.title}</h1>
-          <p style="font-size: 1.2rem; color: var(--text-primary); font-weight: 500; line-height: 1.5; margin-bottom: 24px;">
-            ${project.description}
-          </p>
-
-          <div style="border-radius: var(--radius-xl); overflow: hidden; margin-bottom: 40px; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-lg);">
-            <img src="${project.image}" alt="${project.title}" style="width: 100%; height: auto; display: block;" />
-          </div>
+          <h1 class="page-title">${project.title}</h1>
+          <p class="case-study-lead">${cs.headline || project.description}</p>
         </div>
 
-        <!-- Metrics Grid -->
+        <img src="${project.image}" alt="${project.title}" class="case-study-hero-img" />
+
         ${metrics.length ? `
-          <div style="margin-bottom: 48px;">
-            <h3 style="font-size: 1.3rem; margin-bottom: 20px;">Measurable Production Impact</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+          <div class="case-study-section">
+            <h3 class="case-study-section-title">${getIcon('target')} Measurable Production Impact</h3>
+            <div class="metrics-grid">
               ${metrics.map(m => `
-                <div class="stat-card" style="text-align: left;">
-                  <div class="stat-value" style="font-size: 2rem;">${m.metric}</div>
-                  <div class="stat-label" style="margin-bottom: 4px;">${m.label}</div>
+                <div class="metric-card">
+                  <div class="metric-value">${m.metric}</div>
+                  <div class="metric-label">${m.label}</div>
                 </div>
               `).join('')}
             </div>
           </div>
         ` : ''}
 
-        <!-- Technical Challenges & Architecture -->
-        <div style="display: grid; grid-template-columns: 1fr; gap: 32px; margin-bottom: 48px;">
-          <div class="glass-card" style="padding: 32px;">
-            <h3 style="font-size: 1.3rem; margin-bottom: 14px; color: #e11d48; display: flex; align-items: center; gap: 8px;">
-              Technical Challenge & Constraints
-            </h3>
-            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">
-              ${cs.challenge || 'High-throughput scaling and complex enterprise state requirements.'}
-            </p>
+        ${cs.overview ? `
+          <div class="case-study-section">
+            <h3 class="case-study-section-title">${getIcon('layers')} Overview</h3>
+            <p>${cs.overview}</p>
           </div>
+        ` : ''}
 
-          <div class="glass-card" style="padding: 32px; border-color: var(--accent-blue-subtle);">
-            <h3 style="font-size: 1.3rem; margin-bottom: 14px; color: var(--accent-blue); display: flex; align-items: center; gap: 8px;">
-              Architectural Solution & Implementation
-            </h3>
-            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">
-              ${cs.solution || 'Engineered modular serverless microservices with distributed caching and multi-tenant security isolation.'}
-            </p>
+        <div class="case-study-section challenge-solution">
+          <div class="cs-block challenge">
+            <h4>Technical Challenge &amp; Constraints</h4>
+            <p>${cs.challenge || 'High-throughput scaling and complex enterprise state requirements.'}</p>
+          </div>
+          <div class="cs-block solution">
+            <h4>Architectural Solution</h4>
+            <p>${cs.solution || 'Engineered modular microservices with distributed caching and multi-tenant security isolation.'}</p>
           </div>
         </div>
 
-        <!-- Technologies Used -->
-        <div style="margin-bottom: 48px;">
-          <h3 style="font-size: 1.3rem; margin-bottom: 16px;">Technology Foundation</h3>
-          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-            ${technologies.map(t => `<span class="tech-tag" style="font-size: 0.95rem; padding: 6px 14px;">${t}</span>`).join('')}
-          </div>
-        </div>
-
-        <!-- Key Engineering Features -->
         ${features.length ? `
-          <div style="margin-bottom: 48px;">
-            <h3 style="font-size: 1.3rem; margin-bottom: 20px;">Key Engineering Features</h3>
-            <ul class="service-deliverables" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-              ${features.map(f => `
-                <li class="service-deliverable-item" style="background: var(--bg-secondary); padding: 14px 18px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
-                  ${getIcon('check')}
-                  <span>${f}</span>
+          <div class="case-study-section">
+            <h3 class="case-study-section-title">${getIcon('check')} Key Engineering Features</h3>
+            <ul class="feature-list boxed">
+              ${features.map(f => `<li>${getIcon('check')}<span>${f}</span></li>`).join('')}
+            </ul>
+          </div>
+        ` : ''}
+
+        ${processSteps.length ? `
+          <div class="case-study-section">
+            <h3 class="case-study-section-title">${getIcon('layers')} Delivery Roadmap</h3>
+            <ul class="roadmap-list">
+              ${processSteps.map(step => `
+                <li>
+                  <strong>${step.phase}</strong>
+                  <span>${step.detail}</span>
                 </li>
               `).join('')}
             </ul>
           </div>
         ` : ''}
 
-        <!-- CTA Callout -->
-        <div class="cta-card" style="margin-top: 60px;">
-          <div class="cta-content">
+        <div class="case-study-section">
+          <h3 class="case-study-section-title">${getIcon('cpu')} Technology Foundation</h3>
+          <div class="tag-list">
+            ${technologies.map(t => `<span class="tech-tag">${t}</span>`).join('')}
+          </div>
+          ${cs.architectureNotes ? `<p class="arch-note">${cs.architectureNotes}</p>` : ''}
+        </div>
+
+        <div class="cta-card">
+          <div class="cta-inner">
+<div class="cta-content">
             <h2 class="cta-headline">Need an architecture like this?</h2>
-            <p class="cta-subtext">Let's discuss how we can adapt this architectural blueprint for your organization.</p>
+            <p class="cta-subtext">Let's discuss how we can adapt this blueprint for your organization.</p>
           </div>
           <div class="cta-action">
+            ${liveUrl ? `<a href="${liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">Visit live site ${getIcon('externalLink')}</a>` : ''}
             <a href="/contact/" class="btn btn-white btn-lg">Book a Consultation</a>
+          </div>
           </div>
         </div>
       `;

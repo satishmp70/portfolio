@@ -3,29 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About & Engineering Methodology — Diyaseva Technologies</title>
-  <meta name="description" content="Learn about Diyaseva Technologies' senior-led engineering culture, 6-stage development process, company metrics, and client satisfaction track record." />
-  <meta name="keywords" content="About Diyaseva, Software engineering agency, Agile development process, Senior developers, Diyaseva culture" />
+  <title>About & Engineering Methodology — Vistarsolution</title>
+  <meta name="description" content="Learn about Vistarsolution' senior-led engineering culture, 6-stage development process, company metrics, and client satisfaction track record." />
+  <meta name="keywords" content="About Vistarsolution, Software engineering agency, Agile development process, Senior developers, Vistarsolution culture" />
 
   <!-- Preconnect Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Main Stylesheet -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="stylesheet" href="/src/css/style.css" />
 </head>
 <body>
+  <!-- Top utility bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <a href="mailto:hello@vistarsolution.com" id="topBarEmail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>hello@vistarsolution.com</span></a>
+        <a href="tel:+917021067824" id="topBarPhone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>+91 70210 67824</span></a>
+      </div>
+      <div class="top-bar-right">
+        <span id="topBarLocation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg><span>Nalasopara West</span></span>
+        <div class="top-bar-socials" id="topBarSocials"></div>
+      </div>
+    </div>
+  </div>
 
-  <!-- Site Navigation Header -->
   <header class="site-header" id="siteHeader">
     <div class="container nav-container">
-      <a href="/" class="brand-logo" id="navbarBrand" aria-label="Diyaseva Home">
-        <div class="brand-icon">DS</div>
-        <div class="brand-logo-content">
-          <span class="brand-title">Diyaseva</span>
-          <span class="brand-badge">Engineering</span>
-        </div>
+      <a href="/" class="brand-logo" id="navbarBrand" aria-label="Vistarsolution Home">
+        <img src="/images/logo/logo.png" alt="Vistarsolution" class="brand-logo-img" width="720" height="188" />
       </a>
 
       <!-- Desktop Links -->
@@ -63,12 +72,12 @@
       <div class="breadcrumbs">
         <a href="/">Home</a>
         <span>/</span>
-        <span class="current">About & Methodology</span>
+        <span class="current">About</span>
       </div>
-      <div class="hero-badge">ABOUT DIYASEVA TECHNOLOGIES</div>
-      <h1 class="page-title">Senior Engineering Rigor for Modern Digital Products.</h1>
+      <div class="hero-badge">ABOUT</div>
+      <h1 class="page-title">Senior engineering, built for the long term.</h1>
       <p class="page-subtitle">
-        We are a senior-led software studio founded on architectural craftsmanship, transparency, and a relentless focus on long-term maintainability.
+        A senior-led software studio focused on careful architecture, transparency, and maintainable code.
       </p>
     </div>
   </section>
@@ -78,8 +87,8 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-story-col">
-          <div class="section-badge">OUR ENGINEERING PHILOSOPHY</div>
-          <h2 class="about-headline" id="aboutHeadline">Architected for longevity, maintainability, and scale.</h2>
+          <div class="section-badge">WHO WE ARE</div>
+          <h2 class="about-headline" id="aboutHeadline">Engineering-first, from day one.</h2>
           <p class="about-lead" id="aboutLead"></p>
           <div class="about-paragraphs" id="aboutParagraphs"></div>
         </div>
@@ -95,8 +104,8 @@
   <section class="section">
     <div class="container">
       <div class="section-header text-center">
-        <div class="section-badge">IMPACT & METRICS</div>
-        <h2 class="section-title">Measurable Production Benchmarks.</h2>
+        <div class="section-badge">BY THE NUMBERS</div>
+        <h2 class="section-title">Track record</h2>
       </div>
 
       <div class="stats-grid" id="statsContainer">
@@ -109,11 +118,9 @@
   <section class="section section-alt" id="process">
     <div class="container">
       <div class="section-header text-center">
-        <div class="section-badge">DELIVERY FRAMEWORK</div>
-        <h2 class="section-title">A Structured 6-Stage Agile Lifecycle.</h2>
-        <p class="section-subtitle">
-          From discovery to post-launch SLA, our workflow eliminates guesswork through transparent bi-weekly sprints and continuous preview deploys.
-        </p>
+        <div class="section-badge">PROCESS</div>
+        <h2 class="section-title">How we deliver</h2>
+        <p class="section-subtitle">Six stages from discovery to post-launch support, with a demo every week.</p>
       </div>
 
       <div class="process-grid" id="processContainer">
@@ -126,11 +133,9 @@
   <section class="section" id="why-us">
     <div class="container">
       <div class="section-header text-center">
-        <div class="section-badge">WHY TEAMS CHOOSE DIYASEVA</div>
-        <h2 class="section-title">Built Like a Senior Extension of Your Team.</h2>
-        <p class="section-subtitle">
-          We combine the agility of an elite product squad with the engineering standards of global tech leaders.
-        </p>
+        <div class="section-badge">WHY VISTARSOLUTION</div>
+        <h2 class="section-title">How we work</h2>
+        <p class="section-subtitle">A senior extension of your team, with the standards of a global engineering org.</p>
       </div>
 
       <div class="why-us-grid" id="whyUsContainer">
@@ -139,18 +144,15 @@
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section class="section section-alt" id="testimonialsSection">
+
+  <!-- Clients -->
+  <section class="section section-alt clients-section" id="clients">
     <div class="container">
       <div class="section-header text-center">
-        <div class="section-badge">CLIENT PERSPECTIVES</div>
-        <h2 class="section-title">Trusted by Engineering Leaders Worldwide.</h2>
-        <p class="section-subtitle">
-          Hear from founders, CTOs, and product directors who rely on Diyaseva for mission-critical software execution.
-        </p>
+        <div class="section-badge">OUR CLIENTS</div>
+        <h2 class="section-title">Trusted by growing businesses</h2>
       </div>
-
-      <div class="testimonials-grid" id="testimonialsContainer">
+      <div class="clients-row" id="clientsContainer">
         <!-- Populated by main.js -->
       </div>
     </div>
@@ -160,13 +162,15 @@
   <section class="section-cta">
     <div class="container">
       <div class="cta-card reveal">
-        <div class="cta-content">
-          <div class="section-badge">START A TECHNICAL CONVERSATION</div>
-          <h2 class="cta-headline" id="ctaHeadline">Ready to partner with a senior engineering team?</h2>
-          <p class="cta-subtext" id="ctaSubtext">Schedule an engineering sprint consultation to discuss roadmap goals, architecture, and team velocity.</p>
+        <div class="cta-inner">
+<div class="cta-content">
+          <div class="section-badge">LET'S TALK</div>
+          <h2 class="cta-headline" id="ctaHeadline">Ready to work with a senior team?</h2>
+          <p class="cta-subtext" id="ctaSubtext">Book a consultation to discuss your roadmap and architecture.</p>
         </div>
         <div class="cta-action">
           <a href="/contact/" class="btn btn-white btn-lg" id="ctaButton">Book a Consultation</a>
+        </div>
         </div>
       </div>
     </div>
@@ -178,8 +182,7 @@
       <div class="footer-grid">
         <div class="footer-brand-col">
           <div class="footer-logo">
-            <div class="brand-icon">DS</div>
-            <span class="brand-title" id="footerBrandName">Diyaseva Technologies</span>
+            <img src="/images/logo/logo.png" alt="Vistarsolution" class="brand-logo-img" width="720" height="188" />
           </div>
           <p class="footer-bio" id="footerBio"></p>
           <div class="footer-social-links" id="footerSocialLinks"></div>
