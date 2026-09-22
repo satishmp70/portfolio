@@ -1,11 +1,13 @@
 # Dependencies
 node_modules/
 public/vendor/
+dist/vendor/
 /.pnp
 .pnp.js
 
 # Production Build Artifacts
-dist/
+# The generated static site is the deployable application.
+dist/api/config.php
 dist-ssr/
 build/
 *.local
