@@ -45,16 +45,19 @@ The server does not need Node.js, Vite, npm, or `node_modules`.
 1. Open Hostinger File Manager or connect through SFTP.
 2. Open the domain's `public_html/` directory.
 3. Upload the contents of `dist/` directly into `public_html/`.
-4. Upload `dist/vendor/` separately because `vendor/` is ignored by Git.
-5. Upload `dist/api/config.php` separately because it contains the SMTP password and is ignored by Git.
-6. Do not upload the `dist` directory as an extra nested folder.
+4. Do not upload the `dist` directory as an extra nested folder.
+5. Upload `api/config.php` separately and set the real SMTP password.
 
-If Composer is available on the server instead of uploading `vendor/`, run:
+The uploaded `composer.json` and `composer.lock` are in `public_html/`. Install
+PHPMailer on the server:
 
 ```bash
 cd public_html
-composer install --no-dev
+composer install --no-dev --optimize-autoloader
 ```
+
+This creates `public_html/vendor/`. Do not upload or commit `vendor/` when using
+Composer on the server.
 
 The server must use PHP 8.1 or newer.
 
