@@ -1,12 +1,13 @@
 # Dependencies
 node_modules/
+vendor/
 public/vendor/
 dist/vendor/
 /.pnp
 .pnp.js
 
-# Production Build Artifacts
-# The generated static site is the deployable application.
+# Production Configuration & Secrets
+api/config.php
 dist/api/config.php
 dist-ssr/
 build/
@@ -65,3 +66,8 @@ Desktop.ini
 *.tmp
 *.temp
 scratch/
+
+# Build tooling
+_src/node_modules/
+_src/screenshots/
+_src/*

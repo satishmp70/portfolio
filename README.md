@@ -1,171 +1,60 @@
-# Premium B2B Technology Company Static Portfolio
+# Thinkvistar website
 
-A modern, high-performance, fully **STATIC** portfolio website built for software development agencies, SaaS studios, and technology solution providers.
+Static marketing website for Thinkvistar LLP (https://thinkvistar.com) with a small PHP endpoint for the contact form.
 
----
+The **repository root is the deployable site** (upload it to `public_html/`). The HTML pages and `/assets` in the root are **generated** — edit the sources in `_src/` and rebuild.
 
-## 🌟 Key Architecture & How It Works
+## Editing content
 
-This website is **100% static** (no backend server, no database, no authentication required).
+| What to change | Where |
+| --- | --- |
+| Services, projects/blueprints, stats, clients, contact details, footer links, privacy & terms text | `_src/site-data.json` |
+| Page titles, meta descriptions, breadcrumbs, FAQs, structured data | `_src/pages.mjs` |
+| Page body HTML (sections, headings, copy) | `_src/pages/<page>.html` |
+| Shared `<head>`, header, footer | `_src/layout.mjs` |
+| Styles | `_src/css/site.css` (original design) and `_src/css/additions.css` |
+| Rendering logic, estimator, contact form | `_src/js/main.js` |
 
-All content across the entire website is driven by a single centralized JSON file:
-📁 **`data/siteData.json`**
+FAQs are written once in `pages.mjs`; the build renders them on the page **and** as FAQPage structured data, so the two never drift apart. Only publish genuine testimonials, client names and metrics.
 
-> 💡 **`data/siteData.json` acts as your site's database.**  
-> Whenever you edit this file, your main homepage, project cards, case study pages, terms and conditions, privacy policy, and footer are updated automatically!
+## Building
 
----
+Requires Node.js 18+ and Microsoft Edge or Google Chrome (used headlessly to pre-render pages).
 
-## 🚀 Quick Start (Running Locally)
-
-### 1. Install Dependencies
 ```bash
-npm install
+cd _src
+npm install        # first time only
+npm run build      # writes the pages, /assets, sitemap.xml into the repo root
+node check.mjs     # optional QA: loads every page on desktop + mobile, reports errors, saves screenshots
 ```
 
-### 2. Start Local Development Server
+The build:
+
+1. fingerprints CSS/JS into `/assets` (file names change when content changes, so browsers can cache them for a year);
+2. assembles each page from the shared layout and its body;
+3. **pre-renders** the JavaScript-driven sections (navigation, services, projects, footer, legal text) into the HTML, so search engines, AI crawlers and link previews see the full content without running JavaScript;
+4. regenerates `sitemap.xml`.
+
+`npm run build:fast` skips pre-rendering (useful while editing; always do a full build before deploying).
+
+## Running locally
+
 ```bash
-npm run dev
-```
-Open your browser at `http://localhost:5173`.
-
-### 3. Build for Production (Deploy Anywhere)
-```bash
-npm run build
-```
-This generates a production-ready, minified static build in the `dist/` directory.
-
----
-
-## 🛠️ How to Customize Your Website in `data/siteData.json`
-
-Open `data/siteData.json` in any code editor. The file is cleanly structured into the following sections:
-
-### 1. Company Information & Branding
-Change your company name, tagline, email, phone, and WhatsApp in the `"company"` section:
-```json
-"company": {
-  "name": "Your Company Name",
-  "legalName": "Your Company Name, LLC",
-  "tagline": "Building Digital Products That Move Businesses Forward",
-  "contact": {
-    "email": "contact@yourcompany.com",
-    "phone": "+1 (555) 019-2834",
-    "whatsapp": "+15550192834",
-    "location": "San Francisco, CA / Remote Worldwide"
-  }
-}
+php -S 127.0.0.1:8000
 ```
 
-### 2. Adding a New Project / Case Study
-To add a new project to your portfolio, append a new object to the `"projects"` array in `data/siteData.json`:
+Open http://127.0.0.1:8000. For the contact form, see [DEPLOYMENT.md](DEPLOYMENT.md).
 
-```json
-{
-  "id": "my-new-project-slug",
-  "isPlaceholder": false,
-  "badge": "SaaS Platform",
-  "title": "FinFlow",
-  "category": "SaaS",
-  "clientType": "Fintech & Banking",
-  "description": "Automated billing engine processing 500k+ invoices a month.",
-  "image": "/images/projects/my-project-screenshot.png",
-  "technologies": ["React", "Node.js", "PostgreSQL", "Docker"],   // shown on the case study page only
-  "url": "https://my-live-project-demo.com",
-  "caseStudyUrl": "/case-study/?id=my-new-project-slug",
-  "featured": true,                                                // featured projects appear on the homepage
-  "caseStudy": {
-    "headline": "Streamlining Global Invoicing for 10,000+ Active Subscriptions",
-    "overview": "Detailed overview of what was built and why.",
-    "challenge": "What bottleneck or problem the client was facing.",
-    "solution": "How our architectural approach solved the problem.",
-    "keyFeatures": [
-      "Real-time payment webhook reconciliation",
-      "Multi-currency support with automated tax calculation"
-    ],
-    "developmentProcess": [
-      { "phase": "01 Discovery", "detail": "Analyzed existing payment bottlenecks." },
-      { "phase": "02 Build", "detail": "Engineered microservices and frontend dashboard." }
-    ],
-    "results": [
-      { "metric": "< 100ms", "label": "API Response Latency" },
-      { "metric": "99.99%", "label": "Uptime Across Peak Loads" }
-    ]
-  }
-}
-```
-
-### 3. Adding Project Images
-Place your screenshot, mockup, or graphic into:
-📁 `public/images/projects/`  
-Then reference its path in `siteData.json` (e.g. `"/images/projects/my-screenshot.png"`).
-
-### 4. Customizing Services
-Edit the `"services"` array in `data/siteData.json` to change service names, descriptions, or deliverables. The homepage shows a compact card (icon, title, description); the Services page adds the deliverables list.
-
-### 5. Managing Testimonials
-In `data/siteData.json`:
-- Set `"testimonials.showSection": true` (or `false` if you want to hide testimonials until you receive client reviews).
-- Update the `"testimonials.items"` list with client reviews.
-
-### 6. Updating Terms & Conditions / Privacy Policy
-Edit `"termsAndConditions"` and `"privacyPolicy"` sections in `data/siteData.json`. All headers, clauses, and last-updated timestamps will automatically render on `/terms/` and `/privacy/`.
-
----
-
-## 📂 Project Structure
+## Structure
 
 ```
-portfolio/
-├── data/
-│   └── siteData.json           # ⭐ SINGLE DATABASE FOR ALL SITE CONTENT
-├── index.html                  # Homepage
-├── services/index.html         # Services & industries
-├── tech-stack/index.html       # Technology stack page
-├── projects/index.html         # Selected work
-├── estimator/index.html        # Interactive scope estimator
-├── about/index.html            # About, process, testimonials
-├── contact/index.html          # Consultation form
-├── case-study/index.html       # Standalone case study (?id=project-id)
-├── terms/index.html            # Terms & Conditions
-├── privacy/index.html          # Privacy Policy
-├── public/
-│   └── images/                 # Static images (served from /images/...)
-├── robots.txt
-├── sitemap.xml
-├── package.json                # Dev & build scripts (Vite)
-├── vite.config.js              # Multi-page bundler configuration
-└── src/
-    ├── css/
-    │   └── style.css           # Design system (mobile-first, single accent colour)
-    └── js/
-        ├── dataLoader.js       # Central data loader
-        ├── main.js             # Dynamic renderer, navigation, scroll reveal
-        ├── estimator.js        # Scope estimator logic
-        ├── contact.js          # Inquiry form validation & mailto dispatch
-        └── icons.js            # Inline SVG icon dictionary
+index.html, about/, services/, industries/, tech-stack/, projects/,
+estimator/, contact/, privacy/, terms/, case-study/, 404.html   ← generated pages
+assets/            generated, fingerprinted CSS/JS
+fonts/             self-hosted Inter (woff2)
+images/            logos, OG image, client logos, illustrations
+api/               PHP contact endpoint (config.php is git-ignored)
+.htaccess          HTTPS + canonical host redirects, 404 page, caching, compression
+robots.txt, sitemap.xml
+_src/              sources + build tooling (blocked from the web by .htaccess)
 ```
-
----
-
-## 🌐 Free Static Deployment Guides
-
-### Option A: Deploy on Vercel
-1. Push your repository to GitHub.
-2. Go to [Vercel.com](https://vercel.com) and click **Add New Project**.
-3. Select your repository. Vercel will automatically detect Vite.
-4. Click **Deploy**.
-
-### Option B: Deploy on Netlify
-1. Go to [Netlify.com](https://netlify.com) and click **Add new site > Import an existing project**.
-2. Select your repository.
-3. Build command: `npm run build` | Publish directory: `dist`.
-4. Click **Deploy Site**.
-
-### Option C: Deploy on GitHub Pages
-1. In `vite.config.js`, set `base: '/<repository-name>/'` if deploying to a subpath.
-2. Run `npm run build`.
-3. Push the `dist/` directory to the `gh-pages` branch.
-
-### Option D: Direct Apache / Nginx / S3 Hosting
-Run `npm run build` and upload the contents of the `dist/` folder directly to your web server root or S3 bucket.
